@@ -12,4 +12,5 @@ A bateria de 192 casos da primeira máquina (28/09/2026), que constrói máquina
   - o CEGIS com poda, de 17.588;
   - o CEGIS, de 16.120.
   - A fórmula e o CEGIS com poda acharam 82 soluções cada; o CEGIS sem poda achou 50. Nenhum dos três falhou na conferência.
-- `PROCEDENCIA.md`: a versão do z3 e o hash da roda instalada. O z3 recebeu os 192 casos por outro caminho, sem ver a busca, e confirmou os 192 vereditos.
+- `auditoria_z3.json`: a conferência pelo z3, um resolvedor isolado que recebeu os 192 casos por outro caminho, sem ver a busca. Os 192 vereditos foram confirmados (54 de memória insuficiente, 82 soluções, 37 acima do orçamento e 19 não observáveis), com 0 discordâncias, em 2.870 perguntas ao z3. O hash dos casos é o mesmo do protocolo da bateria.
+- `PROCEDENCIA.md`: a versão do z3 e o hash da roda instalada.

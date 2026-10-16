@@ -1,0 +1,55 @@
+{
+ "versao": 1,
+ "semente": 424242,
+ "variantes": {
+  "seq": "sequências com professor de duas camadas escondidas (16 e 16) e 16 tarefas-base (MundoDeSequenciasFundo)",
+  "ling": "linguagem com alfabeto de 8 símbolos e concordância com três posições da janela (MundoDeLinguagemTres)",
+  "tri": "as trilhas de composição por k, melhora com o uso, regimes e deriva, de sementes novas",
+  "age": "agentes numa grade de 6 por 6 (observação de 41 dimensões)"
+ },
+ "vidas_por_familia": {
+  "seq": 4,
+  "ling": 2,
+  "age": 2,
+  "tri": 7
+ },
+ "grade_dos_agentes": 6,
+ "d_entrada": {
+  "seq": 24,
+  "ling": 68,
+  "tri": 24,
+  "age": 41
+ },
+ "hash_das_vidas": {
+  "seq": [
+   "7e43403598a35003dba5012ca9f34c17ac036302b4bb108d23918299a8cab7a4",
+   "054a81b648c50c3e2b3867488fdfadd6e3bc6b591eae1dba462e534d15f80745",
+   "c0dbf4f2a16b042f16f1915f7063a98b25684b2906b14fdf6a57c77af1e71015",
+   "8093d517123eabdf0ef5b56d064437e1da292315a53fe6c54c648db92d4a2d1d"
+  ],
+  "ling": [
+   "6f147b1fce9d4aa07fd9e036aaf86dc4c30997103c684cc7b9401d0f7f905d21",
+   "5280212ae5b1168a02d6685f657e87a7854288c5f56661f7847e1fc1e6bec186"
+  ],
+  "tri": [
+   "7b2a46ffff8b5dd3e8658828e29b0ab70678f7db3b78a0013615e38d69723b41",
+   "2c5a5316115278702174a64085fed7b7badebdb9aeb8b4d2c936ebbd6d07f0bc",
+   "f5c67c1d5f389f5abd1c2d75d413a46fcf2c4c714624063ee8ee550090f8b7f7",
+   "65bab787a9cab374800e15f0d046126a979d006c62f8b86cf6549c55432db3db",
+   "65ae85b2265f3736b501bf8db22d9ad86214e8791b1b1a3bb6bac69a3f75158d",
+   "44f1bdcc925e869de32538f461fa53fddbf4c27ad8fb3c12c66debdb80022412",
+   "329bf9b671fb83d51fa15d0bb362960abb9ca2c8ffca0a459fb69ed0e69cadbf"
+  ],
+  "age": [
+   "55b5da7e27f670aa07018fcbdb56578b87e85b3874d81c4185620052060b3fc1",
+   "df5e799f0fc37748d1fa63eab53b3a4437868084aaba46a53b0b5c5077f9c831"
+  ]
+ },
+ "declaracao": "escrito por nós, sem independência; a busca nunca o vê",
+ "hash_dos_oraculos": {
+  "seq": "e90e7f4ce671a5b7fe6bd8eb975c71538363267aacfd94a82ae18015125b5986",
+  "ling": "6d91eb0639a902a0faac524242c3f68597cbec09e190b80c139f65075ead1247",
+  "der": "50b8d26a89fd761191cef551b65e5a4d1c0d01fe4aa3b7764577166da075af25"
+ },
+ "hash_do_selo": "f43c1770db506fdf81c04abf27339a574db3958f1659b25cece332e09385fcf9"
+}

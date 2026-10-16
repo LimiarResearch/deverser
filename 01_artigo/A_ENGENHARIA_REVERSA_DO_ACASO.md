@@ -6,9 +6,11 @@
 
 Hoje, 16 de outubro de 2026, a Anthropic publicou um artigo contando que um modelo interno de pesquisa descobriu, em menos de meia hora, como foram geradas as sementes das curvas elípticas do NIST: as cinco curvas primas, de P-192 a P-521, e quatro das binárias. Essas sementes chegaram ao padrão em 2000 sem explicação e passaram mais de duas décadas sem que ninguém soubesse dizer de onde vinham. Segundo o artigo, elas saíram do `lrand48`, um gerador pseudoaleatório da biblioteca C, iniciado pelo relógio do computador entre maio de 1997 e abril de 1998.
 
-Eu li o artigo inteiro e fiquei surpreso. Desde setembro eu trabalho numa pesquisa que batizei, em 22/09, de a engenharia reversa do acaso. Ela usa sementes sorteadas, uma verificação que julga cada candidato e buscas guiadas por uma intenção declarada antes. E trabalhei o mês inteiro com uma bancada de inteligências artificiais em que duas são da própria Anthropic: o Claude, que fez a execução, e o Fable, que fez parte do planejamento.
+Eu li o artigo inteiro e fiquei surpreso. Desde setembro eu trabalho numa pesquisa que batizei, em 22/09, de a engenharia reversa do acaso. Ela usa sementes sorteadas, uma verificação que julga cada candidato e buscas guiadas por uma intenção declarada antes. E trabalhei o mês inteiro com ferramentas de inteligência artificial, duas delas da própria Anthropic: o Claude, que fez a execução, e o Fable, que fez parte do planejamento.
 
 O método deles é outro. Eles fizeram criptoanálise clássica: uma hipótese sobre geradores antigos, um varredor de 34 combinações de gerador e fatia de saída, força bruta sobre 2¹⁷ valores e redução de reticulado. Ali não há uma intenção escrita em cláusulas nem uma seleção de candidatos por um verificador. O que coincide é o tema, e a palavra. Eu não sei dizer o que essa coincidência significa. Sei o que eu fiz e quando, e como eu ia publicar esse trabalho de qualquer forma, publico agora, do jeito que está, com as datas e as provas.
+
+Tudo o que este texto cita está no repositório que o acompanha, e cada resultado aponta para a pasta onde está a evidência.
 
 ## A ideia
 
@@ -36,7 +38,9 @@ K_mundo = artefatos entregues que falham fora           o critério é zero
 
 ## A fórmula
 
-Em 28/09 a equação virou fórmula executável. Dado um D, os números do meio e um orçamento, uma máquina constrói um candidato finito, confere que ele cumpre cada cláusula com uma prova que outra pessoa possa verificar e declara o que encontrou. Em 29/09 eu fechei a fórmula, e daí em diante ela só muda por emenda datada. A versão vigente é a 4.3, de 01/10.
+*No repositório: `02_formula`.*
+
+Em 28/09 a equação virou fórmula executável. Dado um D, os números do meio e um orçamento, uma máquina constrói um candidato finito, confere que ele cumpre cada cláusula com uma prova que outra pessoa possa verificar e declara o que encontrou. Em 29/09 eu fechei a fórmula, e daí em diante ela só muda por emenda datada. A versão publicada é a 4.3, com as emendas de 30/09 e 01/10.
 
 A imagem que eu uso é a de um motor montado num eixo. O eixo é V, a verificação, a única peça presa. As outras giram em volta dele, e cada ida e volta entre duas peças passa por V.
 
@@ -65,36 +69,39 @@ E a fórmula diz o que se pode afirmar de um resultado, em degraus: definido, ro
 
 ## As máquinas
 
-Todas as máquinas têm o mesmo coração, a seleção julgada por V: sortear variações dos candidatos, medir cada uma contra D, guardar as melhores e repetir até a fronteira parar de mudar. Algumas versões ganharam depois um aprendiz, que tenta escrever variações melhores que as sorteadas.
+Todas as máquinas têm o mesmo coração, a seleção julgada por V: sortear variações dos candidatos, medir cada uma contra D, guardar as melhores e repetir até a fronteira parar de mudar. Algumas versões ganharam depois um aprendiz, que tenta escrever variações melhores que as sorteadas. As três primeiras vão só com a seleção. A C★3 vai com o aprendiz, como rodou.
 
-- **A primeira máquina (28/09)** constrói máquinas de estados finitos, o tipo de controlador que decide, a cada entrada, se libera ou bloqueia uma ação. Contra o CEGIS, a síntese guiada por contraexemplo da literatura, ela achou as mesmas máquinas nos 64 casos de um domínio enumerado inteiro, com cerca de quatro vezes menos formulações ali e cerca de quinze vezes menos numa bateria de 192 casos. Um resolvedor isolado, o z3, confirmou os 192 vereditos.
-- **O motor fechado da fórmula 4.0 (29/09)** é a seleção com os laços da fórmula: a parada pela fronteira e a pergunta pela causa quando a busca empaca. Ele não tem aprendiz, e é dele o resultado da ordenação.
-- **A Máquina do Dever-Ser 4.3.1 (01/10)** serve a qualquer D: basta escrever a codificação do candidato em bits e o V. A verificação completa passou 428 de 433 provas.
-- **A C★1, a C★2 e a C★3 (01 a 05/10)** são a Máquina do Dever-Ser aplicada a um desafio proposto pelo Codex, o Ser: uma inteligência digital que aprende coisas novas sem recomeçar e sem guardar todo o histórico, julgada por 28 cláusulas em 15 vidas.
-- **O Tear (04 e 05/10)** é a máquina do leito: uma ilha de 64 candidatos que seleciona por torneio e mutação, e um leito que julga cada candidato numa vida inteira, por 15 cláusulas.
+- **O motor de 29/09** *(`03_motor_de_29-09`)* é o motor fechado da fórmula 4.0: a seleção com os laços da fórmula, a parada pela fronteira e a pergunta pela causa quando a busca empaca. Ele nunca teve aprendiz, e é dele o resultado da ordenação. O código publicado é o do commit gravado oito segundos antes de a corrida começar, e as 26 provas dele passam.
+- **A Máquina do Dever-Ser 4.3.1 só com a seleção** *(`04_maquina_do_dever_ser_selecao`)* serve a qualquer D: basta escrever a codificação do candidato em bits e o V. As peças vêm da 4.3.1, a escrita às cegas e o operador, sem a rede que aprende. Ela acha o D de exemplo em poucas rodadas, e as 11 provas dela passam.
+- **O Tear só com a seleção** *(`05_tear_selecao`)* é a máquina do leito: uma ilha de 64 candidatos que seleciona por torneio e mutação, e um leito que julga cada candidato numa vida inteira, por 15 cláusulas. A mesma semente, rodada pelo pacote e pela árvore original, dá os mesmos recordes.
+- **A C★3** *(`08_c_estrela_3`)* é a Máquina do Dever-Ser 4.3.1 aplicada a um D de aprendizado contínuo, o Ser: um programa que aprende coisas novas sem rodadas de treinamento e sem guardar todo o histórico, julgado por 28 cláusulas em 15 vidas. Ela traz a rede que lê, julga e escreve as fotos, uma piscina de vidas com os oráculos calculados antes, a pior de três medidas para tudo o que decide e as testemunhas (SGD, EWC, CBP e SP) como comparação.
 
 ## Os resultados
 
 O que deu certo, no tamanho em que se mediu:
 
-- **Uma rotina de ordenação 4,3% mais rápida no mesmo servidor.** Em 29/09, o motor fechado, sem aprendiz, procurou uma rotina de ordenação de 8 elementos para o processador do servidor de pesquisa. Em 9,7 minutos e 384 candidatos, achou uma rotina 4,3% mais rápida que a rede ótima conhecida, com 22,27 contra 23,36 ciclos por vetor e ruído de 0,46%, correta nos 16.777.216 vetores possíveis, sem trocar hardware. É a mesma rede ótima com outra ordem e a troca feita na memória, e o ganho vem do jeito como aquele processador executa o código.
-- **A PONTE.** Em 04/10, no Tear, uma peça deduzida pelo fluxo de informação substituiu uma peça escrita à mão e chegou ao mesmo ponto com 7,3 mil medidas, contra 24,8 mil. Em duas famílias de mundos novas, ficou à frente da peça escrita em 8 de 8 sementes numa e em 6 de 8 na outra.
-- **A catraca em miniatura.** Nas redes de comparadores de 5 a 8 fios, o motor que muda a si mesmo ganhou nos problemas retidos, com 32 melhoras e nenhuma piora. O ganho foi uma troca de operador pequena e conhecida, que ele achou sozinho.
+- **Uma rotina de ordenação 4,3% mais rápida no mesmo servidor** *(`06_evidencias/ordenacao_29-09`)*. Em 29/09, o motor fechado, sem aprendiz, procurou uma rotina de ordenação de 8 elementos para o processador do servidor de pesquisa. Em 9,7 minutos e 384 candidatos, achou uma rotina 4,3% mais rápida que a rede ótima conhecida, com 22,27 contra 23,36 ciclos por vetor e ruído de 0,46%, correta nos 16.777.216 vetores possíveis, sem trocar hardware. É a mesma rede ótima com outra ordem e a troca feita na memória, e o ganho vem do jeito como aquele processador executa o código. O programa exato que foi medido está na pasta, pronto para compilar.
+- **Menos formulações que o CEGIS** *(`06_evidencias/cegis_e_z3`)*. Numa bateria de 192 casos de construção de máquinas de estados finitos, a fórmula usou 1.152 formulações, contra 17.588 do CEGIS com poda e 16.120 do CEGIS, a síntese guiada por contraexemplo da literatura. A fórmula e o CEGIS com poda acharam 82 soluções cada, e o CEGIS sem poda, 50. Um resolvedor isolado, o z3, recebeu os 192 casos por outro caminho e confirmou os 192 vereditos, com 0 discordâncias.
+- **A catraca em miniatura** *(`02_formula`, seção 22)*. Nas redes de comparadores de 5 a 8 fios, o motor que muda a si mesmo ganhou nos problemas retidos, com 32 melhoras e nenhuma piora. O ganho foi uma troca de operador pequena e conhecida, que ele achou sozinho.
+- **O tecido que aprende** *(`07_conta_15`)*. Na conta 15, as premissas de um pequeno ser de teste foram calculadas a partir do dever ser, com a previsão registrada antes de cada vida. O tecido aprendeu sozinho e esqueceu o que deixou de valer, perto do que a conta previa (a seção seguinte).
 
 O que caiu:
 
-- **No D do Ser, nenhuma máquina achou o corpus.** A cláusula de aprender pede 0,10. As fotos de recorde da C★2 mediram de 0,096 a 0,118 nela durante a busca e caíram para 0,056 a 0,076 nas vidas seladas. Quanto melhor a foto na busca, pior ela ficava fora, com correlação de −0,70: a maldição do vencedor.
-- **O ruído.** A verificação do Ser tem um ruído intrínseco de centenas de pontos, e boa parte das melhoras da C★2 cabia dentro dele.
-- **O aprendiz não transferiu.** Dentro de uma corrida ele foi de cinco a seis vezes melhor que a variação cega nos programas atômicos, e de um problema para o seguinte não levou nada.
-- **A alegação central ainda não foi medida.** Falta saber se a fórmula inteira ganha de uma busca sem os laços, com o mesmo V e o mesmo orçamento. Na bancada da C★2, a evolução simples empatou ou chegou antes.
+- **O aprendiz de fora não transferiu** *(`02_formula`, seção 22)*. O aprendiz que levava o que aprendeu de um problema para o seguinte deu três nulos nas redes de ordenação mínimas, e um positivo numa corrida só, não replicado.
+- **O corpo inteiro do ser de teste não aprendeu** *(`07_conta_15`)*. As premissas aprenderam cada uma no seu teste, e o tecido montado a partir do D inteiro, com 10.905 unidades, deu nulo numa vida de 6 horas.
+- **A orelha calculada não superou a anterior** *(`07_conta_15`)*. Ela acertou 59,4% nas vozes de fora, contra 59,9% do comparador, e a causa estava na formulação do D.
+- **No D do Ser, nenhuma foto cumpriu D** *(`08_c_estrela_3`)*. A corrida da C★3 de 04 e 05/10 parou com estado retomável depois de 1.488 fotos e 2.033 medidas de V, sem nenhuma foto que cumprisse D.
+- **A alegação central ainda não foi medida** *(`02_formula`, seções 15 e 21)*. Falta saber se a fórmula inteira ganha de uma busca sem os laços, com o mesmo V e o mesmo orçamento. O teste exige dois controles, a fórmula com a variação cega e o acaso puro.
 
 Pela régua da própria fórmula, quase tudo está no degrau "rodou", e uma parte pequena no "medido". Eu não afirmo fronteira nem objeto novo. O que eu proponho é a conta que liga peças conhecidas, a busca evolutiva, a síntese por contraexemplo e as máquinas que se modificam, partindo de uma intenção escrita e dos números medidos do meio, presa a uma verificação calibrada.
 
 ## O Sismo e o aprendiz de sinapses
 
+*No repositório: `07_conta_15`.*
+
 O Sismo, o detector da Limiar com o conector que leva a ele os dados de cada sistema, e o aprendiz de sinapses têm a mesma origem: um tecido do Iro, o ser digital com que a pesquisa começou. Esse tecido foi calculado pela conta ainda à mão, antes de existir a máquina que a executa. É o tecido de um pequeno ser de teste, a conta 15, de 26/09, construído por premissas. A conta achou ali a origem dos dois, a semente: o aprendiz de associações da primeira premissa, que pedia que o tecido aprendesse sozinho, sem professor e sem nada fora da sinapse e da unidade. Eu reformei essa semente, e dela saíram o Sismo e o aprendiz de sinapses. A segunda premissa pedia que o próprio tecido cortasse e guardasse o sinal que chega: era a orelha, a entrada dos experimentos, e no produto essa entrada é o conector. Em 06 e 07/10 o aprendiz de associações virou um detector de mudança, e o mecanismo passou a observar dados de sistemas.
 
-Em cada premissa a conta escreveu a previsão antes da vida, e a previsão subiu ao repositório antes da medida:
+Em cada premissa a conta escreveu a previsão antes da vida, e a previsão subiu ao repositório de trabalho antes da medida:
 
 | premissa | previsão | vida |
 |---|---|---|
@@ -110,45 +117,36 @@ O mundo do teste era um dia de 43.200 palavras em que dez delas anunciavam, cada
 - Com a orelha no tecido, o corte deu um evento por fala em 100% das 2.060 falas, como previsto, e os acendimentos errados ficaram entre 0 e 9 em 4.110, contra 6 a 10 previstos.
 - O custo foi de 0,001 segundo de servidor por segundo de vida.
 
-Duas previsões caíram. Os esquecimentos falsos foram 8, contra 0,8 previstos, todos por palavras parecidas. E com a orelha o tecido aprendeu mais devagar do que a conta dizia, entre o 18º e o 43º anúncio, contra 3 a 20.
+Duas previsões caíram. Os esquecimentos falsos foram 8, contra 0,8 previstos, todos por palavras parecidas. E com a orelha o tecido aprendeu mais devagar do que a conta dizia, entre o 18º e o 43º anúncio, contra 3 a 20. A pasta traz as demais premissas, com os sentimentos e o pensar sem língua, e o que passou e o que caiu em cada uma.
 
-Já como detector, ele foi medido contra a concorrência com o critério escrito antes, em 340 rodadas com sementes novas e 13 fluxos:
+O aprendiz de sinapses é um aprendiz de aprendizagem contínua. Ele aprende ao vivo, numa passada só, ligações com atraso entre sinais que disparam, do tipo "B costuma vir cerca de L minutos depois de A", com memória limitada e a resposta idêntica à de quem guardasse tudo.
 
-- Detectou 96% das mudanças (231 de 240), com 0,6% de alarmes falsos, e disse o campo que mudou em todas. O CJSD detectou 76%, o DDM 48% e o ADWIN 40%, este com 26% de alarmes falsos.
-- Na confirmação final congelada, com sementes novas, deu 0 alertas em 5,04 milhões de itens sem mudança.
-- Reprovou no dado real em ordem de tempo, a base INSECTS: pegou as 5 mudanças, mas soltou 90 alarmes fora das janelas. A versão seguinte baixou para 10 alarmes fora, pegando 2 das 5.
-- Os limites ficaram declarados: a mudança lenta real, a mudança só na combinação de categorias e o XOR.
+Para mim isso é uma prova também: dois aparelhos que vão para o mundo saíram de uma conta feita sobre um dever ser e os números do meio, com a previsão escrita antes da medida. O Sismo e o aprendiz de sinapses vão ser publicados à parte, cada um com as suas medidas.
 
-O aprendiz de sinapses é um aprendiz de aprendizagem contínua. Ele aprende ao vivo, numa passada só, ligações com atraso entre sinais que disparam, do tipo "B costuma vir cerca de L minutos depois de A". A ligação nasce quando a evidência contra o acaso passa de um limiar e se desfaz quando ela cai abaixo dele. O que nenhuma leitura futura alcança vira contagem, e assim a memória fica limitada e a resposta sai idêntica à de quem guardasse tudo. Numa empresa simulada, contra cinco métodos conhecidos (correlograma cruzado, Hawkes, Granger, entropia de transferência e coocorrência), em vidas de 90 dias e três sementes, ele achou 13 de 33 pares de defeito, no meio do grupo e mais tarde que os métodos condicionais. Foi o que menos voltou atrás depois de afirmar um par e o que menos cresceu em memória: de 79 para 97 MiB entre 30 e 90 dias, contra perto de 600 MiB do Hawkes e do Granger.
+## O que está no repositório
 
-Para mim isso é uma prova também: dois aparelhos que vão para o mundo saíram de uma conta feita sobre um dever ser e os números do meio, com a previsão escrita antes da medida. O Sismo e o aprendiz de sinapses vão ser publicados.
-
-## Os arquivos
-
-Junto com este texto vão as máquinas só com a seleção, sem os aprendizes, e as evidências dos resultados:
-
-- **a fórmula do dever ser**, na versão 4.3;
-- **o motor de 29/09**, exatamente como estava quando achou a rotina de ordenação, com as provas dele;
-- **a Máquina do Dever-Ser 4.3.1 só com a seleção**: a codificação da foto atômica, o V, a escrita às cegas e o operador da 4.3.1, sem a rede, com um D de exemplo e as provas;
-- **o Tear só com a seleção**: a ilha e o leito, sem as ferramentas e sem a mente;
-- **as evidências** da rotina de ordenação e da comparação com o CEGIS;
-- **a conta 15**, a origem do Sismo e do aprendiz de sinapses: como foi feita, as previsões registradas antes de cada vida, os resultados e os registros.
-
-O Sismo e o aprendiz de sinapses têm publicação própria.
-
-## Datas e provas
-
-A ideia e a equação são de 22/09. O tecido de onde vieram o Sismo e o aprendiz de sinapses é de 26/09, e o detector, de 06 e 07/10. A fórmula executável é de 28/09, e a fórmula fechada e a rotina de ordenação, de 29/09. A Máquina do Dever-Ser 4.3 e a 4.3.1 são de 01/10, com as tags `v4.3-final` e `v4.3.1` no repositório. Os pacotes que guardam a pesquisa:
-
-| pacote | sha256 |
+| pasta | o que tem |
 |---|---|
-| bancada de laboratório, 15/10 | `e521562df39b413a71a5d35576b83f02a1187e7ecc7c502cbf3e46eba0a3e93d` |
-| C★3 completa, com o manual e a fórmula | `e3dac67605cc14a6b598e5e964293e13bf91cd1a6b594942b992c3b04a08161f` |
-| Tear, a máquina do leito | `89b60ffc6f5f3a5f634d609b1c70b2e021e31f12d5f99b562977f63c788be885` |
-| evidências da rotina de ordenação, 29/09 | `8d8fc98af8ff76e9d432791df0591aafb347245667a28d41e0804ead11e8bb42` |
-| cópia completa do servidor de pesquisa, 14/10 | `0aa1871b11b8bb9a892028ea7669586c42f38f8ef037ebccbd5168be9c8c70db` |
+| `01_artigo` | este texto |
+| `02_formula` | a fórmula do dever ser, versão 4.3, com as emendas 6 a 13, as decisões datadas e o que se mediu |
+| `03_motor_de_29-09` | o motor fechado da fórmula 4.0, como rodou na ordenação, com as provas |
+| `04_maquina_do_dever_ser_selecao` | a Máquina do Dever-Ser 4.3.1 só com a seleção, com um D de exemplo e as provas |
+| `05_tear_selecao` | o Tear só com a seleção: a ilha e o leito em C |
+| `06_evidencias` | a corrida da ordenação de 29/09, com o programa medido, e a bateria de 192 casos contra o CEGIS |
+| `07_conta_15` | a conta 15: como foi feita, as premissas, as previsões, os resultados, o código e os registros |
+| `08_c_estrela_3` | a C★3: o código e as instruções para rodar |
 
-Publicar essas somas hoje fixa que esses arquivos existiam hoje, sem expor o conteúdo.
+Cada arquivo tem o seu sha256 em `MANIFESTO.sha256`.
+
+## Datas
+
+- **22/09:** a ideia e a equação.
+- **26/09:** a conta 15, o tecido de onde vieram o Sismo e o aprendiz de sinapses.
+- **28/09:** a fórmula executável e a primeira máquina, com a comparação com o CEGIS.
+- **29/09:** a fórmula fechada, na versão 4.0, e a rotina de ordenação.
+- **30/09 e 01/10:** as emendas 6 a 13 e a Máquina do Dever-Ser 4.3.1.
+- **04 e 05/10:** a corrida da C★3.
+- **06 e 07/10:** o detector de mudança que deu o Sismo.
 
 Hoje alguém reconstruiu o acaso de uma máquina antiga. O acaso que eu tento inverter é o que a natureza usa sobre os números do mundo, e a conta que eu procuro é a da intenção que faria o mesmo trabalho uma vez só. Estou trabalhando nisso.
 

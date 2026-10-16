@@ -1,0 +1,37 @@
+{
+ "prioridade_clausula": null,
+ "prioridade_clausulas": null,
+ "prioridade_em_niveis": [
+  [
+   14
+  ],
+  [
+   3,
+   4,
+   27
+  ]
+ ],
+ "progresso_pela_prioridade": true,
+ "sementes_cada": 1,
+ "colheita_sem_clones": true,
+ "mapa_por_assinatura": true,
+ "bracos": [
+  "aprendida",
+  "cega",
+  "cega_gemea",
+  "operador",
+  "evo"
+ ],
+ "testemunhas_doadoras": true,
+ "doadoras_de_corridas": [
+  "/home/iro/bancada-criacao/corridas/raptor1_t9_2026-10-03",
+  "/home/iro/bancada-criacao/corridas/raptor1_grupo_aprende_2026-10-02",
+  "/home/iro/bancada-criacao/corridas/celula_aprende_2026-10-02"
+ ],
+ "doadoras_por_geracao": 4,
+ "v2_nivel_decisao": 3,
+ "v2_epoca_geracoes": 10,
+ "v2_elite": 16,
+ "coletor_fracao": 0.2,
+ "coletor_vidas": 3
+}
