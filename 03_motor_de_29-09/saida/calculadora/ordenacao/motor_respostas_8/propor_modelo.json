@@ -1,0 +1,565 @@
+{
+ "modelo": {
+  "entradas": [],
+  "carga": "def gerar_carga(semente):\n    return {\"n\": 8, \"redes\": {\"batcher\": [[0, 1], [2, 3], [4, 5], [6, 7], [0, 2], [1, 3], [4, 6], [5, 7], [1, 2], [5, 6], [0, 4], [1, 5], [2, 6], [3, 7], [2, 4], [3, 5], [1, 2], [3, 4], [5, 6]], \"insercao\": [[0, 1], [1, 2], [0, 1], [2, 3], [1, 2], [0, 1], [3, 4], [2, 3], [1, 2], [0, 1], [4, 5], [3, 4], [2, 3], [1, 2], [0, 1], [5, 6], [4, 5], [3, 4], [2, 3], [1, 2], [0, 1], [6, 7], [5, 6], [4, 5], [3, 4], [2, 3], [1, 2], [0, 1]], \"otima\": [[0, 2], [1, 3], [4, 6], [5, 7], [0, 4], [1, 5], [2, 6], [3, 7], [0, 1], [2, 3], [4, 5], [6, 7], [2, 4], [3, 5], [1, 4], [3, 6], [1, 2], [3, 4], [5, 6]]}, \"referencia\": [[0, 2], [1, 3], [4, 6], [5, 7], [0, 4], [1, 5], [2, 6], [3, 7], [0, 1], [2, 3], [4, 5], [6, 7], [2, 4], [3, 5], [1, 4], [3, 6], [1, 2], [3, 4], [5, 6]], \"repeticoes\": 21}\n",
+  "metricas": "def metricas(entrada, saida):\n    return {k: saida[k] for k in (\"erro_de_ordenacao\", \"razao_vs_rede\", \"razao_ref_contra_ref\", \"ciclos_por_vetor\", \"ciclos_referencia\", \"ns_std_sort\", \"ruido\", \"comparadores\")} | {\"efeito_no_meio\": {}}\n",
+  "oraculo": "import itertools\n\n\ndef conferir(entrada, saida):\n    \"\"\"A integridade da medida, independente do medidor: a rede devolvida é conferida pelo princípio 0-1, e o medidor em C tem de concordar\n    (erro zero se e só se a rede ordena, porque os vetores de zeros e uns estão entre os n^n que ele confere). Se a rede ordena ou não, quem\n    julga é a cláusula r_correto do D, pela métrica erro_de_ordenacao.\"\"\"\n    n = entrada[\"n\"]\n    ordena = True\n    for x in itertools.product((0, 1), repeat=n):\n        v = list(x)\n        for i, j in saida[\"rede\"]:\n            if v[i] > v[j]:\n                v[i], v[j] = v[j], v[i]\n        if any(v[q] > v[q + 1] for q in range(n - 1)):\n            ordena = False\n            break\n    if saida.get(\"vetores_conferidos\") != n ** n:\n        return False, \"o medidor não conferiu os n^n vetores\"\n    if ordena != (saida[\"erro_de_ordenacao\"] == 0):\n        return False, \"o medidor em C e o princípio 0-1 discordam: a medida não é confiável\"\n    return True, \"a medida concorda com o princípio 0-1 (a rede \" + (\"ordena\" if ordena else \"não ordena\") + \")\"\n",
+  "semente": 1,
+  "tempo_limite_s": 600,
+  "modelos": [
+   {
+    "id": "principal",
+    "saidas": [
+     {
+      "nome": "erro_de_ordenacao",
+      "unidade": "1"
+     },
+     {
+      "nome": "razao_vs_rede",
+      "unidade": "1"
+     },
+     {
+      "nome": "razao_ref_contra_ref",
+      "unidade": "1"
+     },
+     {
+      "nome": "ciclos_por_vetor",
+      "unidade": "1"
+     },
+     {
+      "nome": "ciclos_referencia",
+      "unidade": "1"
+     },
+     {
+      "nome": "ns_std_sort",
+      "unidade": "1"
+     },
+     {
+      "nome": "ruido",
+      "unidade": "1"
+     },
+     {
+      "nome": "comparadores",
+      "unidade": "1"
+     },
+     {
+      "nome": "efeito_no_meio",
+      "unidade": "1"
+     }
+    ]
+   }
+  ],
+  "testes": [],
+  "exportacao": {
+   "codigo": "def exportar(x, p, saidas):\n    return {'arquivos': {'rotina.txt': repr({k: v for k, v in x.items() if not str(k).startswith('_')})}, 'descricao': {'arquetipo': x.get('_arquetipo')}}\n"
+  },
+  "numeros_excluidos": {
+   "latencia_das_instrucoes_de_troca": "entra pela medida do tempo contra a referência no mesmo processo",
+   "custo_de_desvio_errado": "as rotinas são sem desvio; entra pela medida",
+   "ruido_da_medida_de_tempo": "medido pelo próprio medidor (ruido) e conferido antes da busca",
+   "frequencia_do_processador": "cancelada na razão contra a referência medida junto",
+   "versao_do_gxx": "declarada pelo sha256 do g++ na ferramenta",
+   "cache_de_instrucoes_de_quem_chama": "premissa: o efeito do tamanho do código no cache de quem chama não é medido nesta versão; vai declarado",
+   "profundidade_da_rede": "entra pela medida do tempo",
+   "pressao_de_registradores": "entra pela medida do tempo",
+   "numero_de_comparadores": "entra pela medida (comparadores)"
+  },
+  "dominio": {
+   "arquetipos": [
+    "rede"
+   ]
+  },
+  "representacao": {
+   "arquetipos": [
+    {
+     "nome": "rede",
+     "descricao": "uma rede conhecida, com a ordem dentro dos níveis, a retirada de comparadores, a variante da troca e o uso de registradores",
+     "variaveis": [
+      {
+       "nome": "base",
+       "tipo": "categoria",
+       "valores": [
+        "batcher",
+        "insercao",
+        "otima"
+       ]
+      },
+      {
+       "nome": "variante",
+       "tipo": "categoria",
+       "valores": [
+        "ternario",
+        "minmax",
+        "mascara"
+       ]
+      },
+      {
+       "nome": "registradores",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "taxa_de_mutacao",
+       "tipo": "real",
+       "min": 0.1,
+       "max": 0.6
+      },
+      {
+       "nome": "rem_0",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_1",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_2",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_3",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_4",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_5",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_6",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_7",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_8",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_9",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_10",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_11",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_12",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_13",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_14",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_15",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_16",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_17",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_18",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_19",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_20",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_21",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_22",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_23",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_24",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_25",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_26",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_27",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "pri_0",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_1",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_2",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_3",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_4",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_5",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_6",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_7",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_8",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_9",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_10",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_11",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_12",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_13",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_14",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_15",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_16",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_17",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_18",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_19",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_20",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_21",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_22",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_23",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_24",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_25",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_26",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_27",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      }
+     ],
+     "codigo": "\ndef _niveis(rede, n):\n    ultimo, out = [0] * n, []\n    for i, j in rede:\n        nv = max(ultimo[i], ultimo[j]) + 1\n        ultimo[i] = ultimo[j] = nv\n        out.append(nv)\n    return out\n\n\ndef executar(entrada, base, variante, registradores, taxa_de_mutacao=None, pecas=None, **genes):\n    import ferramenta_ordenacao\n    n = entrada[\"n\"]\n    if pecas is not None:\n        # L que compõe: a rede é a própria lista de comparadores\n        rede = [(int(q[\"i\"]), int(q[\"j\"])) for q in pecas if q.get(\"primitiva\") == \"comparador\"]\n    else:\n        # L0: uma rede conhecida, com a ordem dentro de cada nível (o paralelismo) e a retirada de comparadores como genes\n        b = entrada[\"redes\"][base]\n        niv = _niveis(b, n)\n        mantidos = [k for k in range(len(b)) if not int(genes.get(f\"rem_{k}\", 0))]\n        mantidos.sort(key=lambda k: (niv[k], float(genes.get(f\"pri_{k}\", 0.5)), k))\n        rede = [tuple(b[k]) for k in mantidos]\n    r = ferramenta_ordenacao.medir(n, rede, variante, int(registradores), entrada[\"referencia\"], entrada[\"repeticoes\"])\n    r[\"rede\"] = [list(c) for c in rede]\n    return r\n"
+    }
+   ]
+  }
+ },
+ "motivo": "as rotinas de 8 elementos: L0 são as redes conhecidas com a ordem e a troca como genes"
+}

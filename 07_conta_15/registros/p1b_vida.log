@@ -1,0 +1,33 @@
+A CONTA DA SEGUNDA FORMULACAO (antes da vida)
+  alfa 0.00135; a unidade guarda 6668 somas do costume; o limiar de Page ln((1-alfa)/alfa) = 6.61; p0 = 0.0164
+  previsto depois de   1 anuncios: a fala nunca ouvida acende a propria unidade em  0 de 10; a unidade errada em 0 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto depois de   2 anuncios: a fala nunca ouvida acende a propria unidade em  0 de 10; a unidade errada em 0 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto depois de   3 anuncios: a fala nunca ouvida acende a propria unidade em  1 de 10; a unidade errada em 1 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto depois de   5 anuncios: a fala nunca ouvida acende a propria unidade em  5 de 10; a unidade errada em 5 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto depois de  10 anuncios: a fala nunca ouvida acende a propria unidade em  6 de 10; a unidade errada em 7 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto depois de  20 anuncios: a fala nunca ouvida acende a propria unidade em  7 de 10; a unidade errada em 10 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto depois de  50 anuncios: a fala nunca ouvida acende a propria unidade em  9 de 10; a unidade errada em 12 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto depois de 108 anuncios: a fala nunca ouvida acende a propria unidade em  9 de 10; a unidade errada em 12 de 4110 (o criterio da 5.6.1 da 5.5)
+  previsto: o anuncio a partir do qual a fala nunca ouvida acende a propria unidade: você 5, mundo 5, está 20, cada 5, para 3, corpo nunca, isso 50, pode 50, tempo 10, casa 5
+  previsto para você: acende em 100% das falas da vida; a chance de acertar quando acende q = 0.796; cada vez sem o acontecimento soma 1.57, e a ligacao se apaga na 5a vez dita sem ele
+  previsto para mundo: acende em 100% das falas da vida; a chance de acertar quando acende q = 0.796; cada vez sem o acontecimento soma 1.57, e a ligacao se apaga na 5a vez dita sem ele
+  previsto: esquecimentos falsos (a ligacao apagada sem ter mudado) no dia, nas 10 unidades: 0.8
+A VIDA
+   2 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: SS); a unidade errada em 24 de 4110; esquecimentos: 0 verdadeiros e 0 falsos
+   4 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: SS); a unidade errada em 9 de 4110; esquecimentos: 0 verdadeiros e 3 falsos
+   6 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: SS); a unidade errada em 12 de 4110; esquecimentos: 0 verdadeiros e 5 falsos
+   8 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: SS); a unidade errada em 15 de 4110; esquecimentos: 0 verdadeiros e 5 falsos
+  10 h de vida: a fala nunca ouvida acende a propria unidade em 6 de 10 (as que param: SS); a unidade errada em 14 de 4110; esquecimentos: 0 verdadeiros e 5 falsos
+  12 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: SS); a unidade errada em 14 de 4110; esquecimentos: 0 verdadeiros e 6 falsos
+  14 h de vida: a fala nunca ouvida acende a propria unidade em 5 de 10 (as que param: nn); a unidade errada em 11 de 4110; esquecimentos: 2 verdadeiros e 6 falsos
+  16 h de vida: a fala nunca ouvida acende a propria unidade em 6 de 10 (as que param: nn); a unidade errada em 18 de 4110; esquecimentos: 2 verdadeiros e 6 falsos
+  18 h de vida: a fala nunca ouvida acende a propria unidade em 5 de 10 (as que param: nn); a unidade errada em 13 de 4110; esquecimentos: 2 verdadeiros e 7 falsos
+  20 h de vida: a fala nunca ouvida acende a propria unidade em 6 de 10 (as que param: nn); a unidade errada em 11 de 4110; esquecimentos: 4 verdadeiros e 7 falsos
+  22 h de vida: a fala nunca ouvida acende a propria unidade em 6 de 10 (as que param: nn); a unidade errada em 12 de 4110; esquecimentos: 4 verdadeiros e 7 falsos
+  24 h de vida: a fala nunca ouvida acende a propria unidade em 5 de 10 (as que param: nn); a unidade errada em 10 de 4110; esquecimentos: 5 verdadeiros e 8 falsos
+  o anuncio em que cada palavra acendeu a propria unidade antes do acontecimento: você 3, mundo 6, está 3, cada 5, para 2, corpo 4, isso 4, pode 4, tempo 8, casa 6
+  as que pararam de anunciar: você se apagou na 5a vez dita sem o acontecimento (132 vezes ditas sem ele); mundo se apagou na 13a vez dita sem o acontecimento (118 vezes ditas sem ele)
+  esquecimentos falsos: 8 (casa as 2.0 h por palavra parecida, casa as 2.4 h por palavra parecida, mundo as 3.9 h por palavra parecida, mundo as 4.0 h por palavra parecida, mundo as 4.4 h por palavra parecida, para as 11.8 h por palavra parecida, para as 16.1 h por palavra parecida, para as 23.7 h por palavra parecida)
+  o custo neste roteiro (numpy, sem compilar): 1.9 ms por palavra, 0.001 s de servidor por segundo de vida
+FIM
+saida 0

@@ -1,0 +1,83 @@
+{
+ "id": "002_confirmar_D",
+ "para": "ia",
+ "tipo": "confirmar_D",
+ "conteudo": {
+  "proposta": {
+   "clausulas": [
+    {
+     "id": "r_correto",
+     "tipo": "rigida",
+     "natureza": "intencao",
+     "enunciado": "ordena certo todo vetor de 8 inteiros, com empates",
+     "teste": {
+      "medida": "erro_de_ordenacao",
+      "op": "<=",
+      "valor": 0,
+      "unidade": "1",
+      "escala": 1.0
+     },
+     "origem": "ia",
+     "confirmada": false
+    },
+    {
+     "id": "r_mais_rapida",
+     "tipo": "rigida",
+     "natureza": "intencao",
+     "enunciado": "pelo menos 3% mais rápida no alvo que a mais rápida das referências (a rede escalar e a rede SIMD em AVX2), medida no mesmo processo",
+     "teste": {
+      "medida": "razao_vs_melhor",
+      "op": "<=",
+      "valor": 0.97,
+      "unidade": "1",
+      "escala": 0.1
+     },
+     "origem": "ia",
+     "confirmada": false
+    },
+    {
+     "id": "o_tempo",
+     "tipo": "objetivo",
+     "natureza": "intencao",
+     "enunciado": "a menor razão de tempo contra a rede de referência",
+     "teste": {
+      "medida": "razao_vs_melhor",
+      "sentido": "min",
+      "resolucao": 0.01
+     },
+     "origem": "ia",
+     "confirmada": false
+    },
+    {
+     "id": "o_tamanho",
+     "tipo": "objetivo",
+     "natureza": "intencao",
+     "enunciado": "o menor número de comparadores",
+     "teste": {
+      "medida": "comparadores",
+      "sentido": "min",
+      "resolucao": 1
+     },
+     "origem": "ia",
+     "confirmada": false
+    }
+   ],
+   "escopo": {
+    "alvo": "vps-local",
+    "n": 8,
+    "referencias": "a melhor rede conhecida escrita à mão, a mesma rede em SIMD (AVX2) e o std::sort do libstdc++"
+   },
+   "ambiguidades": [],
+   "condicoes_de_uso": [
+    "vale para o processador medido; outro processador é outro cenário de U"
+   ]
+  },
+  "como_responder": "confirmar, corrigir ou recusar cada cláusula; responder as ambiguidades",
+  "clausulas_de_forma": [],
+  "sobre_as_formas": null,
+  "papel": "responda no lugar do criador: decida e justifique cada decisão; cada uma fica marcada como decisão da IA no resultado, e o criador pode revê-la",
+  "causa": "D"
+ },
+ "criado_em": "2026-09-29T02:31:34-03:00",
+ "formato_da_resposta": "ver esquemas.md, seção confirmar_D"
+}

@@ -1,0 +1,26 @@
+O ESQUECIMENTO NA SINAPSE, com d' = 2 e a sinapse exata: alfa 0.02275, costume de 176, Page 3.76, p0 0.0164
+A VIDA, COM O ESQUECIMENTO NA SINAPSE (a terceira forma)
+   2 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 190 de 4110; o costume acima do limiar em 3.37% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 1390 falsos
+   4 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 120 de 4110; o costume acima do limiar em 3.15% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 3501 falsos
+   6 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 171 de 4110; o costume acima do limiar em 3.03% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 5469 falsos
+   8 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 177 de 4110; o costume acima do limiar em 3.01% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 7622 falsos
+  10 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 144 de 4110; o costume acima do limiar em 2.98% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 9862 falsos
+  12 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 144 de 4110; o costume acima do limiar em 2.96% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 12592 falsos
+  14 h de vida: a fala nunca ouvida acende a propria unidade em 9 de 10 (as que param: Sn); a unidade errada em 214 de 4110; o costume acima do limiar em 2.64% das decisoes desta metade; ligacoes apagadas: 595 verdadeiros e 14679 falsos
+  16 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 156 de 4110; o costume acima do limiar em 2.51% das decisoes desta metade; ligacoes apagadas: 626 verdadeiros e 16376 falsos
+  18 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 150 de 4110; o costume acima do limiar em 2.47% das decisoes desta metade; ligacoes apagadas: 654 verdadeiros e 18010 falsos
+  20 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 117 de 4110; o costume acima do limiar em 2.42% das decisoes desta metade; ligacoes apagadas: 666 verdadeiros e 19981 falsos
+  22 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 121 de 4110; o costume acima do limiar em 2.40% das decisoes desta metade; ligacoes apagadas: 671 verdadeiros e 21826 falsos
+  24 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 164 de 4110; o costume acima do limiar em 2.40% das decisoes desta metade; ligacoes apagadas: 694 verdadeiros e 23466 falsos
+  o anuncio em que cada palavra acendeu a propria unidade antes do acontecimento: você 3, mundo 5, está 3, cada 3, para 2, corpo 3, isso 2, pode 4, tempo 2, casa 4
+  você, dita 132 vezes sem o acontecimento: acendeu a unidade em 7 das 10 primeiras e em 10 de todas; a ultima vez que acendeu foi a 79a
+  mundo, dita 118 vezes sem o acontecimento: acendeu a unidade em 9 das 10 primeiras e em 10 de todas; a ultima vez que acendeu foi a 49a
+  a palavra certa acendendo a propria unidade na corrente: na primeira metade, do 5o anuncio em diante, 99.6% de 1072; na segunda, nas 8 que continuam, 100.0% de 880 (a pior unidade, 100.0%)
+  o costume acima do limiar na primeira metade: 2.96% das 212376 decisoes sem o acontecimento (de 2.87% a 3.08% por unidade)
+  o costume acima do limiar na segunda metade: 2.40% das 213042 decisoes sem o acontecimento (de 0.67% a 2.97% por unidade)
+  ligacoes apagadas sem ter mudado: 23466, em 7100 passos; por unidade: você 1317, mundo 1049, está 2498, cada 2721, para 2812, corpo 2339, isso 2939, pode 2287, tempo 2854, casa 2650
+  o custo neste roteiro (numpy, sem compilar): 4.9 ms por palavra
+  diag você no fim: nenhuma ligacao com peso; recomecadas 820 das 2480
+  diag mundo no fim: 1 ligacoes com peso (1 positivas), 0 delas recomecadas; votos F mediana 0 (de 0 a 0); acertos H mediana 0; q <= p0 em 0; soma C mediana 2.03 e maxima 2.03; as que votam a favor da palavra: 0, das quais 0 com H = 0; a palavra nas 4 falas da vida soma 0.0, 0.0, 0.0, 0.0 contra o limiar 0.00, e as recomecadas dao 0.0, 0.0, 0.0, 0.0
+FIM
+saida 0

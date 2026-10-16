@@ -1,0 +1,20 @@
+{
+ "id": "006_medir_alvo",
+ "para": "ia",
+ "tipo": "medir_alvo",
+ "conteudo": {
+  "alvo": {
+   "id": "vps-local",
+   "tipo": "local",
+   "python": "/home/iro/bancada-criacao/venv/bin/python",
+   "host": null,
+   "descricao": "a VPS: AMD EPYC, 3 dos 6 núcleos para este problema"
+  },
+  "ferramenta": "python -B -m compilador medir /home/iro/bancada-criacao/calculadora-ordenacao/motor8",
+  "pedido": "meça no alvo o perfil da máquina (versão do Python, núcleos, memória, microbenchmarks) e responda com os números, o método e a origem; a ferramenta do motor imprime uma resposta pronta, e você pode medir de outro jeito",
+  "formato": "ver esquemas.md, seção medir_alvo",
+  "causa": "Π"
+ },
+ "criado_em": "2026-09-29T02:31:41-03:00",
+ "formato_da_resposta": "ver esquemas.md, seção medir_alvo"
+}

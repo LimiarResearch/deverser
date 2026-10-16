@@ -1,0 +1,59 @@
+{
+ "casos": 192,
+ "f": {
+  "desfechos": {
+   "insufficient_memory": 54,
+   "over_budget": 37,
+   "solucao": 82,
+   "unobservable": 19
+  },
+  "formulacoes_total": 1152,
+  "verificacoes_total": 817,
+  "nos_total": 54014,
+  "segundos_total": 153.3,
+  "conferidos": 155,
+  "falhas_de_conferencia": 0
+ },
+ "cegis_poda": {
+  "desfechos": {
+   "over_budget": 61,
+   "sem_maquina_na_familia": 49,
+   "solucao": 82
+  },
+  "formulacoes_total": 17588,
+  "verificacoes_total": 1018,
+  "nos_total": 201129,
+  "segundos_total": 159.0,
+  "conferidos": 82,
+  "falhas_de_conferencia": 0
+ },
+ "cegis": {
+  "desfechos": {
+   "over_budget": 44,
+   "sem_maquina_na_familia": 26,
+   "solucao": 50,
+   "timeout": 72
+  },
+  "formulacoes_total": 16120,
+  "verificacoes_total": 2912,
+  "nos_total": 42826972,
+  "segundos_total": 362.7,
+  "conferidos": 50,
+  "falhas_de_conferencia": 0
+ },
+ "concordancia_de_custo": {
+  "f_x_cegis_poda": {
+   "ambos_com_maquina": 82,
+   "mesmo_custo": 82
+  },
+  "f_x_cegis": {
+   "ambos_com_maquina": 50,
+   "mesmo_custo": 50
+  },
+  "cegis_poda_x_cegis": {
+   "ambos_com_maquina": 50,
+   "mesmo_custo": 50
+  }
+ },
+ "contradicoes_entre_metodos": []
+}

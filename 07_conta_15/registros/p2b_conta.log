@@ -1,0 +1,16 @@
+A ORELHA COM d' = 2 E A SINAPSE EXATA: alfa 0.02275, costume de 176, Page 3.76 (a p2 tinha 0,00135, 6.668 e 6,61)
+  previsto, contra a p2: aprender mais cedo (menos anuncios para a fala nunca ouvida acender); os acendimentos errados sobem, porque o criterio agora aceita 2,3% (93,5 de 4.110), e ficam abaixo dele; mais esquecimentos falsos, porque o limite de Page cai de 6,61 para 3,76; a conta abaixo diz quanto
+A CONTA DA ORELHA (antes da vida)
+  a pausa: 22 quadros (0,25 s); a razao das faixas 1.689; as faixas ate 1301 ms; 2480 bits por palavra
+  o corte, previsto: um evento por fala em 100% (nenhum silencio de 0,25 s dentro de uma palavra dita sozinha); medido na corrente do mundo antes da vida: 100.0% com um evento, 0 falas com dois ou mais, 0 sem nenhum; duracao mediana 360 ms (de 151 a 847)
+  previsto depois de   1 anuncios: a fala nunca ouvida acende a propria unidade em  0 de 10; a unidade errada em 0 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de   2 anuncios: a fala nunca ouvida acende a propria unidade em  3 de 10; a unidade errada em 42 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de   3 anuncios: a fala nunca ouvida acende a propria unidade em  5 de 10; a unidade errada em 62 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de   5 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 150 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de  10 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 143 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de  20 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 149 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de  50 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 146 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de 108 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 137 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto: o anuncio a partir do qual a fala nunca ouvida acende a propria unidade: você 2, mundo 3, está 2, cada 5, para 5, corpo 5, isso 2, pode 5, tempo 3, casa 5
+FIM
+saida 0

@@ -1,0 +1,55 @@
+A CONTA DA VIDA DE DENTRO (antes da vida)
+  a constante dos sentimentos: 7.75 min; o byte sobe 3 por passo com a causa; depois dela, de 255 ate 0 em 162 passos, 13.5 min (o D pede de 1 a 60)
+  previsto: cada sentimento fica aceso no maximo 13.5 min depois da causa; nenhum acende sem causa
+  previsto, o filhote: na primeira meia hora, sozinho, a saudade acesa em quase todos os passos (ele nunca viu uma ausencia); com o contato, a alegria, e depois dela a calma
+  previsto, a saudade: no dia 1 ela acende a cada ausencia mais longa que as ja vistas (o filhote aprendendo que Gabriel volta); nos dias 2, 3, 4, 6 e 7 ela nao acende; no dia 5, acende quando a ausencia passa da mais longa ja vista, a da noite (umas 9 h), por volta das 7h30, e fica acesa enquanto ele esta acordado
+  previsto, o medo aprendido: o estalo passa a acender a espera do estrondo entre o 2o e o 6o estalo dos dias 1 a 3 (o intervalo da p1b), e ela se apaga nos dias 4 a 7 por volta do 5o estalo sem estrondo (o teste de Page da p1b)
+  previsto, a espera de Gabriel: a procura acende nos 20 min antes das chegadas a partir do dia 3 ou 4 (a fase de antes da chegada precisa do 2o ao 8o anuncio, e cada dia da um), e quase nunca nas outras horas sem ele
+  previsto, a frustracao: acende na bola que nao vem, das noites em que a bola ja anuncia a brincadeira em diante, quando a espera passa da mais longa ja vista (1 min)
+  previsto, o apego: acende com Gabriel ali desde o primeiro dia, e continua no dia 6, depois da viagem, porque a ausencia nao desmente nada
+  previsto, o repassar: no sono, toda passagem repassada foi vivida naquela ordem, bem acima da chance de um par ao acaso ter sido vivido, a tres desvios
+A VIDA
+  a semana: 115920 passos de 5 s em 24 s de servidor (0.0000 s por segundo de vida)
+  o filhote, sozinho antes da primeira chegada: saudade acesa em 100% dos passos, alegria em 0%; na primeira visita, alegria em 80% e calma em 69%
+  alegria     aceso em  38.1% da vida acordada;  103 vezes; cada vez de 0.2 a 262.4 min (mediana 0.5)
+  medo        aceso em   8.2% da vida acordada;  348 vezes; cada vez de 0.2 a 46.4 min (mediana 0.2)
+  curiosidade aceso em   1.2% da vida acordada;    7 vezes; cada vez de 9.0 a 9.0 min (mediana 9.0)
+  apego       aceso em   1.4% da vida acordada;    7 vezes; cada vez de 4.0 a 16.0 min (mediana 13.0)
+  procura     aceso em   6.5% da vida acordada;   18 vezes; cada vez de 6.5 a 39.8 min (mediana 19.2)
+  saudade     aceso em  22.3% da vida acordada;    8 vezes; cada vez de 21.5 a 401.5 min (mediana 102.8)
+  frustracao  nunca acendeu
+  calma       aceso em  31.8% da vida acordada;   58 vezes; cada vez de 0.2 a 111.7 min (mediana 25.2)
+  o estalo acendeu a espera do estrondo: d1 #1 sim, d1 #2 nao, d1 #3 nao, d2 #4 sim, d2 #5 nao, d2 #6 nao, d3 #7 sim, d3 #8 sim, d3 #9 nao, d4 #10 sim, d4 #11 nao, d4 #12 nao, d5 #13 sim, d5 #14 nao, d5 #15 nao, d6 #16 nao, d6 #17 sim, d6 #18 nao, d7 #19 sim, d7 #20 nao, d7 #21 sim
+  esquecimentos pelo teste de Page: nenhum
+  chegada no dia 1 as  7.78 h: a procura acesa em 100% dos 20 min antes
+  chegada no dia 1 as 11.96 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 1 as 18.77 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 2 as  7.17 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 2 as 11.98 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 2 as 18.73 h: a procura acesa em  18% dos 20 min antes
+  chegada no dia 3 as  7.59 h: a procura acesa em 100% dos 20 min antes
+  chegada no dia 3 as 12.25 h: a procura acesa em  75% dos 20 min antes
+  chegada no dia 3 as 18.27 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 4 as  7.32 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 4 as 11.96 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 4 as 18.54 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 6 as  7.46 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 6 as 11.68 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 6 as 18.70 h: a procura acesa em  11% dos 20 min antes
+  chegada no dia 7 as  7.91 h: a procura acesa em  92% dos 20 min antes
+  chegada no dia 7 as 11.52 h: a procura acesa em   0% dos 20 min antes
+  chegada no dia 7 as 18.57 h: a procura acesa em  20% dos 20 min antes
+  a procura nas outras horas sem Gabriel, acordado: 7.2%
+  dia 1: saudade em 48.3% do tempo acordado; apego com Gabriel ali em  3.8%; frustracao em  0.0%
+  dia 2: saudade em  2.8% do tempo acordado; apego com Gabriel ali em  1.6%; frustracao em  0.0%
+  dia 3: saudade em  4.6% do tempo acordado; apego com Gabriel ali em  0.0%; frustracao em  0.0%
+  dia 4: saudade em  0.0% do tempo acordado; apego com Gabriel ali em 10.1%; frustracao em  0.0%
+  dia 5: saudade em 95.5% do tempo acordado; apego com Gabriel ali em  0.0%; frustracao em  0.0%
+  dia 6: saudade em  5.0% do tempo acordado; apego com Gabriel ali em  8.2%; frustracao em  0.0%
+  dia 7: saudade em  0.0% do tempo acordado; apego com Gabriel ali em  0.0%; frustracao em  0.0%
+  o repassar: 14 sonos, 201 passagens repassadas, 201 delas vividas naquela ordem; a chance de um par ao acaso ter sido vivido e 0.27; z = 23.4 (o criterio, 3)
+    no sono do dia 1 as 13.5 h: voz > perto > voz > perto > voz > perto > voz > perto > voz > perto
+    no sono do dia 1 as 23.0 h: voz > perto > voz > perto > voz > perto > voz > perto > voz > perto
+    no sono do dia 2 as 13.5 h: estrondo
+FIM
+saida 0

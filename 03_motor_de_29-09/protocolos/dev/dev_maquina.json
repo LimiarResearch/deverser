@@ -1,0 +1,26 @@
+{
+ "id": "dev-maquina",
+ "titulo": "compactar os registros diários de um serviço",
+ "tipo": "maquina",
+ "intencao": "Os registros de um dia do nosso serviço (uns 5 MB de texto) precisam ocupar no máximo um quinto do espaço no disco da VPS, e compactar e descompactar um dia tem de levar menos de 2 segundos lá. Nada pode se perder.",
+ "alvos": [
+  {
+   "id": "vps-epyc",
+   "tipo": "ssh",
+   "python": "/usr/bin/python3",
+   "host": "usuario@servidor",
+   "chave": "~/.ssh/sua_chave",
+   "pasta_remota": "/caminho/no/servidor/compilador",
+   "descricao": "VPS AMD EPYC, Linux, Python do sistema"
+  }
+ ],
+ "avaliador": true,
+ "rodadas": 3,
+ "orcamento": {
+  "pedidos_ia": 40,
+  "consultas_de_dados": 30,
+  "avaliacoes": 5000,
+  "candidatos_por_criacao": 60
+ },
+ "uso": "desenvolvimento: construir e depurar o compilador; não entra no resultado"
+}

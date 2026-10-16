@@ -1,0 +1,33 @@
+{
+ "id": "ordenacao_6_motor_vps",
+ "titulo": "Ordenar 6 inteiros mais rápido",
+ "mundo": "silicio",
+ "execucao": "medida",
+ "tipo": "maquina",
+ "intencao": "Pedido de Gabriel, 29/09/2026: uma rotina sem desvio que ordene 6 inteiros de 32 bits mais rápido, no processador real, que a melhor rede conhecida escrita à mão (continuação da AlphaDev, que fez 3 a 5 elementos), pelo motor fechado, com o laço mudando sempre que empacar.",
+ "alvos": [
+  {
+   "id": "vps-local",
+   "tipo": "local",
+   "python": "/home/iro/bancada-criacao/venv/bin/python",
+   "descricao": "a VPS: AMD EPYC, 3 dos 6 núcleos para este problema"
+  }
+ ],
+ "avaliador": false,
+ "ia_responde_pelo_criador": true,
+ "paralelo_no_alvo": 3,
+ "rodadas": 1,
+ "repeticoes": 1,
+ "mudancas_planejadas": false,
+ "orcamento": {
+  "pedidos_ia": 40,
+  "consultas_de_dados": 10,
+  "avaliacoes": 10000000,
+  "candidatos_por_criacao": 60
+ },
+ "busca": "concorrencia",
+ "populacao": "sigma",
+ "teto_s_da_concorrencia": 604800,
+ "reformulacoes_max": 5,
+ "conferir_distinguibilidade": true
+}

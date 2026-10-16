@@ -1,0 +1,35 @@
+{"hora": "2026-09-29T02:31:33-03:00", "evento": "iniciado", "problema": "ordenacao_8_motor_vps.json"}
+{"hora": "2026-09-29T02:31:34-03:00", "evento": "pedido", "id": "001_formular_D", "para": "ia", "tipo": "formular_D", "causa": "D"}
+{"hora": "2026-09-29T02:31:34-03:00", "evento": "resposta_copiada", "id": "001_formular_D", "sha256": "82e79fefb4c6a5a16b76cf8d7eb9a4acb6623db03f951f45977c6bae28beec08", "de": "formular_D.json"}
+{"hora": "2026-09-29T02:31:34-03:00", "evento": "resposta", "id": "001_formular_D", "tipo": "formular_D", "sha256": "eb2025ffb8133c748394e80f333f18a4ceba082bacccbe660048f3736d0cd051"}
+{"hora": "2026-09-29T02:31:34-03:00", "evento": "pedido", "id": "002_confirmar_D", "para": "ia", "tipo": "confirmar_D", "causa": "D"}
+{"hora": "2026-09-29T02:31:35-03:00", "evento": "resposta_copiada", "id": "002_confirmar_D", "sha256": "193d3e9a8c9c51c58d995dcf57b47340f0a5796ce7ef483e41025c59225efaf0", "de": "confirmar_D.json"}
+{"hora": "2026-09-29T02:31:35-03:00", "evento": "resposta", "id": "002_confirmar_D", "tipo": "confirmar_D", "sha256": "e7abd8cb8c26a634fb9334260358a7364987ada6d0b50252eaee6f6161660a3f"}
+{"hora": "2026-09-29T02:31:35-03:00", "evento": "pedido", "id": "003_mapear_numeros", "para": "ia", "tipo": "mapear_numeros", "causa": "Π"}
+{"hora": "2026-09-29T02:31:36-03:00", "evento": "resposta_copiada", "id": "003_mapear_numeros", "sha256": "b716000ff545a3282c40ce8571d9684489f5987ecdb584d3a41fbf8c1c8ca683", "de": "mapear_D.json"}
+{"hora": "2026-09-29T02:31:36-03:00", "evento": "resposta", "id": "003_mapear_numeros", "tipo": "mapear_numeros", "sha256": "ad12aeca7c4ac55320576435f6adcc60aaae6bbfdb92fc7d27699300f6662fd8"}
+{"hora": "2026-09-29T02:31:36-03:00", "evento": "mapa_de_numeros", "de": "ia", "numeros": 6, "no_mapa": 6}
+{"hora": "2026-09-29T02:31:36-03:00", "evento": "pedido", "id": "004_propor_modelo", "para": "ia", "tipo": "propor_modelo", "causa": "L e M: a primeira proposta"}
+{"hora": "2026-09-29T02:31:36-03:00", "evento": "resposta_copiada", "id": "004_propor_modelo", "sha256": "e531eb52c58e2531dd87a6938faaf70688db6d225e0a0fb25f0bb3c73ba8162d", "de": "propor_modelo.json"}
+{"hora": "2026-09-29T02:31:37-03:00", "evento": "resposta", "id": "004_propor_modelo", "tipo": "propor_modelo", "sha256": "02636b5f0886f3db6e760ab8b7b46130f742d6439098e8f315d55ae0388b70ff"}
+{"hora": "2026-09-29T02:31:37-03:00", "evento": "pedido", "id": "005_mapear_numeros", "para": "ia", "tipo": "mapear_numeros", "causa": "Π"}
+{"hora": "2026-09-29T02:31:37-03:00", "evento": "resposta_copiada", "id": "005_mapear_numeros", "sha256": "3c6a275636745f3bfcd756850206f05514dc109b85abea086c975f0683f9a215", "de": "mapear_L.json"}
+{"hora": "2026-09-29T02:31:38-03:00", "evento": "resposta", "id": "005_mapear_numeros", "tipo": "mapear_numeros", "sha256": "8689b45d0e1d7b3a62676c6a440837eb98301a526910b4565fddd0b5d3dc8b7d"}
+{"hora": "2026-09-29T02:31:38-03:00", "evento": "mapa_de_numeros", "de": "ia", "numeros": 3, "no_mapa": 9}
+{"hora": "2026-09-29T02:31:41-03:00", "evento": "modelo_testado", "modelo": "m1", "falhas": 0}
+{"hora": "2026-09-29T02:31:41-03:00", "evento": "pedido", "id": "006_medir_alvo", "para": "ia", "tipo": "medir_alvo", "causa": "Π"}
+{"hora": "2026-09-29T02:31:43-03:00", "evento": "resposta_copiada", "id": "006_medir_alvo", "sha256": "f6b2c8e552ea367b7281e1b614bb49afff2e5683c070303f5897c6600401d1f6", "de": "medida_do_alvo_006_medir_alvo.json"}
+{"hora": "2026-09-29T02:31:43-03:00", "evento": "resposta", "id": "006_medir_alvo", "tipo": "medir_alvo", "sha256": "bfb4156c510d283c4b0e87677ae60df3ebd206896069dc86b5d4791465d4baa6"}
+{"hora": "2026-09-29T02:31:43-03:00", "evento": "alvo_medido_pela_ia", "numeros": 12}
+{"hora": "2026-09-29T02:31:43-03:00", "evento": "pedido", "id": "007_conferir_distinguibilidade", "para": "ia", "tipo": "conferir_distinguibilidade", "causa": "Π e D: o meio entrega a informação que decide cada cláusula?"}
+{"hora": "2026-09-29T02:31:43-03:00", "evento": "resposta_copiada", "id": "007_conferir_distinguibilidade", "sha256": "0ace4900b5d2d8dc795aeaadb9a5261fef2645bd9e298917e0f627e6ca8c6b61", "de": "distinguibilidade.json"}
+{"hora": "2026-09-29T02:31:44-03:00", "evento": "resposta", "id": "007_conferir_distinguibilidade", "tipo": "conferir_distinguibilidade", "sha256": "32d2785eef2cca028d1a464d2813fe11f2cbe416d4c317a3dbb7fe420eec34ce"}
+{"hora": "2026-09-29T02:33:01-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.359466314}
+{"hora": "2026-09-29T02:34:14-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.46784149800000063}
+{"hora": "2026-09-29T02:35:28-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.183109283}
+{"hora": "2026-09-29T02:36:41-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.017800000000000038}
+{"hora": "2026-09-29T02:37:52-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.0}
+{"hora": "2026-09-29T02:39:04-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.096800327}
+{"hora": "2026-09-29T02:40:19-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.0}
+{"hora": "2026-09-29T02:41:30-03:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.0}
+{"hora": "2026-09-29T02:41:30-03:00", "evento": "criacao", "rotulo": "criacao", "validos": 3, "desfecho": "solucao", "segundos": 586.14}

@@ -1,0 +1,33 @@
+A ORELHA COM d' = 2 E A SINAPSE EXATA: alfa 0.02275, costume de 176, Page 3.76 (a p2 tinha 0,00135, 6.668 e 6,61)
+  previsto, contra a p2: aprender mais cedo (menos anuncios para a fala nunca ouvida acender); os acendimentos errados sobem, porque o criterio agora aceita 2,3% (93,5 de 4.110), e ficam abaixo dele; mais esquecimentos falsos, porque o limite de Page cai de 6,61 para 3,76; a conta abaixo diz quanto
+A CONTA DA ORELHA (antes da vida)
+  a pausa: 22 quadros (0,25 s); a razao das faixas 1.689; as faixas ate 1301 ms; 2480 bits por palavra
+  o corte, previsto: um evento por fala em 100% (nenhum silencio de 0,25 s dentro de uma palavra dita sozinha); medido na corrente do mundo antes da vida: 100.0% com um evento, 0 falas com dois ou mais, 0 sem nenhum; duracao mediana 360 ms (de 151 a 847)
+  previsto depois de   1 anuncios: a fala nunca ouvida acende a propria unidade em  0 de 10; a unidade errada em 0 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de   2 anuncios: a fala nunca ouvida acende a propria unidade em  3 de 10; a unidade errada em 42 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de   3 anuncios: a fala nunca ouvida acende a propria unidade em  5 de 10; a unidade errada em 62 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de   5 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 150 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de  10 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 143 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de  20 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 149 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de  50 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 146 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto depois de 108 anuncios: a fala nunca ouvida acende a propria unidade em 10 de 10; a unidade errada em 137 de 4110 (o criterio da 5.6.1 da 93.5; a regua da p1b previa 9 e 12 depois de 50)
+  previsto: o anuncio a partir do qual a fala nunca ouvida acende a propria unidade: você 2, mundo 3, está 2, cada 5, para 5, corpo 5, isso 2, pode 5, tempo 3, casa 5
+A VIDA
+   2 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 181 de 4110; esquecimentos: 0 verdadeiros e 0 falsos
+   4 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 127 de 4110; esquecimentos: 0 verdadeiros e 0 falsos
+   6 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 168 de 4110; esquecimentos: 0 verdadeiros e 1 falsos
+   8 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 181 de 4110; esquecimentos: 0 verdadeiros e 2 falsos
+  10 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 142 de 4110; esquecimentos: 0 verdadeiros e 2 falsos
+  12 h de vida: a fala nunca ouvida acende a propria unidade em 9 de 10 (as que param: SS); a unidade errada em 149 de 4110; esquecimentos: 0 verdadeiros e 4 falsos
+  14 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 103 de 4110; esquecimentos: 4 verdadeiros e 7 falsos
+  16 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: nn); a unidade errada em 105 de 4110; esquecimentos: 4 verdadeiros e 9 falsos
+  18 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: nn); a unidade errada em 115 de 4110; esquecimentos: 5 verdadeiros e 10 falsos
+  20 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nS); a unidade errada em 82 de 4110; esquecimentos: 6 verdadeiros e 14 falsos
+  22 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: nn); a unidade errada em 79 de 4110; esquecimentos: 7 verdadeiros e 17 falsos
+  24 h de vida: a fala nunca ouvida acende a propria unidade em 6 de 10 (as que param: nn); a unidade errada em 108 de 4110; esquecimentos: 7 verdadeiros e 18 falsos
+  o anuncio em que cada palavra acendeu a propria unidade antes do acontecimento: você 3, mundo 3, está 3, cada 3, para 2, corpo 4, isso 2, pode 4, tempo 3, casa 4
+  as que pararam de anunciar: você se apagou na 1a vez dita sem o acontecimento (132 vezes ditas sem ele); mundo se apagou na 6a vez dita sem o acontecimento (118 vezes ditas sem ele)
+  esquecimentos falsos: 18 (você as 5.7 h, isso as 7.0 h, casa as 10.8 h, isso as 11.4 h, casa as 12.4 h, cada as 12.5 h, pode as 12.8 h, tempo as 14.2 h, casa as 15.7 h, cada as 17.3 h, para as 18.7 h, casa as 18.8 h, pode as 18.9 h, isso as 19.5 h, isso as 21.3 h, corpo as 21.4 h, para as 21.9 h, casa as 22.3 h)
+  o custo neste roteiro (numpy, sem compilar): 4.0 ms por palavra, 0.002 s de servidor por segundo de vida
+FIM
+saida 0

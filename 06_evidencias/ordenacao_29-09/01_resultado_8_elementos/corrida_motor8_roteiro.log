@@ -1,0 +1,105 @@
+02:31:33 /home/iro/bancada-criacao/calculadora-ordenacao/motor8
+
+02:31:33 passo
+02:31:34 responde 001_formular_D formular_D.json
+02:31:34 copiada 001_formular_D
+
+02:31:34 passo
+02:31:34 responde 002_confirmar_D confirmar_D.json
+02:31:35 copiada 002_confirmar_D
+
+02:31:35 passo
+02:31:35 responde 003_mapear_numeros mapear_D.json
+02:31:36 copiada 003_mapear_numeros
+
+02:31:36 passo
+02:31:36 responde 004_propor_modelo propor_modelo.json
+02:31:36 copiada 004_propor_modelo
+
+02:31:37 passo
+02:31:37 responde 005_mapear_numeros mapear_L.json
+02:31:37 copiada 005_mapear_numeros
+
+02:31:38 passo
+02:31:42 responde 006_medir_alvo medida_do_alvo_006_medir_alvo.json
+02:31:43 copiada 006_medir_alvo
+
+02:31:43 passo
+02:31:43 responde 007_conferir_distinguibilidade distinguibilidade.json
+02:31:43 copiada 007_conferir_distinguibilidade
+
+02:31:44 passo
+02:41:30 desfecho: {"tipo": "solucao", "escolhido": "rede|base=otima|pri_0=0.501418|pri_1=0.418347|pri_10=0.529374|pri_11=0.253601|pri_12=0.593209|pri_13=0.339781|pri_14=0.95969|pri_15=0.852853|pri_16=0.639865|pri_17=0.54587|pri_18=0.98704|pri_19=0.192829|pri_2=0.196035|pri_20=0.563358|pri_21=1.0|pri_22=0.299882|pri_23=0.738375|pri_24=0.845456|pri_25=0.620024|pri_26=0.110035|pri_27=0.308518|pri_3=0.222898|pri_4=0.96061|pri_5=0.179396|pri_6=0.163985|pri_7=0.680965|pri_8=0.363863|pri_9=0.918134|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=1|rem_25=1|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.279381|variante=ternario", "otimalidade": "melhor encontrado e verificado; não demonstrado como o melhor, porque parte de L foi amostrada", "depende_de_hipoteses": [], "premissas": {"verificado": "as cláusulas rígidas de D, segundo o modelo m1 (889c906d0b), sobre U(Π)", "U": "a caixa dos intervalos de Π, com os números tratados como independentes (nenhuma dependência declarada)", "pior_caso": "nas rodadas medidas no alvo", "modelo_validado": "não: nenhum modelo independente conferiu M", "validado_no_mundo": "não: nenhum artefato foi avaliado fora do modelo", "numeros_por_tipo": {}, "mapa_de_numeros": {"no_mapa": 9, "usados": [], "excluidos_com_justificativa": ["cache_de_instrucoes_de_quem_chama", "custo_de_desvio_errado", "frequencia_do_processador", "latencia_das_instrucoes_de_troca", "numero_de_comparadores", "pressao_de_registradores", "profundidade_da_rede", "ruido_da_medida_de_tempo", "versao_do_gxx"], "ausentes": [], "aviso": "o mapa é o conhecido até aqui; não encontrar lacuna não prova que todas as grandezas foram encontradas"}, "L": "a grade declarada da representação (os níveis de cada variável); o contínuo entre os níveis não foi calculado", "cobertura_de_L": "amostrada em rede, a concorrência amostra L", "poda": "nenhuma", "dominancia": "pior caso em U: cada objetivo pelo extremo desfavorável da faixa", "decisoes_da_ia_no_lugar_do_criador": [{"pedido": "002_confirmar_D", "clausula": "r_correto", "acao": "confirmar", "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"}, {"pedido": "002_confirmar_D", "clausula": "r_mais_rapida", "acao": "confirmar", "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"}, {"pedido": "002_confirmar_D", "clausula": "o_tempo", "acao": "confirmar", "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"}, {"pedido": "002_confirmar_D", "clausula": "o_tamanho", "acao": "confirmar", "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"}, {"pedido": "007_conferir_distinguibilidade", "distinguibilidade": {"r_correto": {"distinguivel": true, "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1", "
+02:41:30 ia contra a cópia dela mesma, os dois medidos na VPS",
+      "medida": {
+       "ruido_medido": 0.0113,
+       "desvio_ref_contra_ref": 0.0053,
+       "diferenca_pedida": 0.03
+      }
+     }
+    },
+    "por": "ia"
+   },
+   "ponto_fixo": {
+    "declarado": true,
+    "voltas": 0,
+    "cumpre": true
+   },
+   "horizonte": {
+    "H": null,
+    "alem_do_horizonte": null,
+    "numeros_com_deriva": []
+   },
+   "L_mapeada": [
+    "rede"
+   ],
+   "dominio_de_M": {
+    "arquetipos": [
+     "rede"
+    ]
+   },
+   "fora_do_dominio": {
+    "n": 0,
+    "exemplos": []
+   },
+   "mundo": {
+    "avaliados": 0,
+    "falharam": 0
+   },
+   "sigma_da_concorrencia": {
+    "populacao": 48,
+    "parar_sem_melhora": 3,
+    "seg_por_lote_medido": 4.403,
+    "teto_s": 604800.0,
+    "geracoes_minimas": 20,
+    "regra": "o maior múltiplo de paralelo que deixa caber geracoes_minimas gerações no teto, entre 2 e 16 lotes"
+   }
+  }
+ },
+ "contadores": {
+  "pedidos_ia": 7,
+  "pedidos_criador": 0,
+  "pedidos_avaliador": 0,
+  "consultas_de_dados": 0,
+  "avaliacoes": 48,
+  "passos": 8,
+  "segundos_motor": 590.0
+ },
+ "modelo": "m1",
+ "criacoes": 1,
+ "numeros": {
+  "maquina_id": "escolha",
+  "python_versao": "medido",
+  "python_implementacao": "medido",
+  "sistema": "medido",
+  "numpy_disponivel": "medido",
+  "numpy_versao": "medido",
+  "cpus": "medido",
+  "alimentacao": "medido",
+  "ram_total_mb": "medido",
+  "ram_livre_mb": "medido",
+  "ns_por_insercao_em_conjunto": "medido",
+  "ns_por_hash_splitmix": "medido"
+ }
+}
+

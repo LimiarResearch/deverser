@@ -1,0 +1,684 @@
+{
+ "problema": "ordenacao_8_motor_vps",
+ "desfecho": {
+  "tipo": "solucao",
+  "escolhido": "rede|base=otima|pri_0=0.501418|pri_1=0.418347|pri_10=0.529374|pri_11=0.253601|pri_12=0.593209|pri_13=0.339781|pri_14=0.95969|pri_15=0.852853|pri_16=0.639865|pri_17=0.54587|pri_18=0.98704|pri_19=0.192829|pri_2=0.196035|pri_20=0.563358|pri_21=1.0|pri_22=0.299882|pri_23=0.738375|pri_24=0.845456|pri_25=0.620024|pri_26=0.110035|pri_27=0.308518|pri_3=0.222898|pri_4=0.96061|pri_5=0.179396|pri_6=0.163985|pri_7=0.680965|pri_8=0.363863|pri_9=0.918134|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=1|rem_25=1|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.279381|variante=ternario",
+  "otimalidade": "melhor encontrado e verificado; não demonstrado como o melhor, porque parte de L foi amostrada",
+  "depende_de_hipoteses": [],
+  "premissas": {
+   "verificado": "as cláusulas rígidas de D, segundo o modelo m1 (889c906d0b), sobre U(Π)",
+   "U": "a caixa dos intervalos de Π, com os números tratados como independentes (nenhuma dependência declarada)",
+   "pior_caso": "nas rodadas medidas no alvo",
+   "modelo_validado": "não: nenhum modelo independente conferiu M",
+   "validado_no_mundo": "não: nenhum artefato foi avaliado fora do modelo",
+   "numeros_por_tipo": {},
+   "mapa_de_numeros": {
+    "no_mapa": 9,
+    "usados": [],
+    "excluidos_com_justificativa": [
+     "cache_de_instrucoes_de_quem_chama",
+     "custo_de_desvio_errado",
+     "frequencia_do_processador",
+     "latencia_das_instrucoes_de_troca",
+     "numero_de_comparadores",
+     "pressao_de_registradores",
+     "profundidade_da_rede",
+     "ruido_da_medida_de_tempo",
+     "versao_do_gxx"
+    ],
+    "ausentes": [],
+    "aviso": "o mapa é o conhecido até aqui; não encontrar lacuna não prova que todas as grandezas foram encontradas"
+   },
+   "L": "a grade declarada da representação (os níveis de cada variável); o contínuo entre os níveis não foi calculado",
+   "cobertura_de_L": "amostrada em rede, a concorrência amostra L",
+   "poda": "nenhuma",
+   "dominancia": "pior caso em U: cada objetivo pelo extremo desfavorável da faixa",
+   "decisoes_da_ia_no_lugar_do_criador": [
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "r_correto",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "r_mais_rapida",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "o_tempo",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "o_tamanho",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "007_conferir_distinguibilidade",
+     "distinguibilidade": {
+      "r_correto": {
+       "distinguivel": true,
+       "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1",
+       "medida": {
+        "vetores": 16777216
+       }
+      },
+      "r_mais_rapida": {
+       "distinguivel": true,
+       "prova": "a diferença pedida (3%) passa o ruído da razão mais o desvio da referência contra a cópia dela mesma, os dois medidos na VPS",
+       "medida": {
+        "ruido_medido": 0.0113,
+        "desvio_ref_contra_ref": 0.0053,
+        "diferenca_pedida": 0.03
+       }
+      }
+     }
+    }
+   ],
+   "forma_do_motor": {
+    "f": null,
+    "f0": "a busca de sempre (grade ou amostra, sem poda)",
+    "origem": "o seletor escolhido no banco com o D da calculadora (saida/motor_otimo/resultado_c8.json)",
+    "estavel_neste_problema": true,
+    "recuos": []
+   },
+   "cadaveres_na_conta": 45,
+   "distinguibilidade": {
+    "para": "6afc2eb1a794ef9243fa674ceb55aa050c99afb1b399ee76644cdb395b81607c",
+    "clausulas": {
+     "r_correto": {
+      "distinguivel": true,
+      "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1",
+      "medida": {
+       "vetores": 16777216
+      }
+     },
+     "r_mais_rapida": {
+      "distinguivel": true,
+      "prova": "a diferença pedida (3%) passa o ruído da razão mais o desvio da referência contra a cópia dela mesma, os dois medidos na VPS",
+      "medida": {
+       "ruido_medido": 0.0113,
+       "desvio_ref_contra_ref": 0.0053,
+       "diferenca_pedida": 0.03
+      }
+     }
+    },
+    "por": "ia"
+   },
+   "ponto_fixo": {
+    "declarado": true,
+    "voltas": 0,
+    "cumpre": true
+   },
+   "horizonte": {
+    "H": null,
+    "alem_do_horizonte": null,
+    "numeros_com_deriva": []
+   },
+   "L_mapeada": [
+    "rede"
+   ],
+   "dominio_de_M": {
+    "arquetipos": [
+     "rede"
+    ]
+   },
+   "fora_do_dominio": {
+    "n": 0,
+    "exemplos": []
+   },
+   "mundo": {
+    "avaliados": 0,
+    "falharam": 0
+   },
+   "sigma_da_concorrencia": {
+    "populacao": 48,
+    "parar_sem_melhora": 3,
+    "seg_por_lote_medido": 4.403,
+    "teto_s": 604800.0,
+    "geracoes_minimas": 20,
+    "regra": "o maior múltiplo de paralelo que deixa caber geracoes_minimas gerações no teto, entre 2 e 16 lotes"
+   }
+  }
+ },
+ "contadores": {
+  "pedidos_ia": 7,
+  "pedidos_criador": 0,
+  "pedidos_avaliador": 0,
+  "consultas_de_dados": 0,
+  "avaliacoes": 48,
+  "passos": 8,
+  "segundos_motor": 3.64
+ },
+ "D": [
+  {
+   "id": "r_correto",
+   "tipo": "rigida",
+   "enunciado": "ordena certo todo vetor de 8 inteiros, com empates",
+   "teste": {
+    "medida": "erro_de_ordenacao",
+    "op": "<=",
+    "valor": 0,
+    "unidade": "1",
+    "escala": 1.0
+   },
+   "origem": "ia",
+   "confirmada": true,
+   "corrigida_de": null
+  },
+  {
+   "id": "r_mais_rapida",
+   "tipo": "rigida",
+   "enunciado": "pelo menos 3% mais rápida no alvo que a mais rápida das referências (a rede escalar e a rede SIMD em AVX2), medida no mesmo processo",
+   "teste": {
+    "medida": "razao_vs_melhor",
+    "op": "<=",
+    "valor": 0.97,
+    "unidade": "1",
+    "escala": 0.1
+   },
+   "origem": "ia",
+   "confirmada": true,
+   "corrigida_de": null
+  },
+  {
+   "id": "o_tempo",
+   "tipo": "objetivo",
+   "enunciado": "a menor razão de tempo contra a rede de referência",
+   "teste": {
+    "medida": "razao_vs_melhor",
+    "sentido": "min",
+    "resolucao": 0.01
+   },
+   "origem": "ia",
+   "confirmada": true,
+   "corrigida_de": null
+  },
+  {
+   "id": "o_tamanho",
+   "tipo": "objetivo",
+   "enunciado": "o menor número de comparadores",
+   "teste": {
+    "medida": "comparadores",
+    "sentido": "min",
+    "resolucao": 1
+   },
+   "origem": "ia",
+   "confirmada": true,
+   "corrigida_de": null
+  }
+ ],
+ "respostas_das_ambiguidades": {},
+ "numeros": {
+  "maquina_id": {
+   "aceito": {
+    "valor": "vps-local",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "escolha",
+    "fonte": "criador",
+    "metodo": "o criador escolheu o alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "python_versao": {
+   "aceito": {
+    "valor": "3.12.3",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "platform.python_version() no alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "python_implementacao": {
+   "aceito": {
+    "valor": "CPython",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "platform.python_implementation() no alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "sistema": {
+   "aceito": {
+    "valor": "Linux",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "platform.system() no alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "numpy_disponivel": {
+   "aceito": {
+    "valor": true,
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "import numpy no alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "numpy_versao": {
+   "aceito": {
+    "valor": "2.5.3",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "numpy.__version__ no alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "cpus": {
+   "aceito": {
+    "valor": 6,
+    "unidade": "núcleos lógicos",
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "os.cpu_count() no alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "alimentacao": {
+   "aceito": {
+    "valor": "sem_bateria",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "GetSystemPowerStatus no Windows, /sys/class/power_supply no Linux (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "ram_total_mb": {
+   "aceito": {
+    "valor": 11960,
+    "unidade": "MiB",
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "sysconf ou GlobalMemoryStatusEx no alvo (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "ram_livre_mb": {
+   "aceito": {
+    "valor": 10807,
+    "unidade": "MiB",
+    "incerteza": null,
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "sysconf ou GlobalMemoryStatusEx no alvo, no instante da medida (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "ns_por_insercao_em_conjunto": {
+   "aceito": {
+    "valor": 155.19,
+    "unidade": "ns",
+    "incerteza": [
+     123.65,
+     243.28
+    ],
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "set() de 100 mil inteiros, 7 repetições: mediana, intervalo mín-máx (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  },
+  "ns_por_hash_splitmix": {
+   "aceito": {
+    "valor": 850.85,
+    "unidade": "ns",
+    "incerteza": [
+     800.61,
+     922.7
+    ],
+    "tipo": "medido",
+    "fonte": "executor no alvo vps-local",
+    "metodo": "splitmix64 em Python puro, 20 mil chamadas, 7 repetições: mediana, intervalo mín-máx (ferramenta de medida do motor)",
+    "data": "2026-09-29T02:31:42-03:00"
+   },
+   "recusados": [],
+   "fornecido_pelo_motor": false
+  }
+ },
+ "mapa_de_numeros": {
+  "latencia_das_instrucoes_de_troca": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "ciclos",
+   "grandeza": {
+    "quantidade": "latencia das instrucoes de troca"
+   },
+   "onde": "no alvo",
+   "por_que": "o custo de cada troca",
+   "estado": "excluido: entra pela medida do tempo contra a referência no mesmo processo",
+   "aceito": false
+  },
+  "custo_de_desvio_errado": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "ciclos",
+   "grandeza": {
+    "quantidade": "custo de desvio errado"
+   },
+   "onde": "no alvo",
+   "por_que": "quanto custa a rotina que desvia",
+   "estado": "excluido: as rotinas são sem desvio; entra pela medida",
+   "aceito": false
+  },
+  "ruido_da_medida_de_tempo": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "1",
+   "grandeza": {
+    "quantidade": "ruido da medida de tempo"
+   },
+   "onde": "no alvo",
+   "por_que": "o que é distinguível",
+   "estado": "excluido: medido pelo próprio medidor (ruido) e conferido antes da busca",
+   "aceito": false
+  },
+  "frequencia_do_processador": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "GHz",
+   "grandeza": {
+    "quantidade": "frequencia do processador"
+   },
+   "onde": "no alvo",
+   "por_que": "o tempo absoluto",
+   "estado": "excluido: cancelada na razão contra a referência medida junto",
+   "aceito": false
+  },
+  "versao_do_gxx": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "versão",
+   "grandeza": {
+    "quantidade": "versao do gxx"
+   },
+   "onde": "no alvo",
+   "por_que": "o código gerado",
+   "estado": "excluido: declarada pelo sha256 do g++ na ferramenta",
+   "aceito": false
+  },
+  "cache_de_instrucoes_de_quem_chama": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "bytes",
+   "grandeza": {
+    "quantidade": "cache de instrucoes de quem chama"
+   },
+   "onde": "no alvo",
+   "por_que": "o efeito do corpo no meio",
+   "estado": "excluido: premissa: o efeito do tamanho do código no cache de quem chama não é medido nesta versão; vai declarado",
+   "aceito": false
+  },
+  "profundidade_da_rede": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "níveis",
+   "grandeza": {
+    "quantidade": "profundidade da rede"
+   },
+   "onde": "no alvo",
+   "por_que": "o paralelismo que o processador aproveita",
+   "estado": "excluido: entra pela medida do tempo",
+   "aceito": false
+  },
+  "pressao_de_registradores": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "registradores",
+   "grandeza": {
+    "quantidade": "pressao de registradores"
+   },
+   "onde": "no alvo",
+   "por_que": "quando os valores saem dos registradores",
+   "estado": "excluido: entra pela medida do tempo",
+   "aceito": false
+  },
+  "numero_de_comparadores": {
+   "clausulas": [
+    "o_tamanho",
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "comparadores",
+   "grandeza": {
+    "quantidade": "numero de comparadores"
+   },
+   "onde": "no alvo",
+   "por_que": "o trabalho da rotina",
+   "estado": "excluido: entra pela medida (comparadores)",
+   "aceito": false
+  }
+ },
+ "modelos": [
+  {
+   "id": "m1",
+   "hash": "889c906d0baa0abbe0465394d75428d01bb322d07be8824f9c0be79b62cad4bd",
+   "pedido": "004_propor_modelo",
+   "motivo": "as rotinas de 8 elementos: L0 são as redes conhecidas com a ordem e a troca como genes"
+  }
+ ],
+ "testes": [
+  {
+   "modelo": "m1",
+   "ensaio_local": [],
+   "hora": "2026-09-29T02:31:41-03:00"
+  }
+ ],
+ "alternativo": false,
+ "criacoes": [
+  {
+   "rotulo": "criacao",
+   "hora": "2026-09-29T02:41:30-03:00",
+   "candidatos": 48,
+   "calculados": 48,
+   "reusados": 0,
+   "validos": 3,
+   "desfecho": "solucao",
+   "nulos": {
+    "candidato_falho": 45
+   },
+   "forca": {
+    "forte": 3
+   },
+   "segundos": 586.14
+  }
+ ],
+ "discordancias": [],
+ "sensibilidade": [],
+ "escolhido": {
+  "id": "rede|base=otima|pri_0=0.501418|pri_1=0.418347|pri_10=0.529374|pri_11=0.253601|pri_12=0.593209|pri_13=0.339781|pri_14=0.95969|pri_15=0.852853|pri_16=0.639865|pri_17=0.54587|pri_18=0.98704|pri_19=0.192829|pri_2=0.196035|pri_20=0.563358|pri_21=1.0|pri_22=0.299882|pri_23=0.738375|pri_24=0.845456|pri_25=0.620024|pri_26=0.110035|pri_27=0.308518|pri_3=0.222898|pri_4=0.96061|pri_5=0.179396|pri_6=0.163985|pri_7=0.680965|pri_8=0.363863|pri_9=0.918134|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=1|rem_25=1|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.279381|variante=ternario",
+  "formulacao": {
+   "base": "otima",
+   "variante": "ternario",
+   "registradores": 0,
+   "taxa_de_mutacao": 0.279381,
+   "rem_0": 0,
+   "rem_1": 0,
+   "rem_2": 0,
+   "rem_3": 0,
+   "rem_4": 0,
+   "rem_5": 0,
+   "rem_6": 0,
+   "rem_7": 0,
+   "rem_8": 0,
+   "rem_9": 0,
+   "rem_10": 0,
+   "rem_11": 0,
+   "rem_12": 0,
+   "rem_13": 0,
+   "rem_14": 0,
+   "rem_15": 0,
+   "rem_16": 0,
+   "rem_17": 0,
+   "rem_18": 0,
+   "rem_19": 0,
+   "rem_20": 0,
+   "rem_21": 1,
+   "rem_22": 0,
+   "rem_23": 1,
+   "rem_24": 1,
+   "rem_25": 1,
+   "rem_26": 0,
+   "rem_27": 0,
+   "pri_0": 0.501418,
+   "pri_1": 0.418347,
+   "pri_2": 0.196035,
+   "pri_3": 0.222898,
+   "pri_4": 0.96061,
+   "pri_5": 0.179396,
+   "pri_6": 0.163985,
+   "pri_7": 0.680965,
+   "pri_8": 0.363863,
+   "pri_9": 0.918134,
+   "pri_10": 0.529374,
+   "pri_11": 0.253601,
+   "pri_12": 0.593209,
+   "pri_13": 0.339781,
+   "pri_14": 0.95969,
+   "pri_15": 0.852853,
+   "pri_16": 0.639865,
+   "pri_17": 0.54587,
+   "pri_18": 0.98704,
+   "pri_19": 0.192829,
+   "pri_20": 0.563358,
+   "pri_21": 1.0,
+   "pri_22": 0.299882,
+   "pri_23": 0.738375,
+   "pri_24": 0.845456,
+   "pri_25": 0.620024,
+   "pri_26": 0.110035,
+   "pri_27": 0.308518,
+   "_arquetipo": "rede",
+   "_id": "rede|base=otima|pri_0=0.501418|pri_1=0.418347|pri_10=0.529374|pri_11=0.253601|pri_12=0.593209|pri_13=0.339781|pri_14=0.95969|pri_15=0.852853|pri_16=0.639865|pri_17=0.54587|pri_18=0.98704|pri_19=0.192829|pri_2=0.196035|pri_20=0.563358|pri_21=1.0|pri_22=0.299882|pri_23=0.738375|pri_24=0.845456|pri_25=0.620024|pri_26=0.110035|pri_27=0.308518|pri_3=0.222898|pri_4=0.96061|pri_5=0.179396|pri_6=0.163985|pri_7=0.680965|pri_8=0.363863|pri_9=0.918134|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=1|rem_25=1|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.279381|variante=ternario",
+   "id": "rede|base=otima|pri_0=0.501418|pri_1=0.418347|pri_10=0.529374|pri_11=0.253601|pri_12=0.593209|pri_13=0.339781|pri_14=0.95969|pri_15=0.852853|pri_16=0.639865|pri_17=0.54587|pri_18=0.98704|pri_19=0.192829|pri_2=0.196035|pri_20=0.563358|pri_21=1.0|pri_22=0.299882|pri_23=0.738375|pri_24=0.845456|pri_25=0.620024|pri_26=0.110035|pri_27=0.308518|pri_3=0.222898|pri_4=0.96061|pri_5=0.179396|pri_6=0.163985|pri_7=0.680965|pri_8=0.363863|pri_9=0.918134|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=1|rem_25=1|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.279381|variante=ternario"
+  },
+  "medidas": {
+   "tempo_mediana_s": 3.094360625022091,
+   "tempo_mediana_s_intervalo": [
+    3.094360625022091,
+    3.094360625022091
+   ],
+   "cpu_mediana_s": 0.01948151599999999,
+   "cpu_mediana_s_intervalo": [
+    0.01948151599999999,
+    0.01948151599999999
+   ],
+   "tempo_p95_s": 3.094360625022091,
+   "tempo_p95_s_intervalo": [
+    3.094360625022091,
+    3.094360625022091
+   ],
+   "pico_memoria_mb": 0.07236289978027344,
+   "oraculos_ok": true,
+   "threads_do_blas": 1,
+   "erro_de_ordenacao": 0.0,
+   "razao_vs_rede": 0.95682,
+   "razao_vs_simd": 0.49521,
+   "razao_vs_melhor": 0.95682,
+   "ciclos_simd": 44.762,
+   "razao_ref_contra_ref": 1.0,
+   "ciclos_por_vetor": 22.273,
+   "ciclos_referencia": 23.359,
+   "ns_std_sort": 104.517,
+   "ruido": 0.00457,
+   "comparadores": 19,
+   "efeito_no_meio": {},
+   "correto": 1
+  },
+  "forca": {
+   "conclusao": "forte",
+   "numeros_hipotese": [],
+   "numeros_usados": 7
+  }
+ },
+ "exportacao": {
+  "ok": false,
+  "erro": "NameError: name 'repr' is not defined"
+ },
+ "mudancas": {},
+ "intervencoes": [
+  "{\"hora\": \"2026-09-29T02:31:34-03:00\", \"texto\": \"formular_D: resposta preparada pela IA pelo criador antes da corrida (experimentos/montar_desafio_motor.py)\"}\n",
+  "{\"hora\": \"2026-09-29T02:31:35-03:00\", \"texto\": \"confirmar_D: resposta preparada pela IA pelo criador antes da corrida (experimentos/montar_desafio_motor.py)\"}\n",
+  "{\"hora\": \"2026-09-29T02:31:36-03:00\", \"texto\": \"mapear_numeros: resposta preparada pela IA pelo criador antes da corrida (experimentos/montar_desafio_motor.py)\"}\n",
+  "{\"hora\": \"2026-09-29T02:31:37-03:00\", \"texto\": \"propor_modelo: resposta preparada pela IA pelo criador antes da corrida (experimentos/montar_desafio_motor.py)\"}\n",
+  "{\"hora\": \"2026-09-29T02:31:38-03:00\", \"texto\": \"mapear_numeros: resposta preparada pela IA pelo criador antes da corrida (experimentos/montar_desafio_motor.py)\"}\n",
+  "{\"hora\": \"2026-09-29T02:31:43-03:00\", \"texto\": \"medir_alvo: a ferramenta de medida do motor, rodada pela IA no alvo\"}\n",
+  "{\"hora\": \"2026-09-29T02:31:44-03:00\", \"texto\": \"conferir_distinguibilidade: resposta preparada pela IA pelo criador antes da corrida (experimentos/montar_desafio_motor.py)\"}\n"
+ ]
+}

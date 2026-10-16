@@ -1,0 +1,17 @@
+A CONTA (antes da vida)
+  o orcamento: 6 nucleos x 0.42 x 11.6 ms / 14.47 ns = 2.02 milhoes de unidades de 1.024 entradas decididas a cada quadro
+  alfa (a 5.6.1) = 0.00135; a janela da media = 36 palavras; a chance de um acontecimento cair por acaso na vida de uma palavra, p0 = 0.0164
+  as palavras que anunciam: você, mundo, está, cada, para, corpo, isso, pode, tempo, casa
+  previsto depois de   1 anuncios: a fala nunca ouvida acende a propria unidade em  2 de 10; acende a unidade errada em 88 de 4110; d' mediano 1.12
+  previsto depois de   2 anuncios: a fala nunca ouvida acende a propria unidade em  4 de 10; acende a unidade errada em 102 de 4110; d' mediano 2.46
+  previsto depois de   3 anuncios: a fala nunca ouvida acende a propria unidade em  7 de 10; acende a unidade errada em 87 de 4110; d' mediano 3.54
+  previsto depois de   5 anuncios: a fala nunca ouvida acende a propria unidade em  8 de 10; acende a unidade errada em 76 de 4110; d' mediano 4.22
+  previsto depois de  10 anuncios: a fala nunca ouvida acende a propria unidade em  9 de 10; acende a unidade errada em 65 de 4110; d' mediano 4.27
+  previsto depois de  20 anuncios: a fala nunca ouvida acende a propria unidade em  9 de 10; acende a unidade errada em 59 de 4110; d' mediano 3.91
+  previsto depois de  50 anuncios: a fala nunca ouvida acende a propria unidade em  8 de 10; acende a unidade errada em 57 de 4110; d' mediano 3.67
+  previsto depois de 108 anuncios: a fala nunca ouvida acende a propria unidade em  8 de 10; acende a unidade errada em 54 de 4110; d' mediano 3.61
+  previsto: o anuncio a partir do qual cada palavra acende a propria unidade: você 1, mundo 3, está 1, cada 3, para 2, corpo nunca, isso 2, pode 10, tempo 3, casa 5
+  previsto para você, que para de anunciar no meio do dia (108 anuncios antes): 1 sem: acende (d' 6.9); 2 sem: acende (d' 6.8); 5 sem: acende (d' 6.8); 10 sem: acende (d' 6.8); 20 sem: acende (d' 6.7); 50 sem: acende (d' 6.7); 108 sem: acende (d' 6.7)
+  previsto para mundo, que para de anunciar no meio do dia (108 anuncios antes): 1 sem: acende (d' 5.3); 2 sem: acende (d' 5.3); 5 sem: acende (d' 5.3); 10 sem: acende (d' 5.3); 20 sem: acende (d' 5.3); 50 sem: acende (d' 5.3); 108 sem: acende (d' 5.3)
+FIM
+saida 0

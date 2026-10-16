@@ -1,0 +1,24 @@
+O ESQUECIMENTO NA SINAPSE, com d' = 2 e a sinapse exata: alfa 0.02275, costume de 176, Page 3.76, p0 0.0164
+A VIDA, COM O ESQUECIMENTO NA UNIDADE (a regra da p2b)
+   2 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 181 de 4110; o costume acima do limiar em 3.46% das decisoes desta metade; esquecimentos: 0 verdadeiros e 0 falsos
+   4 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 127 de 4110; o costume acima do limiar em 3.17% das decisoes desta metade; esquecimentos: 0 verdadeiros e 0 falsos
+   6 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 168 de 4110; o costume acima do limiar em 3.02% das decisoes desta metade; esquecimentos: 0 verdadeiros e 1 falsos
+   8 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 181 de 4110; o costume acima do limiar em 2.96% das decisoes desta metade; esquecimentos: 0 verdadeiros e 2 falsos
+  10 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 142 de 4110; o costume acima do limiar em 2.93% das decisoes desta metade; esquecimentos: 0 verdadeiros e 2 falsos
+  12 h de vida: a fala nunca ouvida acende a propria unidade em 9 de 10 (as que param: SS); a unidade errada em 149 de 4110; o costume acima do limiar em 2.91% das decisoes desta metade; esquecimentos: 0 verdadeiros e 4 falsos
+  14 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 103 de 4110; o costume acima do limiar em 2.39% das decisoes desta metade; esquecimentos: 4 verdadeiros e 7 falsos
+  16 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: nn); a unidade errada em 105 de 4110; o costume acima do limiar em 2.35% das decisoes desta metade; esquecimentos: 4 verdadeiros e 9 falsos
+  18 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: nn); a unidade errada em 115 de 4110; o costume acima do limiar em 2.29% das decisoes desta metade; esquecimentos: 5 verdadeiros e 10 falsos
+  20 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nS); a unidade errada em 82 de 4110; o costume acima do limiar em 2.19% das decisoes desta metade; esquecimentos: 6 verdadeiros e 14 falsos
+  22 h de vida: a fala nunca ouvida acende a propria unidade em 7 de 10 (as que param: nn); a unidade errada em 79 de 4110; o costume acima do limiar em 2.18% das decisoes desta metade; esquecimentos: 7 verdadeiros e 17 falsos
+  24 h de vida: a fala nunca ouvida acende a propria unidade em 6 de 10 (as que param: nn); a unidade errada em 108 de 4110; o costume acima do limiar em 2.16% das decisoes desta metade; esquecimentos: 7 verdadeiros e 18 falsos
+  o anuncio em que cada palavra acendeu a propria unidade antes do acontecimento: você 3, mundo 3, está 3, cada 3, para 2, corpo 4, isso 2, pode 4, tempo 3, casa 4
+  você, dita 132 vezes sem o acontecimento: acendeu a unidade em 5 das 10 primeiras e em 10 de todas; a ultima vez que acendeu foi a 58a; o teste de Page da unidade disparou na 1a
+  mundo, dita 118 vezes sem o acontecimento: acendeu a unidade em 10 das 10 primeiras e em 13 de todas; a ultima vez que acendeu foi a 34a; o teste de Page da unidade disparou na 6a
+  a palavra certa acendendo a propria unidade na corrente: na primeira metade, do 5o anuncio em diante, 99.0% de 1072; na segunda, nas 8 que continuam, 93.6% de 880 (a pior unidade, 84.6%)
+  o costume acima do limiar na primeira metade: 2.91% das 212376 decisoes sem o acontecimento (de 2.68% a 3.00% por unidade)
+  o costume acima do limiar na segunda metade: 2.16% das 213042 decisoes sem o acontecimento (de 0.50% a 2.82% por unidade)
+  esquecimentos falsos: 18 (você as 5.7 h por palavra parecida, isso as 7.0 h por palavra parecida, casa as 10.8 h por palavra parecida, isso as 11.4 h por palavra parecida, casa as 12.4 h por palavra parecida, cada as 12.5 h por palavra parecida, pode as 12.8 h por palavra parecida, tempo as 14.2 h por palavra parecida, casa as 15.7 h por palavra parecida, cada as 17.3 h por palavra parecida, para as 18.7 h por palavra parecida, casa as 18.8 h por palavra parecida, pode as 18.9 h por palavra parecida, isso as 19.5 h por palavra parecida, isso as 21.3 h por palavra parecida, corpo as 21.4 h por palavra parecida, para as 21.9 h por palavra parecida, casa as 22.3 h por palavra parecida)
+  o custo neste roteiro (numpy, sem compilar): 4.3 ms por palavra
+FIM
+saida 0

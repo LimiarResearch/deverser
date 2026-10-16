@@ -1,0 +1,24 @@
+O ESQUECIMENTO NA SINAPSE, com d' = 2 e a sinapse exata: alfa 0.02275, costume de 176, Page 3.76, p0 0.0164
+A VIDA, COM O ESQUECIMENTO NA SINAPSE (a segunda forma)
+   2 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 181 de 4110; o costume acima do limiar em 3.43% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 233 falsos
+   4 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 135 de 4110; o costume acima do limiar em 3.16% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 801 falsos
+   6 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 150 de 4110; o costume acima do limiar em 3.05% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 1465 falsos
+   8 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 198 de 4110; o costume acima do limiar em 3.00% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 2519 falsos
+  10 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 149 de 4110; o costume acima do limiar em 2.97% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 3191 falsos
+  12 h de vida: a fala nunca ouvida acende a propria unidade em 10 de 10 (as que param: SS); a unidade errada em 151 de 4110; o costume acima do limiar em 2.94% das decisoes desta metade; ligacoes apagadas: 0 verdadeiros e 4903 falsos
+  14 h de vida: a fala nunca ouvida acende a propria unidade em 9 de 10 (as que param: Sn); a unidade errada em 148 de 4110; o costume acima do limiar em 2.67% das decisoes desta metade; ligacoes apagadas: 1068 verdadeiros e 6142 falsos
+  16 h de vida: a fala nunca ouvida acende a propria unidade em 9 de 10 (as que param: Sn); a unidade errada em 149 de 4110; o costume acima do limiar em 2.76% das decisoes desta metade; ligacoes apagadas: 1101 verdadeiros e 6888 falsos
+  18 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 164 de 4110; o costume acima do limiar em 2.77% das decisoes desta metade; ligacoes apagadas: 1119 verdadeiros e 7647 falsos
+  20 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 157 de 4110; o costume acima do limiar em 2.77% das decisoes desta metade; ligacoes apagadas: 1130 verdadeiros e 8897 falsos
+  22 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 130 de 4110; o costume acima do limiar em 2.79% das decisoes desta metade; ligacoes apagadas: 1134 verdadeiros e 10051 falsos
+  24 h de vida: a fala nunca ouvida acende a propria unidade em 8 de 10 (as que param: nn); a unidade errada em 164 de 4110; o costume acima do limiar em 2.80% das decisoes desta metade; ligacoes apagadas: 1136 verdadeiros e 11073 falsos
+  o anuncio em que cada palavra acendeu a propria unidade antes do acontecimento: você 3, mundo 3, está 3, cada 3, para 2, corpo 4, isso 2, pode 4, tempo 3, casa 4
+  você, dita 132 vezes sem o acontecimento: acendeu a unidade em 10 das 10 primeiras e em 87 de todas; a ultima vez que acendeu foi a 131a
+  mundo, dita 118 vezes sem o acontecimento: acendeu a unidade em 10 das 10 primeiras e em 13 de todas; a ultima vez que acendeu foi a 65a
+  a palavra certa acendendo a propria unidade na corrente: na primeira metade, do 5o anuncio em diante, 100.0% de 1072; na segunda, nas 8 que continuam, 100.0% de 880 (a pior unidade, 100.0%)
+  o costume acima do limiar na primeira metade: 2.94% das 212376 decisoes sem o acontecimento (de 2.89% a 3.01% por unidade)
+  o costume acima do limiar na segunda metade: 2.80% das 213042 decisoes sem o acontecimento (de 2.62% a 2.89% por unidade)
+  ligacoes apagadas sem ter mudado: 11073, em 2856 passos; por unidade: você 423, mundo 176, está 976, cada 1367, para 1556, corpo 1124, isso 1647, pode 1087, tempo 1069, casa 1648
+  o custo neste roteiro (numpy, sem compilar): 4.6 ms por palavra
+FIM
+saida 0

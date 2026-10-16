@@ -1,0 +1,24 @@
+{
+ "semente": 20260928,
+ "casos": 192,
+ "hash_dos_casos": "aef6c8a1500fbc6a40cddab5cd4adcc5b8b24560f51e8b1b16ba73579c01ef9c",
+ "hash_do_codigo": "d04aeae184913f3240d74f1964091284f62ae06a4333457b155275fafb2968f9",
+ "metodos": [
+  "f",
+  "cegis_poda",
+  "cegis"
+ ],
+ "metricas": [
+  "tipo",
+  "custo",
+  "formulacoes",
+  "verificacoes",
+  "buscas",
+  "nos",
+  "segundos",
+  "conferido"
+ ],
+ "limite_de_nos": 300000,
+ "max_formulacoes": 400,
+ "congelado_em": "2026-09-28T02:46:25"
+}

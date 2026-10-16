@@ -1,0 +1,24 @@
+{
+ "id": "001_formular_D",
+ "para": "ia",
+ "tipo": "formular_D",
+ "conteudo": {
+  "intencao": "Pedido de Gabriel, 29/09/2026: uma rotina sem desvio que ordene 8 inteiros de 32 bits mais rápido, no processador real, que a melhor rede conhecida escrita à mão (continuação da AlphaDev, que fez 3 a 5 elementos), pelo motor fechado, com o laço mudando sempre que empacar.",
+  "tipo": "maquina",
+  "execucao": "medida",
+  "mundo": "silicio",
+  "natureza": "marque cada cláusula com natureza: intencao (o que o criador quer) ou forma (fixa a forma do corpus, como 'biológica'); a forma do corpus é resultado do cálculo, e cláusula de forma só fica se o criador disser que é intenção",
+  "alvos": [
+   {
+    "id": "vps-local",
+    "tipo": "local",
+    "python": "/home/iro/bancada-criacao/venv/bin/python",
+    "descricao": "a VPS: AMD EPYC, 3 dos 6 núcleos para este problema"
+   }
+  ],
+  "lugar": null,
+  "causa": "D"
+ },
+ "criado_em": "2026-09-29T02:31:34-03:00",
+ "formato_da_resposta": "ver esquemas.md, seção formular_D"
+}

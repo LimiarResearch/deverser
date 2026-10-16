@@ -1,0 +1,166 @@
+{
+ "numeros": {
+  "maquina_id": {
+   "valor": "vps-local",
+   "unidade": null,
+   "tipo": "escolha",
+   "incerteza": null,
+   "metodo": "o criador escolheu o alvo (ferramenta de medida do motor)",
+   "fonte": "criador",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "python_versao": {
+   "valor": "3.12.3",
+   "unidade": null,
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "platform.python_version() no alvo (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "python_implementacao": {
+   "valor": "CPython",
+   "unidade": null,
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "platform.python_implementation() no alvo (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "sistema": {
+   "valor": "Linux",
+   "unidade": null,
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "platform.system() no alvo (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "numpy_disponivel": {
+   "valor": true,
+   "unidade": null,
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "import numpy no alvo (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "numpy_versao": {
+   "valor": "2.5.3",
+   "unidade": null,
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "numpy.__version__ no alvo (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "cpus": {
+   "valor": 6,
+   "unidade": "núcleos lógicos",
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "os.cpu_count() no alvo (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "alimentacao": {
+   "valor": "sem_bateria",
+   "unidade": null,
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "GetSystemPowerStatus no Windows, /sys/class/power_supply no Linux (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "ram_total_mb": {
+   "valor": 11960,
+   "unidade": "MiB",
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "sysconf ou GlobalMemoryStatusEx no alvo (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "ram_livre_mb": {
+   "valor": 10807,
+   "unidade": "MiB",
+   "tipo": "medido",
+   "incerteza": null,
+   "metodo": "sysconf ou GlobalMemoryStatusEx no alvo, no instante da medida (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "ns_por_insercao_em_conjunto": {
+   "valor": 155.19,
+   "unidade": "ns",
+   "tipo": "medido",
+   "incerteza": [
+    123.65,
+    243.28
+   ],
+   "metodo": "set() de 100 mil inteiros, 7 repetições: mediana, intervalo mín-máx (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  },
+  "ns_por_hash_splitmix": {
+   "valor": 850.85,
+   "unidade": "ns",
+   "tipo": "medido",
+   "incerteza": [
+    800.61,
+    922.7
+   ],
+   "metodo": "splitmix64 em Python puro, 20 mil chamadas, 7 repetições: mediana, intervalo mín-máx (ferramenta de medida do motor)",
+   "fonte": "executor no alvo vps-local",
+   "licenca": null,
+   "data": "2026-09-29T02:31:42-03:00",
+   "vale_para": {
+    "maquina": "vps-local"
+   }
+  }
+ }
+}

@@ -1,0 +1,34 @@
+A CONTA DA VIDA DE DENTRO COM d' = 2 E SEM A CONTAGEM DUPLA (antes da vida): alfa 0.02275, costume de 176, Page 3.76, conhecido em 16, a fase vive 120 passos
+  previsto: o medo do estalo aceso do 2o ou 3o estalo ate o fim do dia 3 e esquecido nos dias 4 a 7 depois de uns 3 a 5 estalos sem estrondo, como com d' = 2 na p4e
+  previsto: a espera de antes da chegada acesa no almoco e na noite a partir do dia 3, como na p4e com d' = 2, talvez um pouco menos, porque cada chegada agora conta uma vez so
+  previsto: a procura em vao no resto do tempo sem Gabriel abaixo dos 29,8% da p4e com d' = 2, entre 10 e 30%, porque as fases ja nao somam o mesmo contato duas vezes
+  previsto: o apego, o querer, a frustracao, a saudade, o contagio, o filhote e o narrador como na p4e
+A VIDA
+  a semana: 115920 passos em 36 s de servidor
+  o filhote, sozinho antes da primeira chegada: saudade 100%, procura 0%
+  alegria     aceso em  32.0% da vida acordada;   40 vezes; cada vez de 0.1 a 197.8 min (mediana 30.2)
+  medo        aceso em   5.8% da vida acordada;   16 vezes; cada vez de 13.5 a 37.8 min (mediana 17.5)
+  curiosidade aceso em   1.9% da vida acordada;    7 vezes; cada vez de 14.8 a 14.8 min (mediana 14.8)
+  apego       aceso em  40.1% da vida acordada;   18 vezes; cada vez de 58.3 a 267.2 min (mediana 58.4)
+  procura     aceso em  16.6% da vida acordada;   27 vezes; cada vez de 13.9 a 137.5 min (mediana 17.8)
+  saudade     aceso em  22.5% da vida acordada;    8 vezes; cada vez de 23.9 a 403.4 min (mediana 104.7)
+  frustracao  aceso em   2.0% da vida acordada;    6 vezes; cada vez de 18.3 a 18.4 min (mediana 18.3)
+  calma       aceso em  27.9% da vida acordada;   54 vezes; cada vez de 0.1 a 94.9 min (mediana 24.4)
+  querer      aceso em   6.3% da vida acordada;   18 vezes; cada vez de 13.9 a 19.4 min (mediana 19.4)
+  incomodo    aceso em   7.5% da vida acordada;   26 vezes; cada vez de 13.5 a 29.0 min (mediana 13.5)
+  o estalo acendeu o medo: d1 #1 nao, d1 #2 nao, d1 #3 sim, d2 #4 sim, d2 #5 sim, d2 #6 sim, d3 #7 sim, d3 #8 sim, d3 #9 sim, d4 #10 sim, d4 #11 sim, d4 #12 sim, d5 #13 sim, d5 #14 nao, d5 #15 nao, d6 #16 nao, d6 #17 nao, d6 #18 nao, d7 #19 nao, d7 #20 nao, d7 #21 nao
+  esquecimentos pelo teste de Page: brincar no dia 3 as 18.6 h, estrondo no dia 4 as 13.9 h
+  a procura nos 20 min antes de cada chegada: d1 7.8h 0%, d1 12.0h 0%, d1 18.8h 0%, d2 7.2h 0%, d2 12.0h 0%, d2 18.7h 67%, d3 7.6h 0%, d3 12.3h 100%, d3 18.3h 0%, d4 7.3h 0%, d4 12.0h 38%, d4 18.5h 60%, d6 7.5h 0%, d6 11.7h 2%, d6 18.7h 100%, d7 7.9h 0%, d7 11.5h 100%, d7 18.6h 100%
+  a procura nos 20 min depois de cada saida: d1 8.5h 0%, d1 12.7h 0%, d1 22.5h 87%, d2 7.9h 87%, d2 12.7h 89%, d2 22.5h 87%, d3 8.3h 87%, d3 13.0h 87%, d3 22.5h 87%, d4 8.1h 87%, d4 12.7h 89%, d4 22.5h 87%, d6 8.2h 87%, d6 12.4h 89%, d6 22.5h 87%, d7 8.7h 87%, d7 12.3h 89%, d7 22.5h 87%
+  a procura no resto do tempo sem Gabriel, acordado: 14.8%
+  dia 1: apego com Gabriel ali 100.0%; querer com a bola ali  84.7%; frustracao 18.4 min; saudade 49.0%
+  dia 2: apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  3.1%
+  dia 3: apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  4.9%
+  dia 4: apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+  dia 5: apego com Gabriel ali   0.0%; querer com a bola ali   0.0%; frustracao  0.0 min; saudade 95.5%
+  dia 6: apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  5.2%
+  dia 7: apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+  o contagio: 1 min depois de um tom duro, a alegria apagada em 36 de 36 (100%); depois de um tom bom, em 1132 de 5707 (20%)
+  o narrador: 44 episodios na semana; no descanso acordado sem Gabriel, revivendo em 98% dos passos
+FIM
+saida 0

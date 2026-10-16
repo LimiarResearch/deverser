@@ -1,0 +1,63 @@
+A CONTA DA ORELHA · D: a 5.6.1, decidir com tres desvios · Pi: 3708 falas sinteticas de 412 palavras em 5 vozes e 90 trechos de Gabriel, pela coclea da V9p (3472 bits, 1003 acesos em media)
+  rodada 1: de fora faber; a orelha pelas palavras pares da lista, o teste nas impares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.06); a razao entre palavras e voz vai de 360.26 na primeira a 7.9266 na ultima, metade dela nas 38 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 77.3% (de 35.4 a 96.6), dispersao 5.480, d' mediano 11.50, 99.5% das palavras com d' >= 3
+    a medida em faber, fora da conta (206 falas): acerto 25.2%, dispersao 5.645, d' mediano 9.83, 99.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 12.1% (d' mediano 35.62, 100.0% com d' >= 3); pelo Jaccard da V10 15.0%
+  rodada 2: de fora cadu; a orelha pelas palavras pares da lista, o teste nas impares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.04); a razao entre palavras e voz vai de 449.90 na primeira a 10.5471 na ultima, metade dela nas 40 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 71.4% (de 16.5 a 95.1), dispersao 6.400, d' mediano 11.05, 99.5% das palavras com d' >= 3
+    a medida em cadu, fora da conta (206 falas): acerto 38.3%, dispersao 6.921, d' mediano 9.39, 99.5% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 29.6% (d' mediano 35.76, 100.0% com d' >= 3); pelo Jaccard da V10 28.6%
+  rodada 3: de fora dora; a orelha pelas palavras pares da lista, o teste nas impares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.05); a razao entre palavras e voz vai de 229.47 na primeira a 4.2254 na ultima, metade dela nas 39 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 53.3% (de 23.3 a 78.2), dispersao 5.695, d' mediano 10.04, 100.0% das palavras com d' >= 3
+    a medida em dora, fora da conta (206 falas): acerto 81.1%, dispersao 4.875, d' mediano 9.36, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 79.1% (d' mediano 37.13, 100.0% com d' >= 3); pelo Jaccard da V10 86.4%
+  rodada 4: de fora alex; a orelha pelas palavras pares da lista, o teste nas impares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.04); a razao entre palavras e voz vai de 215.15 na primeira a 4.3526 na ultima, metade dela nas 40 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 38.0% (de 27.2 a 48.5), dispersao 5.938, d' mediano 9.46, 100.0% das palavras com d' >= 3
+    a medida em alex, fora da conta (206 falas): acerto 91.7%, dispersao 4.490, d' mediano 9.90, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 90.8% (d' mediano 40.73, 100.0% com d' >= 3); pelo Jaccard da V10 95.1%
+  rodada 5: de fora santa; a orelha pelas palavras pares da lista, o teste nas impares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.04); a razao entre palavras e voz vai de 225.53 na primeira a 4.5324 na ultima, metade dela nas 39 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 54.0% (de 24.8 a 77.7), dispersao 5.867, d' mediano 10.10, 100.0% das palavras com d' >= 3
+    a medida em santa, fora da conta (206 falas): acerto 73.8%, dispersao 5.116, d' mediano 9.14, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 86.4% (d' mediano 37.83, 100.0% com d' >= 3); pelo Jaccard da V10 88.8%
+  rodada 6: de fora gabriel; a orelha pelas palavras pares da lista, o teste nas impares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.04); a razao entre palavras e voz vai de 189.27 na primeira a 3.9424 na ultima, metade dela nas 40 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 62.0% (de 25.2 a 91.7), dispersao 5.409, d' mediano 9.52, 99.7% das palavras com d' >= 3
+    a medida em gabriel, fora da conta (38 falas): acerto 13.2%, dispersao 5.392, d' mediano 7.99, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 7.9% (d' mediano 28.81, 100.0% com d' >= 3); pelo Jaccard da V10 5.3%
+  rodada 7: de fora faber; a orelha pelas palavras impares da lista, o teste nas pares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.05); a razao entre palavras e voz vai de 386.75 na primeira a 0.8411 na ultima, metade dela nas 37 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 75.7% (de 33.0 a 97.6), dispersao 5.757, d' mediano 11.37, 99.8% das palavras com d' >= 3
+    a medida em faber, fora da conta (206 falas): acerto 21.4%, dispersao 5.888, d' mediano 9.90, 99.5% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 18.4% (d' mediano 35.55, 100.0% com d' >= 3); pelo Jaccard da V10 13.6%
+  rodada 8: de fora cadu; a orelha pelas palavras impares da lista, o teste nas pares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.04); a razao entre palavras e voz vai de 398.94 na primeira a 0.8743 na ultima, metade dela nas 38 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 69.8% (de 21.4 a 94.7), dispersao 6.245, d' mediano 11.10, 99.8% das palavras com d' >= 3
+    a medida em cadu, fora da conta (206 falas): acerto 35.0%, dispersao 6.637, d' mediano 9.56, 99.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 25.2% (d' mediano 36.04, 100.0% com d' >= 3); pelo Jaccard da V10 20.4%
+  rodada 9: de fora dora; a orelha pelas palavras impares da lista, o teste nas pares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.05); a razao entre palavras e voz vai de 186.66 na primeira a 1.6502 na ultima, metade dela nas 39 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 49.8% (de 24.8 a 70.4), dispersao 5.678, d' mediano 10.09, 100.0% das palavras com d' >= 3
+    a medida em dora, fora da conta (206 falas): acerto 70.4%, dispersao 4.946, d' mediano 9.12, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 72.3% (d' mediano 36.21, 100.0% com d' >= 3); pelo Jaccard da V10 76.7%
+  rodada 10: de fora alex; a orelha pelas palavras impares da lista, o teste nas pares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.05); a razao entre palavras e voz vai de 189.31 na primeira a 1.6309 na ultima, metade dela nas 39 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 36.8% (de 21.8 a 45.1), dispersao 5.908, d' mediano 9.47, 100.0% das palavras com d' >= 3
+    a medida em alex, fora da conta (206 falas): acerto 91.3%, dispersao 4.481, d' mediano 9.92, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 85.9% (d' mediano 40.26, 100.0% com d' >= 3); pelo Jaccard da V10 93.2%
+  rodada 11: de fora santa; a orelha pelas palavras impares da lista, o teste nas pares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.05); a razao entre palavras e voz vai de 204.74 na primeira a 1.6727 na ultima, metade dela nas 38 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 53.3% (de 25.7 a 75.7), dispersao 5.868, d' mediano 10.03, 100.0% das palavras com d' >= 3
+    a medida em santa, fora da conta (206 falas): acerto 66.0%, dispersao 5.075, d' mediano 9.16, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 78.2% (d' mediano 37.19, 100.0% com d' >= 3); pelo Jaccard da V10 81.6%
+  rodada 12: de fora gabriel; a orelha pelas palavras impares da lista, o teste nas pares
+    a materia: 205 direcoes sobre os 3472 bits (encolhimento 0.04); a razao entre palavras e voz vai de 168.25 na primeira a 1.1842 na ultima, metade dela nas 39 primeiras; o preco, 1003 bits acesos x 205 direcoes x 4.58 ns = 0.94 ms por palavra
+    a previsao da conta (cada voz de dentro de fora por vez, com uma voz a menos): acerto 56.8% (de 21.4 a 91.3), dispersao 5.405, d' mediano 9.53, 99.7% das palavras com d' >= 3
+    a medida em gabriel, fora da conta (52 falas): acerto 11.5%, dispersao 5.468, d' mediano 7.85, 100.0% com d' >= 3
+    sem a orelha, no mesmo teste: pela media dos bits 1.9% (d' mediano 26.97, 100.0% com d' >= 3); pelo Jaccard da V10 5.8%
+FIM 205 s
+saida 0

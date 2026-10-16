@@ -1,0 +1,10 @@
+{
+ "id": "dev-lugar",
+ "titulo": "captação de água de chuva para uma casa",
+ "tipo": "lugar",
+ "intencao": "Quero que uma casa térrea de 4 pessoas em Petrolina (PE) tenha água de chuva para o banho e a limpeza o ano inteiro, com uma cisterna e a área de telhado que ela tem, gastando o mínimo de material. A casa tem 80 m² de telhado.",
+ "lugar": {"nome": "Petrolina, PE", "lat": -9.39, "lon": -40.50},
+ "avaliador": false,
+ "orcamento": {"pedidos_ia": 40, "consultas_de_dados": 30, "avaliacoes": 5000, "candidatos_por_criacao": 2000},
+ "uso": "desenvolvimento: construir e depurar o compilador; não entra no resultado"
+}
