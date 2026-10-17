@@ -30,3 +30,7 @@ Cada pasta de máquina tem o seu LEIA-ME, com o que é, de onde veio e como roda
 ## O que não está aqui
 
 As pastas 03, 04 e 05 vão sem aprendiz: ficaram de fora a rede da 4.3.1, a mente e as ferramentas do Tear e o aprendiz da variação do motor. A C★3 vai com o aprendiz, como rodou. Não estão aqui os manuais, os planos de construção, os registros de trabalho nem as cópias do servidor de pesquisa.
+
+## Licença
+
+O código e os documentos deste repositório estão sob a licença MIT (`LICENSE`).
