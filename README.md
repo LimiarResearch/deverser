@@ -23,7 +23,7 @@ Cada pasta de máquina tem o seu LEIA-ME, com o que é, de onde veio e como roda
 - **O motor de 29/09:** as 18 provas do compilador e as 8 do núcleo passaram. O código é o do commit `7edc5af` do repositório de trabalho, o último antes da corrida de 8 elementos começar.
 - **A 4.3.1 só com a seleção:** as 11 provas passaram. As peças tiradas da 4.3.1 foram conferidas como idênticas às originais.
 - **O Tear só com a seleção:** a mesma semente, rodada pelo pacote e pela árvore original do Tear, deu os mesmos recordes, byte a byte.
-- **A C★3:** o código executável é idêntico ao original sem os comentários, conferido pela árvore sintática de cada arquivo Python e pelo C++ sem comentários; os textos de saída que citavam pessoas foram reescritos em forma neutra. As provas da perturbação, da sonda, do condutor v2 e do coletor passaram.
+- **A C★3:** o código executável é idêntico ao original sem os comentários, conferido pela árvore sintática de cada arquivo Python e pelo C++ sem comentários; os textos de saída que citavam pessoas foram reescritos em forma neutra. As provas da C★3 passaram no Windows, inclusive a V da busca e a calibração de V, que usam a V real: perturbação, sonda, V repartida, condutor v2, coletor, V da busca e calibração. A prova da V compartilhada só roda em Linux.
 - **Os comentários de código que transcreviam conversas** foram reescritos como decisões formais. Nenhuma linha executável mudou: a árvore sintática de cada arquivo Python e o código C sem comentários foram comparados com os originais, e as provas rodaram de novo depois da mudança.
 - **Nenhum endereço de servidor, chave ou senha** está no pacote.
 
