@@ -2,6 +2,8 @@
 
 A bateria de 192 casos da primeira máquina (28/09/2026), que constrói máquinas de estados finitos.
 
+**O que se compara.** Uma formulação é um candidato completo que o método monta e manda julgar. Os três métodos rodaram nos mesmos 192 casos, com o protocolo congelado antes. O CEGIS daqui, a síntese guiada por contraexemplo, é uma implementação do próprio autor, nas duas variantes (com e sem poda), e não uma ferramenta publicada. No tempo total, a fórmula e o CEGIS com poda ficaram próximos: 153,3 s contra 159,0 s (`resumo.json`). O código da bateria e do CEGIS não está neste repositório; estão o protocolo, o resultado de cada caso e a auditoria do z3.
+
 - `bateria_dse_v4/protocolo.json`: o protocolo, congelado antes de rodar.
 - `bateria_dse_v4/resultados.jsonl`: o resultado de cada caso, para cada método:
   - `f`, a fórmula;

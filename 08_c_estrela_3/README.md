@@ -1,5 +1,7 @@
 # C★3
 
+**Estado:** a corrida de 04 e 05/10/2026 parou, com estado retomável, sem nenhum candidato que cumprisse D. Esta pasta é o código para reproduzir a busca, não um resultado.
+
 A C★3 é a Máquina do Dever-Ser 4.3.1 aplicada a um D de aprendizado contínuo, o Ser: um programa que aprende coisas novas sem rodadas de treinamento e sem guardar todo o histórico. Esta pasta traz o código da C★3 e as instruções para rodá-la.
 
 ## O problema
@@ -35,7 +37,7 @@ Variáveis de ambiente: `OPENBLAS_NUM_THREADS=1` e `SER_BACKEND=cpp`. A pasta do
 
 ## Como rodar
 
-Os comandos rodam de dentro desta pasta. Nada é lançado sem `--autorizacao`, com a frase e a data de quem autorizou a corrida, que fica gravada na declaração.
+Os comandos rodam de dentro desta pasta. Nada é lançado sem `--autorizacao`, com a frase e a data de quem autorizou a corrida, que fica gravada na declaração. A exigência é uma trava: nenhuma corrida começa sem uma pessoa responsável declarada.
 
 **A corrida:**
 

@@ -2,15 +2,9 @@
 
 *Notas de uma pesquisa em andamento. Gabriel Santos, Limiar Research, 16 de outubro de 2026.*
 
-## Por que eu publico isto hoje
+## Este texto
 
-Hoje, 16 de outubro de 2026, a Anthropic publicou um artigo contando que um modelo interno de pesquisa descobriu, em menos de meia hora, como foram geradas as sementes das curvas elípticas do NIST: as cinco curvas primas, de P-192 a P-521, e quatro das binárias. Essas sementes chegaram ao padrão em 2000 sem explicação e passaram mais de duas décadas sem que ninguém soubesse dizer de onde vinham. Segundo o artigo, elas saíram do `lrand48`, um gerador pseudoaleatório da biblioteca C, iniciado pelo relógio do computador entre maio de 1997 e abril de 1998.
-
-Eu li o artigo inteiro e fiquei surpreso. Desde setembro eu trabalho numa pesquisa que batizei, em 22/09, de a engenharia reversa do acaso. Ela usa sementes sorteadas, uma verificação que julga cada candidato e buscas guiadas por uma intenção declarada antes. E trabalhei o mês inteiro com ferramentas de inteligência artificial, duas delas da própria Anthropic: o opus, que fez a execução, e o Fable, que fez parte do planejamento.
-
-O método deles é outro. Eles fizeram criptoanálise clássica: uma hipótese sobre geradores antigos, um varredor de 34 combinações de gerador e fatia de saída, força bruta sobre 2¹⁷ valores e redução de reticulado. Ali não há uma intenção escrita em cláusulas nem uma seleção de candidatos por um verificador. O que coincide é o tema, e a palavra. Eu não sei dizer o que essa coincidência significa. Sei o que eu fiz e quando, e como eu ia publicar esse trabalho de qualquer forma, publico agora, do jeito que está, com as datas e as provas.
-
-Tudo o que este texto cita está no repositório que o acompanha, e cada resultado aponta para a pasta onde está a evidência.
+Este texto apresenta uma pesquisa em andamento desde 22/09/2026: a fórmula do dever ser, as máquinas que a executam e o que elas acharam, inclusive o que deu errado. As datas estão no fim. Cada resultado aponta para a pasta do repositório onde está a evidência, e o README da raiz reúne os resultados numa tabela, com o alcance e o limite de cada um.
 
 ## A ideia
 
@@ -148,6 +142,6 @@ Cada arquivo tem o seu sha256 em `MANIFESTO.sha256`.
 - **04 e 05/10:** a corrida da C★3.
 - **06 e 07/10:** o detector de mudança que deu o Sismo.
 
-Hoje alguém reconstruiu o acaso de uma máquina antiga. O acaso que eu tento inverter é o que a natureza usa sobre os números do mundo, e a conta que eu procuro é a da intenção que faria o mesmo trabalho uma vez só. Estou trabalhando nisso.
+O acaso que eu tento inverter é o que a natureza usa sobre os números do mundo, e a conta que eu procuro é a da intenção que faria o mesmo trabalho uma vez só. Estou trabalhando nisso.
 
 *Gabriel Santos, Limiar Research*

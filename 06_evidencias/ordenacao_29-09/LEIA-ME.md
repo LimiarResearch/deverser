@@ -2,7 +2,7 @@
 
 ## O resultado em uma frase
 
-Na madrugada de 29/09/2026, a máquina do dever-ser, no motor fechado da fórmula 4.0, rodou no próprio servidor de pesquisa e procurou uma rotina de ordenação de 8 elementos mais rápida para aquele processador. Em 9,7 minutos e 384 candidatos, achou uma rotina 4,3% mais rápida que a melhor referência conhecida, correta em todos os 16.777.216 vetores possíveis, sem trocar nenhuma peça do hardware.
+Na madrugada de 29/09/2026, a máquina do dever-ser, no motor fechado da fórmula 4.0, rodou no próprio servidor de pesquisa e procurou uma rotina de ordenação de 8 elementos mais rápida para aquele processador. Em 9,7 minutos e 384 candidatos, achou uma rotina com 4,3% menos ciclos por vetor que a referência, que é a mesma rede ótima de 19 comparadores com a troca feita nos registradores. A rotina é correta em todos os 16.777.216 vetores possíveis e roda no mesmo hardware. O ganho foi medido naquele processador, um AMD EPYC de primeira geração (Zen 1), com o gcc 13; a seção "O que ela é, sem exagero" diz por que ele pode não valer em outro.
 
 ## O problema escolhido
 
