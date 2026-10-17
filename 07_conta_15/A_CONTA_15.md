@@ -4,7 +4,7 @@ Limiar Research. Gabriel Santos. Cálculo realizado em 26 de setembro de 2026.
 
 ## O que é
 
-A conta 15 é o cálculo, a partir do dever ser e dos números do meio, do tecido de um pequeno ser de teste: um ser sem fala, que ouve, percebe o ambiente, tem sentimentos e um pensar sem língua, e aprende durante a própria vida. Ela foi feita antes de existir a máquina que executa a fórmula. Cada premissa do ser foi calculada por um roteiro próprio, com a previsão escrita e registrada antes de a vida rodar.
+A conta 15 é o cálculo, a partir do dever ser e dos números do meio, do tecido de um pequeno ser de teste simulado: um programa sem fala, que recebe som, percebe um ambiente simulado e aprende durante a própria vida. O D dele descreve também, em cláusulas, estados com nomes de sentimentos (curiosidade, medo, apego e outros) e um pensar sem língua; cada um é medido como uma condição do tecido (a seção seguinte). Ela foi feita antes de existir a máquina que executa a fórmula. Cada premissa do ser foi calculada por um roteiro próprio, com a previsão escrita e registrada antes de a vida rodar.
 
 A conta 15 é a origem do Sismo e do aprendiz de sinapses. A semente dos dois é o aprendiz de associações das premissas 1 e 2c: cada ligação acumula a evidência contra o acaso, só vota quando essa evidência passa de um limiar e é esquecida e recomeçada quando o teste de mudança acusa que o que ela ligava deixou de valer. Essa semente foi depois reformada pelo autor. Em 06 e 07/10 ela deu o detector de mudança que hoje é o Sismo; dela saiu também o aprendiz de sinapses. Os dois têm publicação própria.
 

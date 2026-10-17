@@ -23,7 +23,7 @@ S★ = C★(D, Π)
 
 D é o dever ser, a intenção escrita em cláusulas. Π são os números do meio onde o ser vai existir, medidos, cada um com a sua incerteza e a sua procedência. C★ é a conta, e S★ é o corpus que melhor atende D dentro do que o meio admite. A busca continua existindo e corre sobre formulações, nunca sobre corpos, com cada fracasso anotado num registro de nulos. Chamei isso de seleção selecionada.
 
-O custo também tem nome. O acaso paga com cadáveres no mundo. A intenção paga com cadáveres dentro da conta, os candidatos reprovados na medida, e exige zero falhas fora dela.
+O custo também tem nome. O acaso paga com falhas no mundo. A intenção paga com falhas dentro da conta, os candidatos reprovados na medida, e exige zero falhas fora dela.
 
 ```
 K_conta = candidatos calculados que não cumprem D      quanto menos, melhor
@@ -93,7 +93,7 @@ Pela régua da própria fórmula, quase tudo está no degrau "rodou", e uma part
 
 *No repositório: `07_conta_15`.*
 
-O Sismo, o detector da Limiar com o conector que leva a ele os dados de cada sistema, e o aprendiz de sinapses têm a mesma origem: um tecido do Iro, o ser digital com que a pesquisa começou. Esse tecido foi calculado pela conta ainda à mão, antes de existir a máquina que a executa. É o tecido de um pequeno ser de teste, a conta 15, de 26/09, construído por premissas. A conta achou ali a origem dos dois, a semente: o aprendiz de associações da primeira premissa, que pedia que o tecido aprendesse sozinho, sem professor e sem nada fora da sinapse e da unidade. Eu reformei essa semente, e dela saíram o Sismo e o aprendiz de sinapses. A segunda premissa pedia que o próprio tecido cortasse e guardasse o sinal que chega: era a orelha, a entrada dos experimentos, e no produto essa entrada é o conector. Em 06 e 07/10 o aprendiz de associações virou um detector de mudança, e o mecanismo passou a observar dados de sistemas.
+O Sismo, o detector da Limiar com o conector que leva a ele os dados de cada sistema, e o aprendiz de sinapses têm a mesma origem: o tecido de um pequeno ser de teste simulado, calculado à mão na conta 15, de 26/09, antes de existir a máquina que executa a fórmula. Esse tecido foi construído por premissas. A conta achou ali a origem dos dois, a semente: o aprendiz de associações da primeira premissa, que pedia que o tecido aprendesse sozinho, sem professor e sem nada fora da sinapse e da unidade. Eu reformei essa semente, e dela saíram o Sismo e o aprendiz de sinapses. A segunda premissa pedia que o próprio tecido cortasse e guardasse o sinal que chega: era a orelha, a entrada dos experimentos, e no produto essa entrada é o conector. Em 06 e 07/10 o aprendiz de associações virou um detector de mudança, e o mecanismo passou a observar dados de sistemas.
 
 Em cada premissa a conta escreveu a previsão antes da vida, e a previsão subiu ao repositório de trabalho antes da medida:
 
@@ -111,11 +111,11 @@ O mundo do teste era um dia de 43.200 palavras em que dez delas anunciavam, cada
 - Com a orelha no tecido, o corte deu um evento por fala em 100% das 2.060 falas, como previsto, e os acendimentos errados ficaram entre 0 e 9 em 4.110, contra 6 a 10 previstos.
 - O custo foi de 0,001 segundo de servidor por segundo de vida.
 
-Duas previsões caíram. Os esquecimentos falsos foram 8, contra 0,8 previstos, todos por palavras parecidas. E com a orelha o tecido aprendeu mais devagar do que a conta dizia, entre o 18º e o 43º anúncio, contra 3 a 20. A pasta traz as demais premissas, com os sentimentos e o pensar sem língua, e o que passou e o que caiu em cada uma.
+Duas previsões caíram. Os esquecimentos falsos foram 8, contra 0,8 previstos, todos por palavras parecidas. E com a orelha o tecido aprendeu mais devagar do que a conta dizia, entre o 18º e o 43º anúncio, contra 3 a 20. A pasta traz as demais premissas, com os estados que o D chama de sentimentos e o pensar sem língua, e o que passou e o que caiu em cada uma.
 
 O aprendiz de sinapses é um aprendiz de aprendizagem contínua. Ele aprende ao vivo, numa passada só, ligações com atraso entre sinais que disparam, do tipo "B costuma vir cerca de L minutos depois de A", com memória limitada e a resposta idêntica à de quem guardasse tudo.
 
-Para mim isso é uma prova também: dois aparelhos que vão para o mundo saíram de uma conta feita sobre um dever ser e os números do meio, com a previsão escrita antes da medida. O Sismo e o aprendiz de sinapses vão ser publicados à parte, cada um com as suas medidas.
+O Sismo e o aprendiz de sinapses vão ser publicados à parte, cada um com as suas medidas.
 
 ## O que está no repositório
 
