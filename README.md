@@ -59,8 +59,6 @@ No método, a busca é uma peça trocável. A catraca, a parte que deixaria a m�
 | Nenhum candidato cumpriu D | a C★3, 04 e 05/10/2026 | a Máquina do Dever-Ser 4.3.1 aplicada a um D de aprendizado contínuo | a pasta é o código para reproduzir a busca, não um resultado; os registros dessa corrida não estão neste repositório | `08_c_estrela_3/` |
 | As premissas de um pequeno ser de teste simulado, calculadas à mão a partir do D, cada uma com a previsão impressa antes da vida | a conta 15, 26/09/2026 | na premissa 1b, a previsão foi de 12 acendimentos errados em 4.110, e a vida mediu 24, 9 e 12 com 2, 4 e 6 horas | várias previsões que caíram ficaram fora do texto (lista em `07_conta_15/A_CONTA_15.md`); nas premissas 3 e 4 a previsão é texto fixo do roteiro; o corpo inteiro não aprendeu; os registros não têm carimbo de tempo | `07_conta_15/` |
 
-**A catraca.** A seção 22 da fórmula registra uma mudança adotada pela catraca em miniatura, melhor em 32 problemas retidos e pior em nenhum. Os registros dessa corrida não estão neste repositório, e a própria fórmula diz que nenhum resultado passou do degrau "medido".
-
 **Onde está cada número:**
 - **Ordenação de 29/09:**
   - os ciclos, a razão, o ruído e a correção estão em `06_evidencias/ordenacao_29-09/01_resultado_8_elementos/rede_vencedora.json`;
@@ -101,7 +99,7 @@ A razão muda com o processador, e a própria saída mostra quanto. Na verifica�
 
 ## Glossário
 
-Os termos próprios, com a definição que o repositório dá e o termo mais próximo na área. A definição completa de cada um está na fórmula (`02_formula`, seções 2, 4 e 9) e nos LEIA-ME citados.
+Os termos próprios, com a definição que o repositório dá e o termo mais próximo na área. A definição completa de cada um está na fórmula (`02_formula`, seções 2, 4 e 9) e nos LEIA-ME citados. Para "seleção selecionada" e "catraca" não há termo exato na área, e a tabela diz o que fica mais perto.
 
 | termo | o que é, segundo o repositório | termo próximo na área |
 |---|---|---|
@@ -114,8 +112,8 @@ Os termos próprios, com a definição que o repositório dá e o termo mais pr�
 | S★ | o corpus escolhido: o que melhor atende D dentro do que o meio admite | solução |
 | corpus | o concorrente que está sendo selecionado para atender D | candidato |
 | foto atômica | o candidato decomposto até a menor unidade do meio; no digital, a sequência de bits do candidato numa codificação fixa | codificação do candidato em bits |
-| seleção selecionada | a busca que corre sobre formulações, com cada fracasso registrado (decisão de 22/09/2026, `02_formula`, seção 23) | |
-| catraca | o mecanismo pelo qual o motor propõe uma mudança em si mesmo, adotada só se ganhar com folga nos moldes de desenvolvimento e nos de confirmação (laço 11) | |
+| seleção selecionada | a busca que corre sobre formulações, com cada fracasso registrado (decisão de 22/09/2026, `02_formula`, seção 23) | não há termo exato; é uma busca sobre formulações do problema, com registro dos fracassos |
+| catraca | o mecanismo pelo qual o motor propõe uma mudança em si mesmo, adotada só se ganhar com folga nos moldes de desenvolvimento e nos de confirmação (laço 11) | não há termo exato; é uma auto-modificação aceita só se ganhar em problemas retidos, próxima de um portão de validação (em inglês, ratchet) |
 | braço | cada fonte de filhos de um mesmo pai: a escrita às cegas, o operador, o sorteio e, na C★3, a escrita aprendida (`04_maquina_do_dever_ser_selecao/LEIA-ME.md`, `08_c_estrela_3/README.md`) | operador de variação |
 | testemunha | um método conhecido, escrito na mesma linguagem do candidato e medido à parte, só para comparação; na C★3, SGD, EWC, CBP e SP | linha de base (baseline) |
 | oráculo | uma conferência por outro método, independente de V; na ordenação, a conferência pelo princípio 0-1; na fórmula, o laço 12 | verificador independente |

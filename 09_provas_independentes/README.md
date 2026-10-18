@@ -4,7 +4,7 @@ Esta pasta traz o trabalho de uma sessão separada, feita em 17 e 18/10/2026 com
 - conferiu as alegações do repositório pelos próprios registros (`verif/`);
 - rodou o código em outras máquinas, com testes novos (`provas/`).
 
-Os arquivos estão como a sessão os entregou, com os scripts, as sementes, as saídas e os hashes. Os caminhos citados dentro dos relatórios são os da máquina daquela sessão.
+Os arquivos estão como a sessão os entregou, com os scripts, as sementes, as saídas e os hashes. Os caminhos absolutos nos registros e nos relatórios são do ambiente da verificação. A única edição foi no `provas/codec/RESULTADO_codec.md`, onde o nome de outro projeto da Limiar foi trocado por "outro projeto da Limiar".
 
 **O resumo:**
 - Os números do repositório conferem com os registros e são coerentes entre si.
@@ -77,7 +77,7 @@ O D, que pedia no máximo 0,95 do melhor codec único, não foi cumprido por nin
 
 Nos 23 dias retidos, o melhor codec único ficou 59 vezes menor que o CSV e 15,5% menor que a melhor alternativa genérica, o colunar int32 com xz -9e (1.180.998 contra 1.398.416 bytes). Esse resultado é do método, com D, Π e V fixos e busca exaustiva, e não da seleção.
 
-A tabela de dados (`itens.csv`, sha256 `ebbd0256ee7584c1948121c67bdbfe927eaf0e0aaae00e923c5d71525ba3fce2`) não está aqui. Ela sai da empresa simulada de outro projeto.
+A tabela de dados (`itens.csv`) não está aqui. Os dados são de outro projeto da Limiar e estão disponíveis sob pedido; o sha256 deles é `ebbd0256ee7584c1948121c67bdbfe927eaf0e0aaae00e923c5d71525ba3fce2`.
 
 ### `verif/`: as três verificações pelos registros
 

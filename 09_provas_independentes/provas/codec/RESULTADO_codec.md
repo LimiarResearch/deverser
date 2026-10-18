@@ -1,6 +1,6 @@
 # O codec sem perda pela Máquina do Dever-Ser 4.3.1 (18/10/2026)
 
-Dados: a tabela de métricas da empresa simulada do Estalo (itens.csv, 36.000 minutos, 496 colunas, 75,6 MB; cópia só de leitura).
+Dados: a tabela de métricas da empresa simulada de outro projeto da Limiar (itens.csv, 36.000 minutos, 496 colunas, 75,6 MB; cópia só de leitura).
 Um dia é um bloco que se lê sozinho. Desenvolvimento: dias 5 e 6. Retidos: os outros 23 dias. Toda medida confere a volta exata.
 A máquina: a 4.3.1 só com a seleção, do repositório deverser, sem mudança; o D e a codificação estão em d_codec2.py.
 
