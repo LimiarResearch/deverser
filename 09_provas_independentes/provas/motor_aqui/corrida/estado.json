@@ -1,0 +1,1835 @@
+{
+ "fase": "inicio",
+ "D": {
+  "titulo": "Ordenar 8 inteiros mais rápido",
+  "escopo": {
+   "alvo": "vps-local",
+   "n": 8,
+   "referencias": "a melhor rede conhecida escrita à mão, a mesma rede em SIMD (AVX2) e o std::sort do libstdc++",
+   "respostas_das_ambiguidades": {}
+  },
+  "clausulas": [
+   {
+    "id": "r_correto",
+    "tipo": "rigida",
+    "natureza": "intencao",
+    "enunciado": "ordena certo todo vetor de 8 inteiros, com empates",
+    "teste": {
+     "medida": "erro_de_ordenacao",
+     "op": "<=",
+     "valor": 0,
+     "unidade": "1",
+     "escala": 1.0
+    },
+    "origem": "ia",
+    "confirmada": true,
+    "confirmada_por": "ia"
+   },
+   {
+    "id": "r_mais_rapida",
+    "tipo": "rigida",
+    "natureza": "intencao",
+    "enunciado": "pelo menos 3% mais rápida no alvo que a mais rápida das referências (a rede escalar e a rede SIMD em AVX2), medida no mesmo processo",
+    "teste": {
+     "medida": "razao_vs_melhor",
+     "op": "<=",
+     "valor": 0.97,
+     "unidade": "1",
+     "escala": 0.1
+    },
+    "origem": "ia",
+    "confirmada": true,
+    "confirmada_por": "ia"
+   },
+   {
+    "id": "o_tempo",
+    "tipo": "objetivo",
+    "natureza": "intencao",
+    "enunciado": "a menor razão de tempo contra a rede de referência",
+    "teste": {
+     "medida": "razao_vs_melhor",
+     "sentido": "min",
+     "resolucao": 0.01
+    },
+    "origem": "ia",
+    "confirmada": true,
+    "confirmada_por": "ia"
+   },
+   {
+    "id": "o_tamanho",
+    "tipo": "objetivo",
+    "natureza": "intencao",
+    "enunciado": "o menor número de comparadores",
+    "teste": {
+     "medida": "comparadores",
+     "sentido": "min",
+     "resolucao": 1
+    },
+    "origem": "ia",
+    "confirmada": true,
+    "confirmada_por": "ia"
+   }
+  ],
+  "condicoes_de_uso": [
+   "vale para o processador medido; outro processador é outro cenário de U"
+  ],
+  "versao": 1,
+  "pai": null,
+  "pendencias": []
+ },
+ "D_confirmado": true,
+ "modelo": {
+  "entradas": [],
+  "carga": "def gerar_carga(semente):\n    return {\"n\": 8, \"redes\": {\"batcher\": [[0, 1], [2, 3], [4, 5], [6, 7], [0, 2], [1, 3], [4, 6], [5, 7], [1, 2], [5, 6], [0, 4], [1, 5], [2, 6], [3, 7], [2, 4], [3, 5], [1, 2], [3, 4], [5, 6]], \"insercao\": [[0, 1], [1, 2], [0, 1], [2, 3], [1, 2], [0, 1], [3, 4], [2, 3], [1, 2], [0, 1], [4, 5], [3, 4], [2, 3], [1, 2], [0, 1], [5, 6], [4, 5], [3, 4], [2, 3], [1, 2], [0, 1], [6, 7], [5, 6], [4, 5], [3, 4], [2, 3], [1, 2], [0, 1]], \"otima\": [[0, 2], [1, 3], [4, 6], [5, 7], [0, 4], [1, 5], [2, 6], [3, 7], [0, 1], [2, 3], [4, 5], [6, 7], [2, 4], [3, 5], [1, 4], [3, 6], [1, 2], [3, 4], [5, 6]]}, \"referencia\": [[0, 2], [1, 3], [4, 6], [5, 7], [0, 4], [1, 5], [2, 6], [3, 7], [0, 1], [2, 3], [4, 5], [6, 7], [2, 4], [3, 5], [1, 4], [3, 6], [1, 2], [3, 4], [5, 6]], \"repeticoes\": 21}\n",
+  "metricas": "def metricas(entrada, saida):\n    return {k: saida[k] for k in (\"erro_de_ordenacao\", \"razao_vs_rede\", \"razao_vs_simd\", \"razao_vs_melhor\", \"ciclos_simd\", \"razao_ref_contra_ref\", \"ciclos_por_vetor\", \"ciclos_referencia\", \"ns_std_sort\", \"ruido\", \"comparadores\")} | {\"efeito_no_meio\": {}}\n",
+  "oraculo": "import itertools\n\n\ndef conferir(entrada, saida):\n    \"\"\"A integridade da medida, independente do medidor: a rede devolvida é conferida pelo princípio 0-1, e o medidor em C tem de concordar\n    (erro zero se e só se a rede ordena, porque os vetores de zeros e uns estão entre os n^n que ele confere). Se a rede ordena ou não, quem\n    julga é a cláusula r_correto do D, pela métrica erro_de_ordenacao.\"\"\"\n    n = entrada[\"n\"]\n    ordena = True\n    for x in itertools.product((0, 1), repeat=n):\n        v = list(x)\n        for i, j in saida[\"rede\"]:\n            if v[i] > v[j]:\n                v[i], v[j] = v[j], v[i]\n        if any(v[q] > v[q + 1] for q in range(n - 1)):\n            ordena = False\n            break\n    if saida.get(\"vetores_conferidos\") != n ** n:\n        return False, \"o medidor não conferiu os n^n vetores\"\n    if ordena != (saida[\"erro_de_ordenacao\"] == 0):\n        return False, \"o medidor em C e o princípio 0-1 discordam: a medida não é confiável\"\n    return True, \"a medida concorda com o princípio 0-1 (a rede \" + (\"ordena\" if ordena else \"não ordena\") + \")\"\n",
+  "semente": 1,
+  "tempo_limite_s": 600,
+  "modelos": [
+   {
+    "id": "principal",
+    "saidas": [
+     {
+      "nome": "erro_de_ordenacao",
+      "unidade": "1"
+     },
+     {
+      "nome": "razao_vs_rede",
+      "unidade": "1"
+     },
+     {
+      "nome": "razao_vs_simd",
+      "unidade": "1"
+     },
+     {
+      "nome": "razao_vs_melhor",
+      "unidade": "1"
+     },
+     {
+      "nome": "ciclos_simd",
+      "unidade": "1"
+     },
+     {
+      "nome": "razao_ref_contra_ref",
+      "unidade": "1"
+     },
+     {
+      "nome": "ciclos_por_vetor",
+      "unidade": "1"
+     },
+     {
+      "nome": "ciclos_referencia",
+      "unidade": "1"
+     },
+     {
+      "nome": "ns_std_sort",
+      "unidade": "1"
+     },
+     {
+      "nome": "ruido",
+      "unidade": "1"
+     },
+     {
+      "nome": "comparadores",
+      "unidade": "1"
+     },
+     {
+      "nome": "efeito_no_meio",
+      "unidade": "1"
+     }
+    ]
+   }
+  ],
+  "testes": [],
+  "exportacao": {
+   "codigo": "def exportar(x, p, saidas):\n    return {'arquivos': {'rotina.txt': repr({k: v for k, v in x.items() if not str(k).startswith('_')})}, 'descricao': {'arquetipo': x.get('_arquetipo')}}\n"
+  },
+  "numeros_excluidos": {
+   "latencia_das_instrucoes_de_troca": "entra pela medida do tempo contra a referência no mesmo processo",
+   "custo_de_desvio_errado": "as rotinas são sem desvio; entra pela medida",
+   "ruido_da_medida_de_tempo": "medido pelo próprio medidor (ruido) e conferido antes da busca",
+   "frequencia_do_processador": "cancelada na razão contra a referência medida junto",
+   "versao_do_gxx": "declarada pelo sha256 do g++ na ferramenta",
+   "cache_de_instrucoes_de_quem_chama": "premissa: o efeito do tamanho do código no cache de quem chama não é medido nesta versão; vai declarado",
+   "profundidade_da_rede": "entra pela medida do tempo",
+   "pressao_de_registradores": "entra pela medida do tempo",
+   "numero_de_comparadores": "entra pela medida (comparadores)"
+  },
+  "dominio": {
+   "arquetipos": [
+    "rede",
+    "composicao"
+   ]
+  },
+  "representacao": {
+   "arquetipos": [
+    {
+     "nome": "rede",
+     "descricao": "uma rede conhecida, com a ordem dentro dos níveis, a retirada de comparadores, a variante da troca e o uso de registradores",
+     "variaveis": [
+      {
+       "nome": "base",
+       "tipo": "categoria",
+       "valores": [
+        "batcher",
+        "insercao",
+        "otima"
+       ]
+      },
+      {
+       "nome": "variante",
+       "tipo": "categoria",
+       "valores": [
+        "ternario",
+        "mascara",
+        "simd",
+        "simd_imediato"
+       ]
+      },
+      {
+       "nome": "registradores",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "taxa_de_mutacao",
+       "tipo": "real",
+       "min": 0.1,
+       "max": 0.6
+      },
+      {
+       "nome": "rem_0",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_1",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_2",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_3",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_4",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_5",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_6",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_7",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_8",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_9",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_10",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_11",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_12",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_13",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_14",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_15",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_16",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_17",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_18",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_19",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_20",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_21",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_22",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_23",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_24",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_25",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_26",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "rem_27",
+       "tipo": "categoria",
+       "valores": [
+        0,
+        0,
+        0,
+        1
+       ]
+      },
+      {
+       "nome": "pri_0",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_1",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_2",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_3",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_4",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_5",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_6",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_7",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_8",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_9",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_10",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_11",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_12",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_13",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_14",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_15",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_16",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_17",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_18",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_19",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_20",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_21",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_22",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_23",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_24",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_25",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_26",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      },
+      {
+       "nome": "pri_27",
+       "tipo": "real",
+       "min": 0.0,
+       "max": 1.0
+      }
+     ],
+     "codigo": "\ndef _niveis(rede, n):\n    ultimo, out = [0] * n, []\n    for i, j in rede:\n        nv = max(ultimo[i], ultimo[j]) + 1\n        ultimo[i] = ultimo[j] = nv\n        out.append(nv)\n    return out\n\n\ndef executar(entrada, base, variante, registradores, taxa_de_mutacao=None, pecas=None, **genes):\n    import ferramenta_ordenacao\n    n = entrada[\"n\"]\n    if pecas is not None:\n        # L que compõe: a rede é a própria lista de comparadores\n        rede = [(int(q[\"i\"]), int(q[\"j\"])) for q in pecas if q.get(\"primitiva\") == \"comparador\"]\n    else:\n        # L0: uma rede conhecida, com a ordem dentro de cada nível (o paralelismo) e a retirada de comparadores como genes\n        b = entrada[\"redes\"][base]\n        niv = _niveis(b, n)\n        mantidos = [k for k in range(len(b)) if not int(genes.get(f\"rem_{k}\", 0))]\n        mantidos.sort(key=lambda k: (niv[k], float(genes.get(f\"pri_{k}\", 0.5)), k))\n        rede = [tuple(b[k]) for k in mantidos]\n    r = ferramenta_ordenacao.medir(n, rede, variante, int(registradores), entrada[\"referencia\"], entrada[\"repeticoes\"])\n    r[\"rede\"] = [list(c) for c in rede]\n    return r\n"
+    }
+   ],
+   "composicao": {
+    "primitivas": [
+     {
+      "nome": "comparador",
+      "variaveis": [
+       {
+        "nome": "i",
+        "tipo": "inteiro",
+        "min": 0,
+        "max": 7,
+        "passo": 1
+       },
+       {
+        "nome": "j",
+        "tipo": "inteiro",
+        "min": 0,
+        "max": 7,
+        "passo": 1
+       }
+      ]
+     }
+    ],
+    "min_pecas": 17,
+    "max_pecas": 38,
+    "variaveis": [
+     {
+      "nome": "base",
+      "tipo": "categoria",
+      "valores": [
+       "batcher",
+       "insercao",
+       "otima"
+      ]
+     },
+     {
+      "nome": "variante",
+      "tipo": "categoria",
+      "valores": [
+       "ternario",
+       "mascara",
+       "simd",
+       "simd_imediato"
+      ]
+     },
+     {
+      "nome": "registradores",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "taxa_de_mutacao",
+      "tipo": "real",
+      "min": 0.1,
+      "max": 0.6
+     }
+    ],
+    "codigo": "\ndef _niveis(rede, n):\n    ultimo, out = [0] * n, []\n    for i, j in rede:\n        nv = max(ultimo[i], ultimo[j]) + 1\n        ultimo[i] = ultimo[j] = nv\n        out.append(nv)\n    return out\n\n\ndef executar(entrada, base, variante, registradores, taxa_de_mutacao=None, pecas=None, **genes):\n    import ferramenta_ordenacao\n    n = entrada[\"n\"]\n    if pecas is not None:\n        # L que compõe: a rede é a própria lista de comparadores\n        rede = [(int(q[\"i\"]), int(q[\"j\"])) for q in pecas if q.get(\"primitiva\") == \"comparador\"]\n    else:\n        # L0: uma rede conhecida, com a ordem dentro de cada nível (o paralelismo) e a retirada de comparadores como genes\n        b = entrada[\"redes\"][base]\n        niv = _niveis(b, n)\n        mantidos = [k for k in range(len(b)) if not int(genes.get(f\"rem_{k}\", 0))]\n        mantidos.sort(key=lambda k: (niv[k], float(genes.get(f\"pri_{k}\", 0.5)), k))\n        rede = [tuple(b[k]) for k in mantidos]\n    r = ferramenta_ordenacao.medir(n, rede, variante, int(registradores), entrada[\"referencia\"], entrada[\"repeticoes\"])\n    r[\"rede\"] = [list(c) for c in rede]\n    return r\n",
+    "descricao": "a rede livre: qualquer lista de comparadores, fora das redes conhecidas"
+   }
+  },
+  "hash": "6c9ef2c92479f76ca29f64e55f00904624ada37509c638361830bf534720d8d4",
+  "id": "m2",
+  "recebido_em": "2026-10-17T23:14:36+00:00"
+ },
+ "modelos": [
+  {
+   "id": "m1",
+   "hash": "889c906d0baa0abbe0465394d75428d01bb322d07be8824f9c0be79b62cad4bd",
+   "pedido": "004_propor_modelo",
+   "motivo": "as rotinas de 8 elementos: L0 são as redes conhecidas com a ordem e a troca como genes"
+  },
+  {
+   "id": "m2",
+   "hash": "6c9ef2c92479f76ca29f64e55f00904624ada37509c638361830bf534720d8d4",
+   "pedido": "008_revisar",
+   "motivo": "abertura de L preparada antes da corrida (ordem das causas: L primeiro): a rede livre, uma lista de comparadores que compõe, para achar topologias fora das redes conhecidas"
+  }
+ ],
+ "alternativo": null,
+ "numeros": {
+  "maquina_id": {
+   "aceito": {
+    "valor": "vps-local",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "escolha",
+    "metodo": "o criador escolheu o alvo (ferramenta de medida do motor)",
+    "fonte": "criador",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": null,
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "python_versao": {
+   "aceito": {
+    "valor": "3.13.16",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "platform.python_version() no alvo (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": null,
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "python_implementacao": {
+   "aceito": {
+    "valor": "CPython",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "platform.python_implementation() no alvo (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": null,
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "sistema": {
+   "aceito": {
+    "valor": "Linux",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "platform.system() no alvo (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": null,
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "numpy_disponivel": {
+   "aceito": {
+    "valor": true,
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "import numpy no alvo (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": null,
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "numpy_versao": {
+   "aceito": {
+    "valor": "2.5.3",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "numpy.__version__ no alvo (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": null,
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "cpus": {
+   "aceito": {
+    "valor": 4,
+    "unidade": "núcleos lógicos",
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "os.cpu_count() no alvo (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": "núcleos lógicos",
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "alimentacao": {
+   "aceito": {
+    "valor": "sem_bateria",
+    "unidade": null,
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "GetSystemPowerStatus no Windows, /sys/class/power_supply no Linux (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": null,
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "ram_total_mb": {
+   "aceito": {
+    "valor": 16093,
+    "unidade": "MiB",
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "sysconf ou GlobalMemoryStatusEx no alvo (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": "MiB",
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "ram_livre_mb": {
+   "aceito": {
+    "valor": 15404,
+    "unidade": "MiB",
+    "incerteza": null,
+    "tipo": "medido",
+    "metodo": "sysconf ou GlobalMemoryStatusEx no alvo, no instante da medida (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": "MiB",
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "ns_por_insercao_em_conjunto": {
+   "aceito": {
+    "valor": 56.52,
+    "unidade": "ns",
+    "incerteza": [
+     52.97,
+     92.31
+    ],
+    "tipo": "medido",
+    "metodo": "set() de 100 mil inteiros, 7 repetições: mediana, intervalo mín-máx (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": "ns",
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  },
+  "ns_por_hash_splitmix": {
+   "aceito": {
+    "valor": 310.01,
+    "unidade": "ns",
+    "incerteza": [
+     293.58,
+     340.43
+    ],
+    "tipo": "medido",
+    "metodo": "splitmix64 em Python puro, 20 mil chamadas, 7 repetições: mediana, intervalo mín-máx (ferramenta de medida do motor)",
+    "fonte": "executor no alvo vps-local",
+    "data": "2026-10-17T23:14:57+00:00",
+    "vale_para": {
+     "maquina": "vps-local"
+    }
+   },
+   "recusados": [],
+   "pedidos": 0,
+   "unidade": "ns",
+   "perfil_do_alvo": true,
+   "fornecido_por": "ia"
+  }
+ },
+ "testes": [
+  {
+   "modelo": "m1",
+   "ensaio_local": [],
+   "hora": "2026-10-17T23:09:10+00:00"
+  },
+  {
+   "modelo": "m2",
+   "ensaio_local": [],
+   "hora": "2026-10-17T23:14:50+00:00"
+  }
+ ],
+ "criacoes": [
+  {
+   "chave": "2fd29eb0a82c2f53986d3a0b53f570a38f3d0f1bbd38ff9d91c9fc4b59a46f6e",
+   "rotulo": "criacao",
+   "hora": "2026-10-17T23:13:23+00:00",
+   "segundos": 221.17,
+   "desfecho": "candidato_falho",
+   "candidatos": 48,
+   "calculados": 48,
+   "reusados": 0,
+   "custo": {
+    "medicoes_no_alvo": 48,
+    "medidas_reusadas": 0
+   },
+   "validos": 0,
+   "nulos": {
+    "candidato_falho": 48
+   },
+   "discordancias": [],
+   "sensibilidade": [],
+   "forca": {},
+   "evidencias_que_cairam": {},
+   "cadaveres": 48,
+   "calculo_antes": {
+    "amostrados": [
+     "rede"
+    ],
+    "poda_heuristica": false,
+    "concorrencia": {
+     "codigos_que_concorreram": 288,
+     "sigma": {
+      "populacao": 48,
+      "parar_sem_melhora": 3,
+      "seg_por_lote_medido": 2.829,
+      "teto_s": 604800.0,
+      "geracoes_minimas": 20,
+      "regra": "o maior múltiplo de paralelo que deixa caber geracoes_minimas gerações no teto, entre 2 e 16 lotes"
+     },
+     "parada": {
+      "motivo": "a primeira fronteira ficou igual por 3 gerações seguidas",
+      "geracoes": 5,
+      "sem_melhora": 3,
+      "avaliados": 288,
+      "segundos": 218.3
+     },
+     "geracoes": 6,
+     "melhor_violacao_por_ordem": [
+      5.9532,
+      1.2154,
+      6.3436,
+      0.877,
+      0.9425,
+      1.2283,
+      1.256,
+      3.8146,
+      0.8511,
+      0.8336,
+      3.5205,
+      0.9987,
+      0.5997,
+      0.6867,
+      0.9133,
+      0.7342,
+      0.5225,
+      0.8581,
+      0.452,
+      4.6338,
+      0.4158
+     ]
+    }
+   },
+   "melhor_violacao": 0.183109,
+   "por_arquetipo": {
+    "rede": {
+     "melhor": "rede|base=otima|pri_0=0.642412|pri_1=0.786835|pri_10=0.089013|pri_11=0.490496|pri_12=0.0|pri_13=0.363389|pri_14=0.269051|pri_15=0.519061|pri_16=0.0|pri_17=0.958321|pri_18=0.822611|pri_19=0.820136|pri_2=0.921619|pri_20=0.937645|pri_21=0.914817|pri_22=0.36944|pri_23=0.297708|pri_24=0.679793|pri_25=0.409603|pri_26=0.610797|pri_27=0.946715|pri_3=0.233768|pri_4=0.618277|pri_5=0.152282|pri_6=0.729079|pri_7=0.05615|pri_8=0.913733|pri_9=0.467238|registradores=0|rem_0=1|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=1|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=1|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.6|variante=simd_imediato",
+     "violacao": 0.1831,
+     "reprovou_em": "r_correto",
+     "medidas": {
+      "erro_de_ordenacao": 0.183109283,
+      "razao_vs_melhor": 0.86458
+     }
+    }
+   },
+   "diferencas_de_fotos": null,
+   "fora_do_dominio": {
+    "n": 0,
+    "exemplos": []
+   },
+   "cobertura": {
+    "amostrados": [
+     "rede",
+     "a concorrência amostra L"
+    ],
+    "poda_heuristica": false,
+    "busca_completa": false
+   }
+  },
+  {
+   "chave": "0ed8dfff132662711039b83d30405f5e30ec2a3ec26724b5219028e45c813625",
+   "rotulo": "criacao",
+   "hora": "2026-10-17T23:20:21+00:00",
+   "segundos": 318.22,
+   "desfecho": "solucao",
+   "candidatos": 48,
+   "calculados": 48,
+   "reusados": 0,
+   "custo": {
+    "medicoes_no_alvo": 48,
+    "medidas_reusadas": 0
+   },
+   "validos": 15,
+   "nulos": {
+    "candidato_falho": 33
+   },
+   "discordancias": [],
+   "sensibilidade": [],
+   "forca": {
+    "forte": 15
+   },
+   "evidencias_que_cairam": {
+    "modelo_de_calculo mudou de valor (889c906d0baa0abbe0465394d75428d01bb322d07be882": 48
+   },
+   "cadaveres": 33,
+   "calculo_antes": {
+    "amostrados": [
+     "rede"
+    ],
+    "poda_heuristica": false,
+    "concorrencia": {
+     "codigos_que_concorreram": 432,
+     "sigma": {
+      "populacao": 48,
+      "parar_sem_melhora": 3,
+      "seg_por_lote_medido": 1.97,
+      "teto_s": 604800.0,
+      "geracoes_minimas": 20,
+      "regra": "o maior múltiplo de paralelo que deixa caber geracoes_minimas gerações no teto, entre 2 e 16 lotes"
+     },
+     "parada": {
+      "motivo": "a primeira fronteira ficou igual por 3 gerações seguidas",
+      "geracoes": 8,
+      "sem_melhora": 3,
+      "avaliados": 432,
+      "segundos": 316.2
+     },
+     "geracoes": 9,
+     "melhor_violacao_por_ordem": [
+      6.1612,
+      6.549,
+      7.2282,
+      5.7545,
+      6.5203,
+      0.516,
+      4.6037,
+      0.7768,
+      0.9969,
+      0.711,
+      3.1684,
+      3.3626,
+      0.4387,
+      0.7903,
+      0.4112,
+      0.3545,
+      0.6922,
+      1.0273,
+      4.3959,
+      0.3424,
+      4.7663
+     ]
+    }
+   },
+   "melhor_violacao": 0.0,
+   "por_arquetipo": {
+    "rede": {
+     "melhor": "rede|base=otima|pri_0=0.734429|pri_1=0.863667|pri_10=0.215412|pri_11=1.0|pri_12=0.724638|pri_13=0.721574|pri_14=0.65715|pri_15=0.482889|pri_16=0.670145|pri_17=1.0|pri_18=0.348411|pri_19=1.0|pri_2=1.0|pri_20=0.497966|pri_21=1.0|pri_22=0.142761|pri_23=0.648552|pri_24=0.294429|pri_25=0.086769|pri_26=1.0|pri_27=0.993327|pri_3=0.958458|pri_4=1.0|pri_5=0.147199|pri_6=0.929876|pri_7=0.453007|pri_8=0.753085|pri_9=0.308956|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=0|rem_25=0|rem_26=0|rem_27=1|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.326066|variante=simd_imediato",
+     "violacao": 0.0,
+     "reprovou_em": null,
+     "medidas": {
+      "erro_de_ordenacao": 0.0,
+      "razao_vs_melhor": 0.80354
+     }
+    }
+   },
+   "diferencas_de_fotos": null,
+   "fora_do_dominio": {
+    "n": 0,
+    "exemplos": []
+   },
+   "cobertura": {
+    "amostrados": [
+     "rede",
+     "a concorrência amostra L",
+     "a L que compõe é amostrada: as listas de peças até max_pecas não cabem inteiras"
+    ],
+    "poda_heuristica": false,
+    "busca_completa": false
+   },
+   "dominancia": "pior caso em U: cada objetivo pelo extremo desfavorável da faixa",
+   "fronteira": [
+    {
+     "id": "rede|base=otima|pri_0=0.734429|pri_1=0.863667|pri_10=0.215412|pri_11=1.0|pri_12=0.724638|pri_13=0.721574|pri_14=0.65715|pri_15=0.482889|pri_16=0.670145|pri_17=1.0|pri_18=0.348411|pri_19=1.0|pri_2=1.0|pri_20=0.497966|pri_21=1.0|pri_22=0.142761|pri_23=0.648552|pri_24=0.294429|pri_25=0.086769|pri_26=1.0|pri_27=0.993327|pri_3=0.958458|pri_4=1.0|pri_5=0.147199|pri_6=0.929876|pri_7=0.453007|pri_8=0.753085|pri_9=0.308956|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=0|rem_25=0|rem_26=0|rem_27=1|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.326066|variante=simd_imediato",
+     "medidas": {
+      "tempo_mediana_s": 1.6224872709999545,
+      "tempo_mediana_s_intervalo": [
+       1.6224872709999545,
+       1.6224872709999545
+      ],
+      "cpu_mediana_s": 0.007162371000000001,
+      "cpu_mediana_s_intervalo": [
+       0.007162371000000001,
+       0.007162371000000001
+      ],
+      "tempo_p95_s": 1.6224872709999545,
+      "tempo_p95_s_intervalo": [
+       1.6224872709999545,
+       1.6224872709999545
+      ],
+      "pico_memoria_mb": 0.05760955810546875,
+      "oraculos_ok": true,
+      "threads_do_blas": 1,
+      "erro_de_ordenacao": 0.0,
+      "razao_vs_rede": 0.60892,
+      "razao_vs_simd": 0.80354,
+      "razao_vs_melhor": 0.80354,
+      "ciclos_simd": 15.062,
+      "razao_ref_contra_ref": 1.00753,
+      "ciclos_por_vetor": 11.641,
+      "ciclos_referencia": 18.547,
+      "ns_std_sort": 84.282,
+      "ruido": 0.07337,
+      "comparadores": 19,
+      "efeito_no_meio": {},
+      "correto": 1
+     },
+     "forca": {
+      "conclusao": "forte",
+      "numeros_hipotese": [],
+      "numeros_usados": 7
+     }
+    }
+   ],
+   "escolhido": {
+    "id": "rede|base=otima|pri_0=0.734429|pri_1=0.863667|pri_10=0.215412|pri_11=1.0|pri_12=0.724638|pri_13=0.721574|pri_14=0.65715|pri_15=0.482889|pri_16=0.670145|pri_17=1.0|pri_18=0.348411|pri_19=1.0|pri_2=1.0|pri_20=0.497966|pri_21=1.0|pri_22=0.142761|pri_23=0.648552|pri_24=0.294429|pri_25=0.086769|pri_26=1.0|pri_27=0.993327|pri_3=0.958458|pri_4=1.0|pri_5=0.147199|pri_6=0.929876|pri_7=0.453007|pri_8=0.753085|pri_9=0.308956|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=0|rem_25=0|rem_26=0|rem_27=1|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.326066|variante=simd_imediato",
+    "formulacao": {
+     "base": "otima",
+     "variante": "simd_imediato",
+     "registradores": 1,
+     "taxa_de_mutacao": 0.326066,
+     "rem_0": 0,
+     "rem_1": 0,
+     "rem_2": 0,
+     "rem_3": 0,
+     "rem_4": 0,
+     "rem_5": 0,
+     "rem_6": 0,
+     "rem_7": 0,
+     "rem_8": 0,
+     "rem_9": 0,
+     "rem_10": 0,
+     "rem_11": 0,
+     "rem_12": 0,
+     "rem_13": 0,
+     "rem_14": 0,
+     "rem_15": 0,
+     "rem_16": 0,
+     "rem_17": 0,
+     "rem_18": 0,
+     "rem_19": 0,
+     "rem_20": 0,
+     "rem_21": 1,
+     "rem_22": 0,
+     "rem_23": 1,
+     "rem_24": 0,
+     "rem_25": 0,
+     "rem_26": 0,
+     "rem_27": 1,
+     "pri_0": 0.734429,
+     "pri_1": 0.863667,
+     "pri_2": 1.0,
+     "pri_3": 0.958458,
+     "pri_4": 1.0,
+     "pri_5": 0.147199,
+     "pri_6": 0.929876,
+     "pri_7": 0.453007,
+     "pri_8": 0.753085,
+     "pri_9": 0.308956,
+     "pri_10": 0.215412,
+     "pri_11": 1.0,
+     "pri_12": 0.724638,
+     "pri_13": 0.721574,
+     "pri_14": 0.65715,
+     "pri_15": 0.482889,
+     "pri_16": 0.670145,
+     "pri_17": 1.0,
+     "pri_18": 0.348411,
+     "pri_19": 1.0,
+     "pri_20": 0.497966,
+     "pri_21": 1.0,
+     "pri_22": 0.142761,
+     "pri_23": 0.648552,
+     "pri_24": 0.294429,
+     "pri_25": 0.086769,
+     "pri_26": 1.0,
+     "pri_27": 0.993327,
+     "_arquetipo": "rede",
+     "_id": "rede|base=otima|pri_0=0.734429|pri_1=0.863667|pri_10=0.215412|pri_11=1.0|pri_12=0.724638|pri_13=0.721574|pri_14=0.65715|pri_15=0.482889|pri_16=0.670145|pri_17=1.0|pri_18=0.348411|pri_19=1.0|pri_2=1.0|pri_20=0.497966|pri_21=1.0|pri_22=0.142761|pri_23=0.648552|pri_24=0.294429|pri_25=0.086769|pri_26=1.0|pri_27=0.993327|pri_3=0.958458|pri_4=1.0|pri_5=0.147199|pri_6=0.929876|pri_7=0.453007|pri_8=0.753085|pri_9=0.308956|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=0|rem_25=0|rem_26=0|rem_27=1|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.326066|variante=simd_imediato",
+     "id": "rede|base=otima|pri_0=0.734429|pri_1=0.863667|pri_10=0.215412|pri_11=1.0|pri_12=0.724638|pri_13=0.721574|pri_14=0.65715|pri_15=0.482889|pri_16=0.670145|pri_17=1.0|pri_18=0.348411|pri_19=1.0|pri_2=1.0|pri_20=0.497966|pri_21=1.0|pri_22=0.142761|pri_23=0.648552|pri_24=0.294429|pri_25=0.086769|pri_26=1.0|pri_27=0.993327|pri_3=0.958458|pri_4=1.0|pri_5=0.147199|pri_6=0.929876|pri_7=0.453007|pri_8=0.753085|pri_9=0.308956|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=0|rem_25=0|rem_26=0|rem_27=1|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.326066|variante=simd_imediato"
+    },
+    "medidas": {
+     "tempo_mediana_s": 1.6224872709999545,
+     "tempo_mediana_s_intervalo": [
+      1.6224872709999545,
+      1.6224872709999545
+     ],
+     "cpu_mediana_s": 0.007162371000000001,
+     "cpu_mediana_s_intervalo": [
+      0.007162371000000001,
+      0.007162371000000001
+     ],
+     "tempo_p95_s": 1.6224872709999545,
+     "tempo_p95_s_intervalo": [
+      1.6224872709999545,
+      1.6224872709999545
+     ],
+     "pico_memoria_mb": 0.05760955810546875,
+     "oraculos_ok": true,
+     "threads_do_blas": 1,
+     "erro_de_ordenacao": 0.0,
+     "razao_vs_rede": 0.60892,
+     "razao_vs_simd": 0.80354,
+     "razao_vs_melhor": 0.80354,
+     "ciclos_simd": 15.062,
+     "razao_ref_contra_ref": 1.00753,
+     "ciclos_por_vetor": 11.641,
+     "ciclos_referencia": 18.547,
+     "ns_std_sort": 84.282,
+     "ruido": 0.07337,
+     "comparadores": 19,
+     "efeito_no_meio": {},
+     "correto": 1
+    },
+    "forca": {
+     "conclusao": "forte",
+     "numeros_hipotese": [],
+     "numeros_usados": 7
+    }
+   },
+   "ponto_fixo": {
+    "declarado": true,
+    "voltas": 0,
+    "cumpre": true
+   }
+  }
+ ],
+ "cruzamento": null,
+ "contadores": {
+  "pedidos_ia": 10,
+  "pedidos_criador": 0,
+  "pedidos_avaliador": 0,
+  "consultas_de_dados": 0,
+  "avaliacoes": 96,
+  "passos": 11,
+  "segundos_motor": 545.91
+ },
+ "pedidos": {
+  "001_formular_D": {
+   "para": "ia",
+   "tipo": "formular_D",
+   "respondido": true
+  },
+  "002_confirmar_D": {
+   "para": "ia",
+   "tipo": "confirmar_D",
+   "respondido": true
+  },
+  "003_mapear_numeros": {
+   "para": "ia",
+   "tipo": "mapear_numeros",
+   "respondido": true
+  },
+  "004_propor_modelo": {
+   "para": "ia",
+   "tipo": "propor_modelo",
+   "respondido": true
+  },
+  "005_mapear_numeros": {
+   "para": "ia",
+   "tipo": "mapear_numeros",
+   "respondido": true
+  },
+  "006_medir_alvo": {
+   "para": "ia",
+   "tipo": "medir_alvo",
+   "respondido": true
+  },
+  "007_conferir_distinguibilidade": {
+   "para": "ia",
+   "tipo": "conferir_distinguibilidade",
+   "respondido": true,
+   "chave": "6afc2eb1a794ef9243fa674ceb55aa050c99afb1b399ee76644cdb395b81607c"
+  },
+  "008_revisar": {
+   "para": "ia",
+   "tipo": "revisar",
+   "respondido": true
+  },
+  "009_mapear_numeros": {
+   "para": "ia",
+   "tipo": "mapear_numeros",
+   "respondido": true
+  },
+  "010_medir_alvo": {
+   "para": "ia",
+   "tipo": "medir_alvo",
+   "respondido": true
+  }
+ },
+ "sensibilidade_pedida": [],
+ "desfecho": {
+  "tipo": "solucao",
+  "escolhido": "rede|base=otima|pri_0=0.734429|pri_1=0.863667|pri_10=0.215412|pri_11=1.0|pri_12=0.724638|pri_13=0.721574|pri_14=0.65715|pri_15=0.482889|pri_16=0.670145|pri_17=1.0|pri_18=0.348411|pri_19=1.0|pri_2=1.0|pri_20=0.497966|pri_21=1.0|pri_22=0.142761|pri_23=0.648552|pri_24=0.294429|pri_25=0.086769|pri_26=1.0|pri_27=0.993327|pri_3=0.958458|pri_4=1.0|pri_5=0.147199|pri_6=0.929876|pri_7=0.453007|pri_8=0.753085|pri_9=0.308956|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=1|rem_22=0|rem_23=1|rem_24=0|rem_25=0|rem_26=0|rem_27=1|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.326066|variante=simd_imediato",
+  "otimalidade": "melhor encontrado e verificado; não demonstrado como o melhor, porque parte de L foi amostrada",
+  "depende_de_hipoteses": [],
+  "premissas": {
+   "verificado": "as cláusulas rígidas de D, segundo o modelo m2 (6c9ef2c924), sobre U(Π)",
+   "U": "a caixa dos intervalos de Π, com os números tratados como independentes (nenhuma dependência declarada)",
+   "pior_caso": "nas rodadas medidas no alvo",
+   "modelo_validado": "não: nenhum modelo independente conferiu M",
+   "validado_no_mundo": "não: nenhum artefato foi avaliado fora do modelo",
+   "numeros_por_tipo": {},
+   "mapa_de_numeros": {
+    "no_mapa": 9,
+    "usados": [],
+    "excluidos_com_justificativa": [
+     "cache_de_instrucoes_de_quem_chama",
+     "custo_de_desvio_errado",
+     "frequencia_do_processador",
+     "latencia_das_instrucoes_de_troca",
+     "numero_de_comparadores",
+     "pressao_de_registradores",
+     "profundidade_da_rede",
+     "ruido_da_medida_de_tempo",
+     "versao_do_gxx"
+    ],
+    "ausentes": [],
+    "aviso": "o mapa é o conhecido até aqui; não encontrar lacuna não prova que todas as grandezas foram encontradas"
+   },
+   "L": "a grade declarada da representação (os níveis de cada variável); o contínuo entre os níveis não foi calculado",
+   "cobertura_de_L": "amostrada em rede, a concorrência amostra L, a L que compõe é amostrada: as listas de peças até max_pecas não cabem inteiras",
+   "poda": "nenhuma",
+   "dominancia": "pior caso em U: cada objetivo pelo extremo desfavorável da faixa",
+   "decisoes_da_ia_no_lugar_do_criador": [
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "r_correto",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "r_mais_rapida",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "o_tempo",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "002_confirmar_D",
+     "clausula": "o_tamanho",
+     "acao": "confirmar",
+     "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+    },
+    {
+     "pedido": "007_conferir_distinguibilidade",
+     "distinguibilidade": {
+      "r_correto": {
+       "distinguivel": true,
+       "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1",
+       "medida": {
+        "vetores": 16777216
+       }
+      },
+      "r_mais_rapida": {
+       "distinguivel": true,
+       "prova": "a diferença pedida (3%) passa o ruído da razão mais o desvio da referência contra a cópia dela mesma, os dois medidos na VPS",
+       "medida": {
+        "ruido_medido": 0.0113,
+        "desvio_ref_contra_ref": 0.0053,
+        "diferenca_pedida": 0.03
+       }
+      }
+     }
+    }
+   ],
+   "forma_do_motor": {
+    "f": null,
+    "f0": "a busca de sempre (grade ou amostra, sem poda)",
+    "origem": "o seletor escolhido no banco com o D da calculadora (saida/motor_otimo/resultado_c8.json)",
+    "estavel_neste_problema": true,
+    "recuos": []
+   },
+   "cadaveres_na_conta": 33,
+   "distinguibilidade": {
+    "para": "6afc2eb1a794ef9243fa674ceb55aa050c99afb1b399ee76644cdb395b81607c",
+    "clausulas": {
+     "r_correto": {
+      "distinguivel": true,
+      "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1",
+      "medida": {
+       "vetores": 16777216
+      }
+     },
+     "r_mais_rapida": {
+      "distinguivel": true,
+      "prova": "a diferença pedida (3%) passa o ruído da razão mais o desvio da referência contra a cópia dela mesma, os dois medidos na VPS",
+      "medida": {
+       "ruido_medido": 0.0113,
+       "desvio_ref_contra_ref": 0.0053,
+       "diferenca_pedida": 0.03
+      }
+     }
+    },
+    "por": "ia"
+   },
+   "ponto_fixo": {
+    "declarado": true,
+    "voltas": 0,
+    "cumpre": true
+   },
+   "horizonte": {
+    "H": null,
+    "alem_do_horizonte": null,
+    "numeros_com_deriva": []
+   },
+   "L_mapeada": [
+    "composicao:comparador",
+    "rede"
+   ],
+   "dominio_de_M": {
+    "arquetipos": [
+     "rede",
+     "composicao"
+    ]
+   },
+   "fora_do_dominio": {
+    "n": 0,
+    "exemplos": []
+   },
+   "mundo": {
+    "avaliados": 0,
+    "falharam": 0
+   },
+   "sigma_da_concorrencia": {
+    "populacao": 48,
+    "parar_sem_melhora": 3,
+    "seg_por_lote_medido": 1.97,
+    "teto_s": 604800.0,
+    "geracoes_minimas": 20,
+    "regra": "o maior múltiplo de paralelo que deixa caber geracoes_minimas gerações no teto, entre 2 e 16 lotes"
+   }
+  }
+ },
+ "mudancas": {},
+ "D_proposto": {
+  "clausulas": [
+   {
+    "id": "r_correto",
+    "tipo": "rigida",
+    "natureza": "intencao",
+    "enunciado": "ordena certo todo vetor de 8 inteiros, com empates",
+    "teste": {
+     "medida": "erro_de_ordenacao",
+     "op": "<=",
+     "valor": 0,
+     "unidade": "1",
+     "escala": 1.0
+    },
+    "origem": "ia",
+    "confirmada": false
+   },
+   {
+    "id": "r_mais_rapida",
+    "tipo": "rigida",
+    "natureza": "intencao",
+    "enunciado": "pelo menos 3% mais rápida no alvo que a mais rápida das referências (a rede escalar e a rede SIMD em AVX2), medida no mesmo processo",
+    "teste": {
+     "medida": "razao_vs_melhor",
+     "op": "<=",
+     "valor": 0.97,
+     "unidade": "1",
+     "escala": 0.1
+    },
+    "origem": "ia",
+    "confirmada": false
+   },
+   {
+    "id": "o_tempo",
+    "tipo": "objetivo",
+    "natureza": "intencao",
+    "enunciado": "a menor razão de tempo contra a rede de referência",
+    "teste": {
+     "medida": "razao_vs_melhor",
+     "sentido": "min",
+     "resolucao": 0.01
+    },
+    "origem": "ia",
+    "confirmada": false
+   },
+   {
+    "id": "o_tamanho",
+    "tipo": "objetivo",
+    "natureza": "intencao",
+    "enunciado": "o menor número de comparadores",
+    "teste": {
+     "medida": "comparadores",
+     "sentido": "min",
+     "resolucao": 1
+    },
+    "origem": "ia",
+    "confirmada": false
+   }
+  ],
+  "escopo": {
+   "alvo": "vps-local",
+   "n": 8,
+   "referencias": "a melhor rede conhecida escrita à mão, a mesma rede em SIMD (AVX2) e o std::sort do libstdc++"
+  },
+  "ambiguidades": [],
+  "condicoes_de_uso": [
+   "vale para o processador medido; outro processador é outro cenário de U"
+  ]
+ },
+ "decisoes_da_ia": [
+  {
+   "pedido": "002_confirmar_D",
+   "clausula": "r_correto",
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  },
+  {
+   "pedido": "002_confirmar_D",
+   "clausula": "r_mais_rapida",
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  },
+  {
+   "pedido": "002_confirmar_D",
+   "clausula": "o_tempo",
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  },
+  {
+   "pedido": "002_confirmar_D",
+   "clausula": "o_tamanho",
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  },
+  {
+   "pedido": "007_conferir_distinguibilidade",
+   "distinguibilidade": {
+    "r_correto": {
+     "distinguivel": true,
+     "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1",
+     "medida": {
+      "vetores": 16777216
+     }
+    },
+    "r_mais_rapida": {
+     "distinguivel": true,
+     "prova": "a diferença pedida (3%) passa o ruído da razão mais o desvio da referência contra a cópia dela mesma, os dois medidos na VPS",
+     "medida": {
+      "ruido_medido": 0.0113,
+      "desvio_ref_contra_ref": 0.0053,
+      "diferenca_pedida": 0.03
+     }
+    }
+   }
+  }
+ ],
+ "mapa_pedido": true,
+ "mapa_numeros": {
+  "latencia_das_instrucoes_de_troca": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "ciclos",
+   "grandeza": {
+    "quantidade": "latencia das instrucoes de troca"
+   },
+   "onde": "no alvo",
+   "por_que": "o custo de cada troca"
+  },
+  "custo_de_desvio_errado": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "ciclos",
+   "grandeza": {
+    "quantidade": "custo de desvio errado"
+   },
+   "onde": "no alvo",
+   "por_que": "quanto custa a rotina que desvia"
+  },
+  "ruido_da_medida_de_tempo": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "1",
+   "grandeza": {
+    "quantidade": "ruido da medida de tempo"
+   },
+   "onde": "no alvo",
+   "por_que": "o que é distinguível"
+  },
+  "frequencia_do_processador": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "GHz",
+   "grandeza": {
+    "quantidade": "frequencia do processador"
+   },
+   "onde": "no alvo",
+   "por_que": "o tempo absoluto"
+  },
+  "versao_do_gxx": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "versão",
+   "grandeza": {
+    "quantidade": "versao do gxx"
+   },
+   "onde": "no alvo",
+   "por_que": "o código gerado"
+  },
+  "cache_de_instrucoes_de_quem_chama": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "bytes",
+   "grandeza": {
+    "quantidade": "cache de instrucoes de quem chama"
+   },
+   "onde": "no alvo",
+   "por_que": "o efeito do corpo no meio"
+  },
+  "profundidade_da_rede": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "níveis",
+   "grandeza": {
+    "quantidade": "profundidade da rede"
+   },
+   "onde": "no alvo",
+   "por_que": "o paralelismo que o processador aproveita"
+  },
+  "pressao_de_registradores": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "registradores",
+   "grandeza": {
+    "quantidade": "pressao de registradores"
+   },
+   "onde": "no alvo",
+   "por_que": "quando os valores saem dos registradores"
+  },
+  "numero_de_comparadores": {
+   "clausulas": [
+    "o_tamanho",
+    "r_mais_rapida"
+   ],
+   "origens": [
+    "ia"
+   ],
+   "unidade": "comparadores",
+   "grandeza": {
+    "quantidade": "numero de comparadores"
+   },
+   "onde": "no alvo",
+   "por_que": "o trabalho da rotina"
+  }
+ },
+ "modelo_testado": true,
+ "L_mapeada": [
+  "composicao:comparador",
+  "rede"
+ ],
+ "medida_pedida_para": "6c9ef2c92479f76ca29f64e55f00904624ada37509c638361830bf534720d8d4",
+ "alvo_medido_para": "6c9ef2c92479f76ca29f64e55f00904624ada37509c638361830bf534720d8d4",
+ "distinguibilidade_pedida": "6afc2eb1a794ef9243fa674ceb55aa050c99afb1b399ee76644cdb395b81607c",
+ "distinguibilidade": {
+  "para": "6afc2eb1a794ef9243fa674ceb55aa050c99afb1b399ee76644cdb395b81607c",
+  "clausulas": {
+   "r_correto": {
+    "distinguivel": true,
+    "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1",
+    "medida": {
+     "vetores": 16777216
+    }
+   },
+   "r_mais_rapida": {
+    "distinguivel": true,
+    "prova": "a diferença pedida (3%) passa o ruído da razão mais o desvio da referência contra a cópia dela mesma, os dois medidos na VPS",
+    "medida": {
+     "ruido_medido": 0.0113,
+     "desvio_ref_contra_ref": 0.0053,
+     "diferenca_pedida": 0.03
+    }
+   }
+  },
+  "por": "ia"
+ },
+ "reformulacoes": 1,
+ "reformulacao_pedida": true,
+ "exportado": true,
+ "exportacao": {
+  "ok": false,
+  "erro": "NameError: name 'repr' is not defined"
+ }
+}

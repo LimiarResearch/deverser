@@ -1,0 +1,82 @@
+
+========== cegis_poda contra f
+ formulacoes: f usou menos em 192, mais em 0, igual em 0
+  razao cegis_poda/f por caso (formulacoes): n=192 min=2.00 p25=9.46 mediana=19.00 p75=47.00 max=197.00 media=35.49 media_geom=21.77
+ verificacoes: f usou menos em 120, mais em 0, igual em 72
+  razao cegis_poda/f por caso (verificacoes): n=192 min=1.00 p25=1.00 mediana=1.11 p75=1.50 max=5.00 media=1.54 media_geom=1.35
+ nos: f usou menos em 192, mais em 0, igual em 0
+ segundos: f usou menos em 144, mais em 48, igual em 0
+ f com 0 formulacoes: 0 | f com 0 verificacoes: 0
+ -- por desfecho da formula (soma de formulacoes):
+   insufficient_memory  casos  54 | formulacoes f    54 cegis_poda   4180 razao  77.41 | parte da diferenca  25.1% | verificacoes f   54 cegis_poda   111 razao  2.06
+   over_budget          casos  37 | formulacoes f   181 cegis_poda   3558 razao  19.66 | parte da diferenca  20.5% | verificacoes f  122 cegis_poda   173 razao  1.42
+   solucao              casos  82 | formulacoes f   718 cegis_poda   8435 razao  11.75 | parte da diferenca  47.0% | verificacoes f  500 cegis_poda   567 razao  1.13
+   unobservable         casos  19 | formulacoes f   199 cegis_poda   1415 razao   7.11 | parte da diferenca   7.4% | verificacoes f  141 cegis_poda   167 razao  1.18
+ -- so os casos que os dois resolveram (82): formulacoes 8435/718 = 11.75; verificacoes 567/500 = 1.13; segundos 112.3/113.1 = 0.99
+  razao por caso, so os resolvidos pelos dois: n=82 min=2.00 p25=8.24 mediana=12.50 p75=19.00 max=42.00 media=14.90 media_geom=12.57
+  razao de verificacoes, so os resolvidos pelos dois: n=82 min=1.00 p25=1.00 mediana=1.08 p75=1.22 max=2.00 media=1.18 media_geom=1.16
+ os 19 casos de maior diferenca (10%) somam 26.4% da diferenca total
+ os 48 casos de maior diferenca (25%) somam 51.9% da diferenca total
+ os 96 casos de maior diferenca (50%) somam 77.5% da diferenca total
+ casos em que f usou 1 formulacao: 69 (desfechos: {'insufficient_memory': 54, 'over_budget': 15}); cegis_poda gastou neles 5062 formulacoes
+ sem esses casos: 12526/1083 = 11.57
+ -- por fator do rotulo (soma de formulacoes, razao):
+   familia J: J0 5819/341=17.1; J1 5889/421=14.0; J2 5880/390=15.1
+   ordem: livre 8889/503=17.7; ordem 8699/649=13.4
+   tipo: autorizado 1816/102=17.8; encerrar 8241/397=20.8; eventos 4896/395=12.4; sem_reset 2635/258=10.2
+   memoria k: k2 2924/60=48.7; k3 3885/208=18.7; k4 4925/407=12.1; k5 5854/477=12.3
+   orcamento: curto 7412/383=19.4; folgado 10176/769=13.2
+
+========== cegis contra f
+ formulacoes: f usou menos em 192, mais em 0, igual em 0
+  razao cegis/f por caso (formulacoes): n=192 min=2.00 p25=8.11 mediana=20.75 p75=54.25 max=210.00 media=37.78 media_geom=21.98
+ verificacoes: f usou menos em 189, mais em 1, igual em 2
+  razao cegis/f por caso (verificacoes): n=192 min=0.93 p25=2.50 mediana=4.00 p75=9.00 max=27.00 media=6.43 media_geom=4.63
+ nos: f usou menos em 192, mais em 0, igual em 0
+ segundos: f usou menos em 109, mais em 83, igual em 0
+ f com 0 formulacoes: 0 | f com 0 verificacoes: 0
+ -- por desfecho da formula (soma de formulacoes):
+   insufficient_memory  casos  54 | formulacoes f    54 cegis   4455 razao  82.50 | parte da diferenca  29.4% | verificacoes f   54 cegis   636 razao 11.78
+   over_budget          casos  37 | formulacoes f   181 cegis   3579 razao  19.77 | parte da diferenca  22.7% | verificacoes f  122 cegis   666 razao  5.46
+   solucao              casos  82 | formulacoes f   718 cegis   6698 razao   9.33 | parte da diferenca  40.0% | verificacoes f  500 cegis  1168 razao  2.34
+   unobservable         casos  19 | formulacoes f   199 cegis   1388 razao   6.97 | parte da diferenca   7.9% | verificacoes f  141 cegis   442 razao  3.13
+ -- so os casos que os dois resolveram (50): formulacoes 2375/129 = 18.41; verificacoes 404/117 = 3.45; segundos 10.1/7.4 = 1.37
+  razao por caso, so os resolvidos pelos dois: n=50 min=2.00 p25=9.50 mediana=18.17 p75=27.00 max=47.00 media=19.65 media_geom=15.70
+  razao de verificacoes, so os resolvidos pelos dois: n=50 min=1.00 p25=1.50 mediana=2.94 p75=4.50 max=10.00 media=3.50 media_geom=2.89
+ os 19 casos de maior diferenca (10%) somam 21.2% da diferenca total
+ os 48 casos de maior diferenca (25%) somam 44.6% da diferenca total
+ os 96 casos de maior diferenca (50%) somam 71.8% da diferenca total
+ casos em que f usou 1 formulacao: 69 (desfechos: {'insufficient_memory': 54, 'over_budget': 15}); cegis gastou neles 5491 formulacoes
+ sem esses casos: 10629/1083 = 9.81
+ -- por fator do rotulo (soma de formulacoes, razao):
+   familia J: J0 5679/341=16.7; J1 5146/421=12.2; J2 5295/390=13.6
+   ordem: livre 7889/503=15.7; ordem 8231/649=12.7
+   tipo: autorizado 2053/102=20.1; encerrar 6809/397=17.2; eventos 4387/395=11.1; sem_reset 2871/258=11.1
+   memoria k: k2 3225/60=53.8; k3 4054/208=19.5; k4 4329/407=10.6; k5 4512/477=9.5
+   orcamento: curto 7436/383=19.4; folgado 8684/769=11.3
+
+========== distribuicao das formulacoes da formula
+ f.formulacoes: {1: 69, 2: 46, 3: 3, 4: 3, 5: 2, 6: 3, 8: 8, 9: 8, 10: 4, 11: 2, 12: 7, 13: 5, 14: 3, 15: 4, 16: 2, 17: 3, 18: 7, 19: 1, 20: 3, 21: 3, 22: 1, 23: 2, 24: 1, 25: 2}
+  insufficient_memory: n=54 soma=54 min=1 mediana=1.0 max=1
+  unobservable: n=19 soma=199 min=8 mediana=10 max=15
+  over_budget: n=37 soma=181 min=1 mediana=4 max=15
+  solucao: n=82 soma=718 min=2 mediana=2.0 max=25
+  cegis_poda quando f=insufficient_memory: soma=4180 min=23 mediana=65.0 max=197
+  cegis_poda quando f=unobservable: soma=1415 min=56 mediana=73 max=90
+  cegis_poda quando f=over_budget: soma=3558 min=19 mediana=75 max=263
+  cegis_poda quando f=solucao: soma=8435 min=4 mediana=66.0 max=293
+  cegis quando f=insufficient_memory: soma=4455 min=26 mediana=71.5 max=210
+  cegis quando f=unobservable: soma=1388 min=59 mediana=74 max=82
+  cegis quando f=over_budget: soma=3579 min=22 mediana=92 max=214
+  cegis quando f=solucao: soma=6698 min=4 mediana=76.5 max=231
+
+========== familia autorizado (sensor s_autorizado)
+  autorizado: desfechos f {'solucao': 48} | estados das solucoes {1: 48} | solucoes com s_autorizado 48 | formulacoes f 102 cegis_poda 1816 cegis 2053
+  eventos: desfechos f {'insufficient_memory': 18, 'solucao': 17, 'over_budget': 13} | estados das solucoes {4: 7, 3: 10} | solucoes com s_autorizado 0 | formulacoes f 395 cegis_poda 4896 cegis 4387
+  encerrar: desfechos f {'insufficient_memory': 18, 'solucao': 17, 'over_budget': 13} | estados das solucoes {4: 7, 3: 10} | solucoes com s_autorizado 0 | formulacoes f 397 cegis_poda 8241 cegis 6809
+  sem_reset: desfechos f {'insufficient_memory': 18, 'unobservable': 19, 'over_budget': 11} | estados das solucoes {} | solucoes com s_autorizado 0 | formulacoes f 258 cegis_poda 2635 cegis 2871
+
+========== os 24 casos f=insufficient_memory e cegis_poda=over_budget: orcamento
+   Counter({'curto': 24})
+   f=insufficient_memory e cegis_poda=sem_maquina: Counter({'folgado': 27, 'curto': 3})
+   f=over_budget: Counter({'curto': 37})

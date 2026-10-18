@@ -1,0 +1,10 @@
+decodificador (CANDIDATO) igual ao da corrida: True
+metricas iguais: True
+oraculo igual: True
+rede 'otima' da carga igual a OTIMAS[8] do script: True
+variantes no L da corrida: ['ternario', 'mascara', 'simd', 'simd_imediato']
+repeticoes passadas ao medidor: 21
+0.95682 registradores= 0 variante= ternario rede= [(4, 6), (5, 7), (1, 3), (0, 2), (2, 6), (1, 5), (3, 7), (0, 4), (6, 7), (0, 1), (4, 5), (2, 3), (3, 5), (2, 4), (3, 6), (1, 4), (3, 4), (1, 2), (5, 6)]
+0.96393 registradores= 0 variante= ternario rede= [(0, 2), (1, 3), (5, 7), (4, 6), (1, 5), (2, 6), (3, 7), (0, 4), (0, 1), (6, 7), (2, 3), (4, 5), (3, 5), (2, 4), (3, 6), (1, 4), (1, 2), (3, 4), (5, 6)]
+0.95727 registradores= 0 variante= ternario rede= [(1, 3), (4, 6), (5, 7), (0, 2), (2, 6), (1, 5), (3, 7), (0, 4), (6, 7), (0, 1), (4, 5), (2, 3), (3, 5), (2, 4), (3, 6), (1, 4), (1, 2), (3, 4), (5, 6)]
+genes pri iguais entre o 1o e o 3o da fronteira (seq 3 e seq 9): 16 de 28

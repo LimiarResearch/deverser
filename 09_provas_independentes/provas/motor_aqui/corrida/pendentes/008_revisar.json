@@ -1,0 +1,171 @@
+{
+ "id": "008_revisar",
+ "para": "ia",
+ "tipo": "revisar",
+ "conteudo": {
+  "situacao": "nenhum candidato cumpre D, e nenhum número de Π, nos extremos da incerteza, muda isso",
+  "melhor_candidato": null,
+  "nulos": {
+   "candidato_falho": 48
+  },
+  "sensibilidade": [],
+  "por_arquetipo": {
+   "rede": {
+    "melhor": "rede|base=otima|pri_0=0.642412|pri_1=0.786835|pri_10=0.089013|pri_11=0.490496|pri_12=0.0|pri_13=0.363389|pri_14=0.269051|pri_15=0.519061|pri_16=0.0|pri_17=0.958321|pri_18=0.822611|pri_19=0.820136|pri_2=0.921619|pri_20=0.937645|pri_21=0.914817|pri_22=0.36944|pri_23=0.297708|pri_24=0.679793|pri_25=0.409603|pri_26=0.610797|pri_27=0.946715|pri_3=0.233768|pri_4=0.618277|pri_5=0.152282|pri_6=0.729079|pri_7=0.05615|pri_8=0.913733|pri_9=0.467238|registradores=0|rem_0=1|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=1|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=1|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.6|variante=simd_imediato",
+    "violacao": 0.1831,
+    "reprovou_em": "r_correto",
+    "medidas": {
+     "erro_de_ordenacao": 0.183109283,
+     "razao_vs_melhor": 0.86458
+    }
+   }
+  },
+  "reformulacao": 1,
+  "diferencas_de_fotos": null,
+  "historico_da_menor_violacao": [
+   0.183109
+  ],
+  "ordem_das_causas": [
+   "L estreita: abrir a forma (outro arquétipo, mais primitivas ou mais composição)",
+   "cláusula de forma no D: o criador diz se é intenção",
+   "Π: número ausente, largo ou errado",
+   "M: modelo refutado ou fora do domínio",
+   "D contra o meio, só depois das quatro"
+  ],
+  "clausulas_de_forma": [],
+  "pedido": "proponha uma forma nova (outro arquétipo, ou composição de primitivas) ou uma mudança de D; a mudança de D volta ao criador",
+  "mapa_de_numeros": {
+   "latencia_das_instrucoes_de_troca": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "ciclos",
+    "grandeza": {
+     "quantidade": "latencia das instrucoes de troca"
+    },
+    "onde": "no alvo",
+    "por_que": "o custo de cada troca"
+   },
+   "custo_de_desvio_errado": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "ciclos",
+    "grandeza": {
+     "quantidade": "custo de desvio errado"
+    },
+    "onde": "no alvo",
+    "por_que": "quanto custa a rotina que desvia"
+   },
+   "ruido_da_medida_de_tempo": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "1",
+    "grandeza": {
+     "quantidade": "ruido da medida de tempo"
+    },
+    "onde": "no alvo",
+    "por_que": "o que é distinguível"
+   },
+   "frequencia_do_processador": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "GHz",
+    "grandeza": {
+     "quantidade": "frequencia do processador"
+    },
+    "onde": "no alvo",
+    "por_que": "o tempo absoluto"
+   },
+   "versao_do_gxx": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "versão",
+    "grandeza": {
+     "quantidade": "versao do gxx"
+    },
+    "onde": "no alvo",
+    "por_que": "o código gerado"
+   },
+   "cache_de_instrucoes_de_quem_chama": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "bytes",
+    "grandeza": {
+     "quantidade": "cache de instrucoes de quem chama"
+    },
+    "onde": "no alvo",
+    "por_que": "o efeito do corpo no meio"
+   },
+   "profundidade_da_rede": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "níveis",
+    "grandeza": {
+     "quantidade": "profundidade da rede"
+    },
+    "onde": "no alvo",
+    "por_que": "o paralelismo que o processador aproveita"
+   },
+   "pressao_de_registradores": {
+    "clausulas": [
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "registradores",
+    "grandeza": {
+     "quantidade": "pressao de registradores"
+    },
+    "onde": "no alvo",
+    "por_que": "quando os valores saem dos registradores"
+   },
+   "numero_de_comparadores": {
+    "clausulas": [
+     "o_tamanho",
+     "r_mais_rapida"
+    ],
+    "origens": [
+     "ia"
+    ],
+    "unidade": "comparadores",
+    "grandeza": {
+     "quantidade": "numero de comparadores"
+    },
+    "onde": "no alvo",
+    "por_que": "o trabalho da rotina"
+   }
+  },
+  "sobre_o_mapa": "se a falha revela um número do meio que o mapa não tem, acrescente-o em mapa_acrescentar",
+  "causa": "L ou D: nenhum candidato cumpre D, e nenhum número de Π muda isso"
+ },
+ "criado_em": "2026-10-17T23:13:23+00:00",
+ "formato_da_resposta": "ver esquemas.md, seção revisar"
+}

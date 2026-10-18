@@ -1,0 +1,20 @@
+{
+ "clausulas": {
+  "r_correto": {
+   "distinguivel": true,
+   "prova": "V confere todos os n^n vetores e a rede pelo princípio 0-1",
+   "medida": {
+    "vetores": 16777216
+   }
+  },
+  "r_mais_rapida": {
+   "distinguivel": true,
+   "prova": "a diferença pedida (3%) passa o ruído da razão mais o desvio da referência contra a cópia dela mesma, os dois medidos na VPS",
+   "medida": {
+    "ruido_medido": 0.0113,
+    "desvio_ref_contra_ref": 0.0053,
+    "diferenca_pedida": 0.03
+   }
+  }
+ }
+}

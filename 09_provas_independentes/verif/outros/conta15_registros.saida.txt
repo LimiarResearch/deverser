@@ -1,0 +1,282 @@
+== 1. Arquivos de registro: 29
+
+== 2. Fim de cada registro, codigo de saida, erros, avisos, carimbos de data/hora
+conta_orelha.log             linhas= 63 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p1_conta.log                 linhas= 17 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p1_vida.log                  linhas= 33 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p1b_conta.log                linhas= 16 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p1b_vida.log                 linhas= 33 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p2_conta.log                 linhas= 15 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=['2060']
+p2_sintese.log               linhas= 11 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=['2060']
+p2_vida.log                  linhas= 32 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=['2060']
+p2b_conta.log                linhas= 16 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p2b_vida.log                 linhas= 33 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p2c_conta.log                linhas= 22 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p2c_conta_a.log              linhas= 24 FIM=1 ['saida 0'] erros/avisos=1 datas_ou_horas=[]
+     >> /home/iro/bancada/conta15/p2c_esquecer.py:178: RuntimeWarning: divide by zero encountered in divide
+p2c_diag_b.log               linhas= 26 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p2c_vida_sinapse.log         linhas= 26 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p2c_vida_sinapse_b.log       linhas= 24 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p2c_vida_unidade.log         linhas= 24 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4_conta.log                 linhas= 12 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4_vida.log                  linhas= 55 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4b_conta.log                linhas= 10 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4b_vida.log                 linhas= 41 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4c_conta.log                linhas=  9 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4c_vida.log                 linhas= 35 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4d_conta.log                linhas=  7 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4d_vida.log                 linhas= 34 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4e_conta.log                linhas=  9 FIM=2 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4e_vida_dp2.log             linhas= 32 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4e_vida_dp3.log             linhas= 32 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4f_conta.log                linhas=  7 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+p4f_vida.log                 linhas= 34 FIM=1 ['saida 0'] erros/avisos=0 datas_ou_horas=[]
+
+== 3. A conta registrada (arquivo *_conta.log) e o comeco do *_vida.log
+p1_conta.log     -> p1_vida.log     : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p1b_conta.log    -> p1b_vida.log    : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p2_conta.log     -> p2_vida.log     : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p2b_conta.log    -> p2b_vida.log    : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p4_conta.log     -> p4_vida.log     : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p4b_conta.log    -> p4b_vida.log    : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p4c_conta.log    -> p4c_vida.log    : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p4d_conta.log    -> p4d_vida.log    : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p4f_conta.log    -> p4f_vida.log    : a conta inteira (sem FIM) e o comeco identico da vida = True; linha seguinte na vida: 'A VIDA'
+p4e_conta bloco 1 -> p4e_vida_dp3.log: identico ao comeco = True; linha seguinte: 'A VIDA'
+p4e_conta bloco 2 -> p4e_vida_dp2.log: identico ao comeco = True; linha seguinte: 'A VIDA'
+p2c_vida_sinapse_b.log: primeira linha = "O ESQUECIMENTO NA SINAPSE, com d' = 2 e a sinapse exata: alfa 0.02275, costume de 176, Page 3.76, p0 0.0164"; segunda = 'A VIDA, COM O ESQUECIMENTO NA SINAPSE (a segunda forma)'
+p2c_diag_b.log: primeira linha = "O ESQUECIMENTO NA SINAPSE, com d' = 2 e a sinapse exata: alfa 0.02275, costume de 176, Page 3.76, p0 0.0164"; segunda = 'A VIDA, COM O ESQUECIMENTO NA SINAPSE (a segunda forma)'
+p2c_vida_unidade.log: primeira linha = "O ESQUECIMENTO NA SINAPSE, com d' = 2 e a sinapse exata: alfa 0.02275, costume de 176, Page 3.76, p0 0.0164"; segunda = 'A VIDA, COM O ESQUECIMENTO NA UNIDADE (a regra da p2b)'
+p2c_vida_sinapse.log: primeira linha = "O ESQUECIMENTO NA SINAPSE, com d' = 2 e a sinapse exata: alfa 0.02275, costume de 176, Page 3.76, p0 0.0164"; segunda = 'A VIDA, COM O ESQUECIMENTO NA SINAPSE (a terceira forma)'
+cabecalhos das contas da 2c: ['A CONTA DO ESQUECIMENTO NA SINAPSE (antes da vida)', 'A CONTA DO ESQUECIMENTO NA SINAPSE, SEGUNDA FORMA (antes da vida)']
+
+== 4. A conta da orelha (conta_orelha.log)
+rodadas lidas: 12
+   ('1', 'faber', '77.3', '206', '25.2', '12.1', '15.0')
+   ('2', 'cadu', '71.4', '206', '38.3', '29.6', '28.6')
+   ('3', 'dora', '53.3', '206', '81.1', '79.1', '86.4')
+   ('4', 'alex', '38.0', '206', '91.7', '90.8', '95.1')
+   ('5', 'santa', '54.0', '206', '73.8', '86.4', '88.8')
+   ('6', 'gabriel', '62.0', '38', '13.2', '7.9', '5.3')
+   ('7', 'faber', '75.7', '206', '21.4', '18.4', '13.6')
+   ('8', 'cadu', '69.8', '206', '35.0', '25.2', '20.4')
+   ('9', 'dora', '49.8', '206', '70.4', '72.3', '76.7')
+   ('10', 'alex', '36.8', '206', '91.3', '85.9', '93.2')
+   ('11', 'santa', '53.3', '206', '66.0', '78.2', '81.6')
+   ('12', 'gabriel', '56.8', '52', '11.5', '1.9', '5.8')
+  todas as 12 rodadas (6 vozes): orelha medida 51.57% | prevista 58.18% | media dos bits 48.98% | Jaccard V10 50.88%
+     ponderado pelas falas (2150): orelha 57.44% | bits 55.57% | Jaccard 57.66%
+  so as 10 das 5 vozes sinteticas: orelha medida 59.42% | prevista 57.94% | media dos bits 57.80% | Jaccard V10 59.94%
+     ponderado pelas falas (2060): orelha 59.42% | bits 57.80% | Jaccard 59.94%
+  previsao acima da medida em 6 rodadas; abaixo em 6
+
+== 5. Faixas das vidas das palavras
+p1_vida.log              errados por hora [33, 55, 55, 51, 61, 29, 24, 36, 115, 28, 15, 41] -> min 15 max 115 (0.36% a 2.80%); acima de 93,5 (2,3%): 1 de 12
+                         acende a propria por hora [5, 4, 6, 6, 7, 6, 6, 7, 8, 8, 7, 6]; anuncio em que acendeu: [2, 4, 3, 4, 2, 6, 3, 6, 6, 5] -> 2 a 6
+p1b_vida.log             errados por hora [24, 9, 12, 15, 14, 14, 11, 18, 13, 11, 12, 10] -> min 9 max 24 (0.22% a 0.58%); acima de 93,5 (2,3%): 0 de 12
+                         acende a propria por hora [8, 7, 7, 7, 6, 7, 5, 6, 5, 6, 6, 5]; anuncio em que acendeu: [3, 6, 3, 5, 2, 4, 4, 4, 8, 6] -> 2 a 8
+p2_vida.log              errados por hora [0, 1, 9, 9, 8, 7, 9, 9, 5, 7, 7, 9] -> min 0 max 9 (0.00% a 0.22%); acima de 93,5 (2,3%): 0 de 12
+                         acende a propria por hora [0, 7, 10, 10, 9, 9, 7, 8, 7, 7, 7, 7]; anuncio em que acendeu: [41, 30, 18, 38, 27, 41, 37, 30, 26, 43] -> 18 a 43
+p2b_vida.log             errados por hora [181, 127, 168, 181, 142, 149, 103, 105, 115, 82, 79, 108] -> min 79 max 181 (1.92% a 4.40%); acima de 93,5 (2,3%): 10 de 12
+                         acende a propria por hora [10, 10, 10, 10, 10, 9, 8, 7, 7, 8, 7, 6]; anuncio em que acendeu: [3, 3, 3, 3, 2, 4, 2, 4, 3, 4] -> 2 a 4
+p2c_vida_sinapse_b.log   errados por hora [181, 135, 150, 198, 149, 151, 148, 149, 164, 157, 130, 164] -> min 130 max 198 (3.16% a 4.82%); acima de 93,5 (2,3%): 12 de 12
+                         acende a propria por hora [10, 10, 10, 10, 10, 10, 9, 9, 8, 8, 8, 8]; anuncio em que acendeu: [3, 3, 3, 3, 2, 4, 2, 4, 3, 4] -> 2 a 4
+p2c_vida_unidade.log     errados por hora [181, 127, 168, 181, 142, 149, 103, 105, 115, 82, 79, 108] -> min 79 max 181 (1.92% a 4.40%); acima de 93,5 (2,3%): 10 de 12
+                         acende a propria por hora [10, 10, 10, 10, 10, 9, 8, 7, 7, 8, 7, 6]; anuncio em que acendeu: [3, 3, 3, 3, 2, 4, 2, 4, 3, 4] -> 2 a 4
+p2c_vida_sinapse.log     errados por hora [190, 120, 171, 177, 144, 144, 214, 156, 150, 117, 121, 164] -> min 117 max 214 (2.85% a 5.21%); acima de 93,5 (2,3%): 12 de 12
+                         acende a propria por hora [10, 10, 10, 10, 10, 10, 9, 8, 8, 8, 8, 8]; anuncio em que acendeu: [3, 5, 3, 3, 2, 3, 2, 4, 2, 4] -> 2 a 5
+
+== 6. A 2c: a vida com a regra da unidade repete a p2b numero por numero?
+  p2b horas: 12  p2c unidade horas: 12  identicas: True
+  lista dos 18 esquecimentos falsos identica (sem a anotacao): True
+  previsto na conta da 2a forma, regra nova: 10919 | medido na vida da 2a forma: 11073 | medido na vida da 3a forma: 23466
+  p2c_vida_sinapse_b.log: você: 87/132 = 65.9% de todas; depois das 10 primeiras 77/122 = 63.1%; ultima a 131a
+  p2c_vida_sinapse_b.log: mundo: 13/118 = 11.0% de todas; depois das 10 primeiras 3/108 = 2.8%; ultima a 65a
+  p2c_vida_sinapse.log: você: 10/132 = 7.6% de todas; depois das 10 primeiras 3/122 = 2.5%; ultima a 79a
+  p2c_vida_sinapse.log: mundo: 10/118 = 8.5% de todas; depois das 10 primeiras 1/108 = 0.9%; ultima a 49a
+  costume acima do limiar (3a forma): [('primeira', '2.96'), ('segunda', '2.40')]
+  p2c_vida_sinapse_b x p2c_diag_b: linhas 24 e 26 ; diferentes nas linhas comuns: [(21, '  o custo neste roteiro (numpy, sem compilar): 4.6 ms por pa', '  o custo neste roteiro (numpy, sem compilar): 4.4 ms por pa'), (22, 'FIM', '  diag você no fim: 35 ligacoes com peso (16 positivas), 20 '), (23, 'saida 0', '  diag mundo no fim: 34 ligacoes com peso (15 positivas), 7 ')]
+
+== 7. Premissas 3 e 4
+ --- p4_vida.log
+     alegria       38.1%  103x     0.2 a  262.4 min  mediana 0.5 <13,5
+     medo           8.2%  348x     0.2 a   46.4 min  mediana 0.2 <13,5
+     curiosidade    1.2%    7x     9.0 a    9.0 min  mediana 9.0 <13,5
+     apego          1.4%    7x     4.0 a   16.0 min  mediana 13.0 <13,5
+     procura        6.5%   18x     6.5 a   39.8 min  mediana 19.2
+     saudade       22.3%    8x    21.5 a  401.5 min  mediana 102.8
+     calma         31.8%   58x     0.2 a  111.7 min  mediana 25.2
+     estalo sim em: #1 #4 #7 #8 #10 #13 #17 #19 #21
+     esquecimentos pelo teste de Page: nenhum
+     procura antes das chegadas (dia hora %): [('1', '7.78', 100), ('1', '11.96', 0), ('1', '18.77', 0), ('2', '7.17', 0), ('2', '11.98', 0), ('2', '18.73', 18), ('3', '7.59', 100), ('3', '12.25', 75), ('3', '18.27', 0), ('4', '7.32', 0), ('4', '11.96', 0), ('4', '18.54', 0), ('6', '7.46', 0), ('6', '11.68', 0), ('6', '18.70', 11), ('7', '7.91', 92), ('7', '11.52', 0), ('7', '18.57', 20)]
+     dia 1 saudade em 48.3% do tempo acordado; apego com Gabriel ali em  3.8%; frustracao em  0.0%
+     dia 2 saudade em  2.8% do tempo acordado; apego com Gabriel ali em  1.6%; frustracao em  0.0%
+     dia 3 saudade em  4.6% do tempo acordado; apego com Gabriel ali em  0.0%; frustracao em  0.0%
+     dia 4 saudade em  0.0% do tempo acordado; apego com Gabriel ali em 10.1%; frustracao em  0.0%
+     dia 5 saudade em 95.5% do tempo acordado; apego com Gabriel ali em  0.0%; frustracao em  0.0%
+     dia 6 saudade em  5.0% do tempo acordado; apego com Gabriel ali em  8.2%; frustracao em  0.0%
+     dia 7 saudade em  0.0% do tempo acordado; apego com Gabriel ali em  0.0%; frustracao em  0.0%
+     a procura nas outras horas sem Gabriel, acordado: 7.2%
+     o repassar: 14 sonos, 201 passagens repassadas, 201 delas vividas naquela ordem; a chance de um par ao acaso ter sido vivido e 0.27; z = 23.4 (o criterio, 3)
+ --- p4b_vida.log
+     alegria       40.0%   18x    57.7 a  266.9 min  mediana 58.4
+     medo          40.4%   62x    13.5 a  151.0 min  mediana 22.9
+     curiosidade    2.1%    7x    16.4 a   16.4 min  mediana 16.4
+     apego          4.5%   14x    15.3 a   18.7 min  mediana 17.5
+     procura        1.9%    5x    15.9 a   22.3 min  mediana 22.3
+     saudade       22.5%    8x    23.9 a  403.4 min  mediana 104.7
+     calma         13.0%   42x    13.6 a   31.6 min  mediana 16.5
+     estalo sim em: #3 #4 #5 #6 #7 #8 #9 #10 #13 #16
+     esquecimentos pelo teste de Page: estrondo no dia 7 as 9.2 h
+     procura antes das chegadas (dia hora %): [('1', '7.8', 0), ('1', '12.0', 0), ('1', '18.8', 0), ('2', '7.2', 0), ('2', '12.0', 0), ('2', '18.7', 0), ('3', '7.6', 0), ('3', '12.3', 0), ('3', '18.3', 0), ('4', '7.3', 0), ('4', '12.0', 0), ('4', '18.5', 0), ('6', '7.5', 0), ('6', '11.7', 0), ('6', '18.7', 0), ('7', '7.9', 0), ('7', '11.5', 0), ('7', '18.6', 0)]
+     dia 1 saudade 49.0%; apego com Gabriel ali 11.1%; frustracao  0.0%; episodios 7
+     dia 2 saudade  3.1%; apego com Gabriel ali 16.8%; frustracao  0.0%; episodios 7
+     dia 3 saudade  4.9%; apego com Gabriel ali 10.4%; frustracao  0.0%; episodios 7
+     dia 4 saudade  0.0%; apego com Gabriel ali 10.3%; frustracao  0.0%; episodios 7
+     dia 5 saudade 95.5%; apego com Gabriel ali  0.0%; frustracao  0.0%; episodios 1
+     dia 6 saudade  5.2%; apego com Gabriel ali 16.8%; frustracao  0.0%; episodios 7
+     dia 7 saudade  0.0%; apego com Gabriel ali 10.8%; frustracao  0.0%; episodios 8
+     dia 1 revividos 7 dos 7 episodios do dia
+     dia 2 revividos 7 dos 7 episodios do dia
+     dia 3 revividos 7 dos 7 episodios do dia
+     dia 4 revividos 7 dos 7 episodios do dia
+     dia 5 revividos 1 dos 1 episodios do dia
+     dia 6 revividos 7 dos 7 episodios do dia
+     dia 7 revividos 8 dos 8 episodios do dia
+     a procura nas outras horas sem Gabriel, acordado: 3.3%
+     o narrador: 44 episodios na semana; 55615 passagens revividas, 55615 na ordem vivida (100.0%); no descanso acordado sem Gabriel, revivendo em 98% dos passos
+ --- p4c_vida.log
+     alegria       38.7%  349x     0.1 a   33.5 min  mediana 4.2 <13,5
+     medo           9.2%   17x    13.5 a   58.2 min  mediana 13.7
+     curiosidade    2.1%    7x    16.4 a   16.4 min  mediana 16.4
+     apego         40.1%   18x    58.3 a  267.2 min  mediana 58.4
+     procura        2.4%    4x    16.5 a   48.2 min  mediana 32.9
+     saudade       22.5%    8x    23.9 a  403.4 min  mediana 104.7
+     frustracao     2.3%    7x    13.6 a   18.3 min  mediana 18.3
+     calma         27.5%  208x     0.1 a   33.2 min  mediana 4.2 <13,5
+     querer         6.4%   18x    19.2 a   19.4 min  mediana 19.4
+     estalo sim em: #4 #10
+     esquecimentos pelo teste de Page: nenhum
+     procura antes das chegadas (dia hora %): [('1', '7.8', 0), ('1', '12.0', 0), ('1', '18.8', 0), ('2', '7.2', 0), ('2', '12.0', 0), ('2', '18.7', 0), ('3', '7.6', 0), ('3', '12.3', 0), ('3', '18.3', 0), ('4', '7.3', 0), ('4', '12.0', 0), ('4', '18.5', 0), ('6', '7.5', 0), ('6', '11.7', 0), ('6', '18.7', 0), ('7', '7.9', 0), ('7', '11.5', 0), ('7', '18.6', 0)]
+     saidas com procura > 0: 1 de 18; faixa 82 a 82
+     dia 1 apego com Gabriel ali 100.0%; querer com a bola ali  98.6%; frustracao 31.9 min; saudade 49.0%
+     dia 2 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  3.1%
+     dia 3 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  4.9%
+     dia 4 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     dia 5 apego com Gabriel ali   0.0%; querer com a bola ali   0.0%; frustracao  0.0 min; saudade 95.5%
+     dia 6 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  5.2%
+     dia 7 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     a procura no resto do tempo sem Gabriel, acordado: 4.1%
+     o contagio: 1 min depois de um tom duro, a alegria apagada em 14 de 338 (4%); depois de um tom bom, em 200 de 5707 (4%)
+     o narrador: 44 episodios na semana; no descanso acordado sem Gabriel, revivendo em 98% dos passos
+ --- p4d_vida.log
+     alegria       32.0%   40x     0.1 a  197.8 min  mediana 30.2
+     medo           9.3%   18x    13.5 a   58.2 min  mediana 15.5
+     curiosidade    2.1%    7x    16.4 a   16.4 min  mediana 16.4
+     apego         40.1%   18x    58.3 a  267.2 min  mediana 58.4
+     procura        5.5%   14x    16.0 a   48.2 min  mediana 17.4
+     saudade       22.5%    8x    23.9 a  403.4 min  mediana 104.7
+     frustracao     2.3%    7x    13.5 a   18.5 min  mediana 18.3
+     calma         27.5%   55x     0.1 a   94.9 min  mediana 25.5
+     querer         6.2%   18x    13.7 a   19.4 min  mediana 19.4
+     incomodo       7.5%   26x    13.5 a   29.0 min  mediana 13.5
+     estalo sim em: #4 #10 #16
+     esquecimentos pelo teste de Page: nenhum
+     procura antes das chegadas (dia hora %): [('1', '7.8', 0), ('1', '12.0', 0), ('1', '18.8', 0), ('2', '7.2', 0), ('2', '12.0', 0), ('2', '18.7', 0), ('3', '7.6', 0), ('3', '12.3', 0), ('3', '18.3', 0), ('4', '7.3', 0), ('4', '12.0', 0), ('4', '18.5', 0), ('6', '7.5', 0), ('6', '11.7', 0), ('6', '18.7', 0), ('7', '7.9', 0), ('7', '11.5', 0), ('7', '18.6', 0)]
+     saidas com procura > 0: 11 de 18; faixa 80 a 87
+     dia 1 apego com Gabriel ali 100.0%; querer com a bola ali  81.0%; frustracao 18.5 min; saudade 49.0%
+     dia 2 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 31.8 min; saudade  3.1%
+     dia 3 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  4.9%
+     dia 4 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     dia 5 apego com Gabriel ali   0.0%; querer com a bola ali   0.0%; frustracao  0.0 min; saudade 95.5%
+     dia 6 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  5.2%
+     dia 7 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     a procura no resto do tempo sem Gabriel, acordado: 4.1%
+     o contagio: 1 min depois de um tom duro, a alegria apagada em 36 de 36 (100%); depois de um tom bom, em 1132 de 5707 (20%)
+     o narrador: 44 episodios na semana; no descanso acordado sem Gabriel, revivendo em 98% dos passos
+ --- p4e_vida_dp3.log
+     alegria       32.0%   40x     0.1 a  197.8 min  mediana 30.2
+     medo           6.6%   18x    13.5 a   47.5 min  mediana 15.6
+     curiosidade    2.1%    7x    16.4 a   16.4 min  mediana 16.4
+     apego         40.1%   18x    58.3 a  267.2 min  mediana 58.4
+     procura        5.4%   13x    16.4 a   58.2 min  mediana 17.5
+     saudade       22.5%    8x    23.9 a  403.4 min  mediana 104.7
+     frustracao     2.3%    7x    13.5 a   18.5 min  mediana 18.3
+     calma         27.8%   55x     0.1 a   94.9 min  mediana 25.5
+     querer         6.2%   18x    13.7 a   19.4 min  mediana 19.4
+     incomodo       7.5%   26x    13.5 a   29.0 min  mediana 13.5
+     estalo sim em: #3 #4 #10 #16 #19
+     esquecimentos pelo teste de Page: nenhum
+     procura antes das chegadas (dia hora %): [('1', '7.8', 0), ('1', '12.0', 0), ('1', '18.8', 0), ('2', '7.2', 0), ('2', '12.0', 0), ('2', '18.7', 0), ('3', '7.6', 0), ('3', '12.3', 0), ('3', '18.3', 0), ('4', '7.3', 0), ('4', '12.0', 0), ('4', '18.5', 0), ('6', '7.5', 0), ('6', '11.7', 0), ('6', '18.7', 0), ('7', '7.9', 0), ('7', '11.5', 0), ('7', '18.6', 0)]
+     saidas com procura > 0: 10 de 18; faixa 82 a 87
+     dia 1 apego com Gabriel ali 100.0%; querer com a bola ali  81.0%; frustracao 18.5 min; saudade 49.0%
+     dia 2 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 31.8 min; saudade  3.1%
+     dia 3 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  4.9%
+     dia 4 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     dia 5 apego com Gabriel ali   0.0%; querer com a bola ali   0.0%; frustracao  0.0 min; saudade 95.5%
+     dia 6 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  5.2%
+     dia 7 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     a procura no resto do tempo sem Gabriel, acordado: 4.4%
+     o contagio: 1 min depois de um tom duro, a alegria apagada em 36 de 36 (100%); depois de um tom bom, em 1132 de 5707 (20%)
+     o narrador: 44 episodios na semana; no descanso acordado sem Gabriel, revivendo em 98% dos passos
+ --- p4e_vida_dp2.log
+     alegria       32.0%   40x     0.1 a  197.8 min  mediana 30.2
+     medo           8.0%   17x    13.5 a   57.8 min  mediana 17.5
+     curiosidade    1.9%    7x    14.8 a   14.8 min  mediana 14.8
+     apego         40.1%   18x    58.3 a  267.2 min  mediana 58.4
+     procura       25.3%   29x    14.7 a  195.4 min  mediana 17.8
+     saudade       22.5%    8x    23.9 a  403.4 min  mediana 104.7
+     frustracao     2.0%    6x    18.3 a   18.4 min  mediana 18.3
+     calma         27.8%   54x     0.1 a   94.9 min  mediana 24.4
+     querer         6.3%   18x    13.9 a   19.4 min  mediana 19.4
+     incomodo       7.5%   26x    13.5 a   29.0 min  mediana 13.5
+     estalo sim em: #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13
+     esquecimentos pelo teste de Page: estrondo no dia 5 as 9.1 h
+     procura antes das chegadas (dia hora %): [('1', '7.8', 0), ('1', '12.0', 0), ('1', '18.8', 0), ('2', '7.2', 0), ('2', '12.0', 0), ('2', '18.7', 67), ('3', '7.6', 0), ('3', '12.3', 100), ('3', '18.3', 0), ('4', '7.3', 0), ('4', '12.0', 88), ('4', '18.5', 100), ('6', '7.5', 0), ('6', '11.7', 100), ('6', '18.7', 100), ('7', '7.9', 15), ('7', '11.5', 100), ('7', '18.6', 100)]
+     saidas com procura > 0: 17 de 18; faixa 73 a 89
+     dia 1 apego com Gabriel ali 100.0%; querer com a bola ali  84.7%; frustracao 18.4 min; saudade 49.0%
+     dia 2 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  3.1%
+     dia 3 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  4.9%
+     dia 4 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     dia 5 apego com Gabriel ali   0.0%; querer com a bola ali   0.0%; frustracao  0.0 min; saudade 95.5%
+     dia 6 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  5.2%
+     dia 7 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     a procura no resto do tempo sem Gabriel, acordado: 29.8%
+     o contagio: 1 min depois de um tom duro, a alegria apagada em 36 de 36 (100%); depois de um tom bom, em 1132 de 5707 (20%)
+     o narrador: 44 episodios na semana; no descanso acordado sem Gabriel, revivendo em 98% dos passos
+ --- p4f_vida.log
+     alegria       32.0%   40x     0.1 a  197.8 min  mediana 30.2
+     medo           5.8%   16x    13.5 a   37.8 min  mediana 17.5
+     curiosidade    1.9%    7x    14.8 a   14.8 min  mediana 14.8
+     apego         40.1%   18x    58.3 a  267.2 min  mediana 58.4
+     procura       16.6%   27x    13.9 a  137.5 min  mediana 17.8
+     saudade       22.5%    8x    23.9 a  403.4 min  mediana 104.7
+     frustracao     2.0%    6x    18.3 a   18.4 min  mediana 18.3
+     calma         27.9%   54x     0.1 a   94.9 min  mediana 24.4
+     querer         6.3%   18x    13.9 a   19.4 min  mediana 19.4
+     incomodo       7.5%   26x    13.5 a   29.0 min  mediana 13.5
+     estalo sim em: #3 #4 #5 #6 #7 #8 #9 #10 #11 #12 #13
+     esquecimentos pelo teste de Page: brincar no dia 3 as 18.6 h, estrondo no dia 4 as 13.9 h
+     procura antes das chegadas (dia hora %): [('1', '7.8', 0), ('1', '12.0', 0), ('1', '18.8', 0), ('2', '7.2', 0), ('2', '12.0', 0), ('2', '18.7', 67), ('3', '7.6', 0), ('3', '12.3', 100), ('3', '18.3', 0), ('4', '7.3', 0), ('4', '12.0', 38), ('4', '18.5', 60), ('6', '7.5', 0), ('6', '11.7', 2), ('6', '18.7', 100), ('7', '7.9', 0), ('7', '11.5', 100), ('7', '18.6', 100)]
+     saidas com procura > 0: 16 de 18; faixa 87 a 89
+     dia 1 apego com Gabriel ali 100.0%; querer com a bola ali  84.7%; frustracao 18.4 min; saudade 49.0%
+     dia 2 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  3.1%
+     dia 3 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  4.9%
+     dia 4 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     dia 5 apego com Gabriel ali   0.0%; querer com a bola ali   0.0%; frustracao  0.0 min; saudade 95.5%
+     dia 6 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  5.2%
+     dia 7 apego com Gabriel ali 100.0%; querer com a bola ali 100.0%; frustracao 18.3 min; saudade  0.0%
+     a procura no resto do tempo sem Gabriel, acordado: 14.8%
+     o contagio: 1 min depois de um tom duro, a alegria apagada em 36 de 36 (100%); depois de um tom bom, em 1132 de 5707 (20%)
+     o narrador: 44 episodios na semana; no descanso acordado sem Gabriel, revivendo em 98% dos passos
+
+== 8. A p4f: "a espera acendeu em 7 das 10 chegadas de almoco e de noite"
+  chegadas de almoco e noite dos dias 2 a 7: [(2, 12.0, 0), (2, 18.7, 67), (3, 12.3, 100), (3, 18.3, 0), (4, 12.0, 38), (4, 18.5, 60), (6, 11.7, 2), (6, 18.7, 100), (7, 11.5, 100), (7, 18.6, 100)] ( 10 )
+  acesas com > 0%: 8 de 10
+  acesas com > 2%: 7 de 10
+  acesas com >= 50%: 6 de 10
+  so a partir do dia 3: 8 chegadas; > 0%: 7 ; >= 50%: 5
+
+== 9. Os commits citados no A_CONTA_15.md aparecem em algum arquivo do pacote?
+  hashes citados: 24 ['0790d4bb', '138f8ab1', '13db9950', '191ab66e', '26a9af9a', '28555c17', '3203dae5', '343faa47', '394bc00f', '59dc14cd', '610c9e62', '67e36604', '708cd2e9', '771b0d6c', '9040fdf4', '91e1d92b', 'a9ab92bd', 'c2cee85b', 'd35eebad', 'dd2b384b', 'e10a5ced', 'ed0096e6', 'f34f2fad', 'fd2c641e']
+  achados fora do A_CONTA_15.md: {'0790d4bb': ['01_artigo/A_ENGENHARIA_REVERSA_DO_ACASO.md'], '13db9950': ['01_artigo/A_ENGENHARIA_REVERSA_DO_ACASO.md'], '191ab66e': ['01_artigo/A_ENGENHARIA_REVERSA_DO_ACASO.md'], '28555c17': ['01_artigo/A_ENGENHARIA_REVERSA_DO_ACASO.md'], '343faa47': ['01_artigo/A_ENGENHARIA_REVERSA_DO_ACASO.md'], '67e36604': ['01_artigo/A_ENGENHARIA_REVERSA_DO_ACASO.md'], '91e1d92b': ['01_artigo/A_ENGENHARIA_REVERSA_DO_ACASO.md']}

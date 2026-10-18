@@ -1,0 +1,11 @@
+MANIFESTO: 351 linhas; conferem 351; diferem 0
+  arquivos da copia fora do manifesto: ['MANIFESTO.sha256']
+  linhas do manifesto sem arquivo: []
+a28eec9: 352 arquivos na arvore; diferencas com a copia: nenhuma; arquivos so na copia: []
+  commit 66cd55c: 153 arquivos
+  commit 61c5c4a: 351 arquivos
+  commit f571ac7: 351 arquivos
+  commit 3ba299b: 352 arquivos
+  commit a28eec9: 352 arquivos
+  commit e12d65d: 352 arquivos
+  commit 316ea4f: 352 arquivos

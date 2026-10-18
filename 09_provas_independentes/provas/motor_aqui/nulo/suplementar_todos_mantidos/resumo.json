@@ -1,0 +1,137 @@
+{
+ "modo": "todos_mantidos",
+ "semente": 20261018,
+ "N": 726,
+ "criacoes_espelhadas": [
+  0,
+  1
+ ],
+ "lote": 48,
+ "por_arquetipo": {
+  "rede": 726
+ },
+ "paralelo": 3,
+ "rodadas": 1,
+ "repeticoes": 1,
+ "modelo_hash": "6c9ef2c92479f76ca29f64e55f00904624ada37509c638361830bf534720d8d4",
+ "alvo": {
+  "id": "vps-local",
+  "tipo": "local",
+  "python": "/usr/bin/python3",
+  "host": null,
+  "descricao": "esta máquina: Intel Xeon 2,1 GHz com AVX-512, 4 núcleos, 3 para este problema (verificação de 17/10/2026)"
+ },
+ "FERRAMENTA_GXX": "/usr/bin/g++",
+ "FERRAMENTA_GXX_SHA256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769",
+ "inicio": "2026-10-17T23:30:55+0000",
+ "fim": "2026-10-17T23:39:20+0000",
+ "segundos": 505.3,
+ "medidos": 726,
+ "erros": 0,
+ "oraculo_ok": 726,
+ "corretos_que_ordenam": 726,
+ "cumprem_D": 126,
+ "melhor_violacao": 0.0,
+ "melhores_corretos": [
+  {
+   "id": "rede|base=otima|pri_0=0.412408|pri_1=0.941653|pri_10=0.516959|pri_11=0.322297|pri_12=0.366294|pri_13=0.1088|pri_14=0.628578|pri_15=0.737461|pri_16=0.711661|pri_17=0.083432|pri_18=0.804184|pri_19=0.732268|pri_2=0.78208|pri_20=0.16624|pri_21=0.749526|pri_22=0.936903|pri_23=0.607751|pri_24=0.781211|pri_25=0.771602|pri_26=0.494693|pri_27=0.859654|pri_3=0.198138|pri_4=0.205316|pri_5=0.652181|pri_6=0.193626|pri_7=0.925623|pri_8=0.309626|pri_9=0.242495|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.441396|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.78363,
+   "razao_vs_rede": 0.62137,
+   "variante": "simd_imediato",
+   "registradores": 0,
+   "base": "otima",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=batcher|pri_0=0.921364|pri_1=0.95561|pri_10=0.506598|pri_11=0.879808|pri_12=0.704902|pri_13=0.102244|pri_14=0.5363|pri_15=0.884425|pri_16=0.746696|pri_17=0.176294|pri_18=0.05133|pri_19=0.638276|pri_2=0.659479|pri_20=0.845846|pri_21=0.837396|pri_22=0.940397|pri_23=0.228656|pri_24=0.749579|pri_25=0.006629|pri_26=0.331381|pri_27=0.883459|pri_3=0.580569|pri_4=0.301673|pri_5=0.088868|pri_6=0.62043|pri_7=0.398245|pri_8=0.181459|pri_9=0.050771|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.491294|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.78929,
+   "razao_vs_rede": 0.62569,
+   "variante": "simd_imediato",
+   "registradores": 0,
+   "base": "batcher",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=otima|pri_0=0.901741|pri_1=0.83071|pri_10=0.733067|pri_11=0.656759|pri_12=0.351988|pri_13=0.982006|pri_14=0.187866|pri_15=0.747615|pri_16=0.149532|pri_17=0.499481|pri_18=0.63429|pri_19=0.603622|pri_2=0.250616|pri_20=0.717379|pri_21=0.177957|pri_22=0.151228|pri_23=0.355861|pri_24=0.852602|pri_25=0.961972|pri_26=0.047951|pri_27=0.741004|pri_3=0.666347|pri_4=0.683712|pri_5=0.184715|pri_6=0.122222|pri_7=0.123993|pri_8=0.492428|pri_9=0.516073|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.228798|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.79241,
+   "razao_vs_rede": 0.6312,
+   "variante": "simd_imediato",
+   "registradores": 0,
+   "base": "otima",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=batcher|pri_0=0.90297|pri_1=0.574113|pri_10=0.292065|pri_11=0.699887|pri_12=0.928398|pri_13=0.526917|pri_14=0.292333|pri_15=0.665302|pri_16=0.958986|pri_17=0.9407|pri_18=0.435551|pri_19=0.098797|pri_2=0.392579|pri_20=0.090078|pri_21=0.752766|pri_22=0.950107|pri_23=0.229783|pri_24=0.303218|pri_25=0.413353|pri_26=0.406549|pri_27=0.907605|pri_3=0.973774|pri_4=0.273656|pri_5=0.855143|pri_6=0.673479|pri_7=0.867975|pri_8=0.425062|pri_9=0.938351|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.467152|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.79493,
+   "razao_vs_rede": 0.62653,
+   "variante": "simd_imediato",
+   "registradores": 0,
+   "base": "batcher",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=batcher|pri_0=0.875362|pri_1=0.105016|pri_10=0.127925|pri_11=0.857577|pri_12=0.355136|pri_13=0.827154|pri_14=0.968588|pri_15=0.249024|pri_16=0.573815|pri_17=0.158157|pri_18=0.321799|pri_19=0.911118|pri_2=0.402543|pri_20=0.793003|pri_21=0.539387|pri_22=0.484943|pri_23=0.131883|pri_24=0.106275|pri_25=0.077558|pri_26=0.502688|pri_27=0.128274|pri_3=0.216181|pri_4=0.94541|pri_5=0.154689|pri_6=0.208571|pri_7=0.539806|pri_8=0.773644|pri_9=0.6797|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.19616|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.79708,
+   "razao_vs_rede": 0.61307,
+   "variante": "simd_imediato",
+   "registradores": 0,
+   "base": "batcher",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=otima|pri_0=0.472343|pri_1=0.713969|pri_10=0.62815|pri_11=0.185379|pri_12=0.554853|pri_13=0.8159|pri_14=0.653809|pri_15=0.06142|pri_16=0.828559|pri_17=0.144094|pri_18=0.443761|pri_19=0.027646|pri_2=0.76544|pri_20=0.116646|pri_21=0.411287|pri_22=0.384313|pri_23=0.419558|pri_24=0.615969|pri_25=0.014215|pri_26=0.832943|pri_27=0.002511|pri_3=0.151809|pri_4=0.193562|pri_5=0.329596|pri_6=0.011384|pri_7=0.565129|pri_8=0.816238|pri_9=0.153086|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.17301|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.80359,
+   "razao_vs_rede": 0.56028,
+   "variante": "simd_imediato",
+   "registradores": 0,
+   "base": "otima",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=otima|pri_0=0.197827|pri_1=0.604153|pri_10=0.883855|pri_11=0.259009|pri_12=0.681884|pri_13=0.269103|pri_14=0.674405|pri_15=0.532336|pri_16=0.045776|pri_17=0.884378|pri_18=0.298696|pri_19=0.537064|pri_2=0.884748|pri_20=0.623377|pri_21=0.920719|pri_22=0.358904|pri_23=0.682958|pri_24=0.127358|pri_25=0.935914|pri_26=0.204875|pri_27=0.160939|pri_3=0.594084|pri_4=0.511638|pri_5=0.001841|pri_6=0.816936|pri_7=0.780735|pri_8=0.802838|pri_9=0.891756|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.190295|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.80529,
+   "razao_vs_rede": 0.58592,
+   "variante": "simd_imediato",
+   "registradores": 1,
+   "base": "otima",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=otima|pri_0=0.374743|pri_1=0.909916|pri_10=0.498337|pri_11=0.529858|pri_12=0.906202|pri_13=0.168192|pri_14=0.999852|pri_15=0.230092|pri_16=0.199637|pri_17=0.428595|pri_18=0.780418|pri_19=0.488617|pri_2=0.255175|pri_20=0.686155|pri_21=0.803401|pri_22=0.54939|pri_23=0.676926|pri_24=0.512148|pri_25=0.654419|pri_26=0.221411|pri_27=0.707346|pri_3=0.767121|pri_4=0.564026|pri_5=0.819648|pri_6=0.781569|pri_7=0.907827|pri_8=0.729586|pri_9=0.49516|registradores=0|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.409206|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.81572,
+   "razao_vs_rede": 0.65537,
+   "variante": "simd_imediato",
+   "registradores": 0,
+   "base": "otima",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=batcher|pri_0=0.820007|pri_1=0.071322|pri_10=0.362892|pri_11=0.516409|pri_12=0.632542|pri_13=0.109817|pri_14=0.647773|pri_15=0.662389|pri_16=0.304879|pri_17=0.748492|pri_18=0.090254|pri_19=0.527592|pri_2=0.270594|pri_20=0.02855|pri_21=0.903629|pri_22=0.29999|pri_23=0.360732|pri_24=0.212805|pri_25=0.261826|pri_26=0.854609|pri_27=0.978836|pri_3=0.796216|pri_4=0.82733|pri_5=0.234728|pri_6=0.202581|pri_7=0.012139|pri_8=0.950445|pri_9=0.88435|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.567657|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.81848,
+   "razao_vs_rede": 0.65803,
+   "variante": "simd_imediato",
+   "registradores": 1,
+   "base": "batcher",
+   "n_comparadores": 19
+  },
+  {
+   "id": "rede|base=batcher|pri_0=0.405149|pri_1=0.483502|pri_10=0.679444|pri_11=0.010329|pri_12=0.846137|pri_13=0.639985|pri_14=0.56996|pri_15=0.575111|pri_16=0.798139|pri_17=0.050663|pri_18=0.060939|pri_19=0.545791|pri_2=0.473147|pri_20=0.506392|pri_21=0.666936|pri_22=0.448748|pri_23=0.205622|pri_24=0.626281|pri_25=0.962264|pri_26=0.137969|pri_27=0.299256|pri_3=0.626018|pri_4=0.808456|pri_5=0.361321|pri_6=0.207826|pri_7=0.598918|pri_8=0.059624|pri_9=0.151271|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=0|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=0|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.274757|variante=simd_imediato",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 0.82484,
+   "razao_vs_rede": 0.66161,
+   "variante": "simd_imediato",
+   "registradores": 1,
+   "base": "batcher",
+   "n_comparadores": 19
+  }
+ ]
+}

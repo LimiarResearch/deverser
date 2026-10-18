@@ -1,0 +1,245 @@
+{
+ "respostas": {
+  "001_formular_D": {
+   "bytes_confere_resposta_copiada": true,
+   "json_confere_evento_resposta": true,
+   "copiada_de": "formular_D.json",
+   "arquivo_em_03_saida_igual": false
+  },
+  "002_confirmar_D": {
+   "bytes_confere_resposta_copiada": true,
+   "json_confere_evento_resposta": true,
+   "copiada_de": "confirmar_D.json",
+   "arquivo_em_03_saida_igual": true
+  },
+  "003_mapear_numeros": {
+   "bytes_confere_resposta_copiada": true,
+   "json_confere_evento_resposta": true,
+   "copiada_de": "mapear_D.json",
+   "arquivo_em_03_saida_igual": true
+  },
+  "004_propor_modelo": {
+   "bytes_confere_resposta_copiada": true,
+   "json_confere_evento_resposta": true,
+   "copiada_de": "propor_modelo.json",
+   "arquivo_em_03_saida_igual": false
+  },
+  "005_mapear_numeros": {
+   "bytes_confere_resposta_copiada": true,
+   "json_confere_evento_resposta": true,
+   "copiada_de": "mapear_L.json",
+   "arquivo_em_03_saida_igual": true
+  },
+  "006_medir_alvo": {
+   "bytes_confere_resposta_copiada": true,
+   "json_confere_evento_resposta": true,
+   "copiada_de": "medida_do_alvo_006_medir_alvo.json"
+  },
+  "007_conferir_distinguibilidade": {
+   "bytes_confere_resposta_copiada": true,
+   "json_confere_evento_resposta": true,
+   "copiada_de": "distinguibilidade.json",
+   "arquivo_em_03_saida_igual": true
+  }
+ },
+ "medida_do_alvo_igual_resposta_006": true,
+ "hash_do_modelo_recalculado": "889c906d0baa0abbe0465394d75428d01bb322d07be8824f9c0be79b62cad4bd",
+ "hash_do_modelo_registrado": "889c906d0baa0abbe0465394d75428d01bb322d07be8824f9c0be79b62cad4bd",
+ "ledger_versoes": {
+  "d": "a2cdf9ebc58017d74d65116d8335403e6bf1a7f14c704d68e9f34a9f9fc352a4",
+  "d_versao": 1,
+  "pi": "f58e13d3bff67ef41edf609b4f198a9e0668578b10e64a7782a50ee91c5e52b4",
+  "pi_versao": 1
+ },
+ "hash_D_recalculado_do_estado": "a2cdf9ebc58017d74d65116d8335403e6bf1a7f14c704d68e9f34a9f9fc352a4",
+ "hash_Pi_recalculado_do_estado": "f58e13d3bff67ef41edf609b4f198a9e0668578b10e64a7782a50ee91c5e52b4",
+ "D_confere": true,
+ "Pi_confere": true,
+ "diario_eventos_geracao": 8,
+ "diario_soma_avaliados": 384,
+ "diario_melhor_violacao_por_lote": [
+  0.359466314,
+  0.46784149800000063,
+  0.183109283,
+  0.017800000000000038,
+  0.0,
+  0.096800327,
+  0.0,
+  0.0
+ ],
+ "diario_horas_dos_lotes": [
+  "02:33:01",
+  "02:34:14",
+  "02:35:28",
+  "02:36:41",
+  "02:37:52",
+  "02:39:04",
+  "02:40:19",
+  "02:41:30"
+ ],
+ "diario_intervalos_entre_lotes_s": [
+  73.0,
+  74.0,
+  73.0,
+  71.0,
+  72.0,
+  75.0,
+  71.0
+ ],
+ "estado_concorrencia": {
+  "codigos_que_concorreram": 384,
+  "geracoes": 8,
+  "parada": {
+   "motivo": "a primeira fronteira ficou igual por 3 gerações seguidas",
+   "geracoes": 7,
+   "sem_melhora": 3,
+   "avaliados": 384,
+   "segundos": 581.7
+  },
+  "populacao": 48
+ },
+ "estado_criacao": {
+  "candidatos": 48,
+  "calculados": 48,
+  "validos": 3,
+  "nulos": {
+   "candidato_falho": 45
+  },
+  "segundos": 586.14,
+  "cadaveres": 45
+ },
+ "estado_contadores": {
+  "pedidos_ia": 7,
+  "pedidos_criador": 0,
+  "pedidos_avaliador": 0,
+  "consultas_de_dados": 0,
+  "avaliacoes": 48,
+  "passos": 8,
+  "segundos_motor": 590.0
+ },
+ "auditoria_contadores": {
+  "pedidos_ia": 7,
+  "pedidos_criador": 0,
+  "pedidos_avaliador": 0,
+  "consultas_de_dados": 0,
+  "avaliacoes": 48,
+  "passos": 8,
+  "segundos_motor": 3.64
+ },
+ "ledger_vereditos": 48,
+ "regra_384": {
+  "48_iniciais_mais_7_geracoes_de_48": 384,
+  "8_lotes_de_48": 384
+ },
+ "segundos": {
+  "parada_nsga2": 581.7,
+  "criacao": 586.14,
+  "motor_estado": 590.0,
+  "motor_auditoria": 3.64,
+  "diferenca_estado_menos_auditoria": 586.36,
+  "minutos_parada": 9.695
+ },
+ "sigma_recalculada": {
+  "lotes": 16,
+  "populacao": 48
+ },
+ "melhor_violacao_por_ordem": [
+  18.9053,
+  0.9414,
+  6.0503,
+  2.1471,
+  0.9321,
+  0.9616,
+  8.2208,
+  0.8893,
+  1.9002,
+  8.5446,
+  0.1831,
+  0.3883,
+  0.5427,
+  0.272,
+  0.4158,
+  0.2229,
+  0.151,
+  0.4272,
+  0.1602,
+  0.4189,
+  2.4276
+ ],
+ "melhor_violacao_por_ordem_decodificada_se_correta": [
+  null,
+  1.06414,
+  null,
+  null,
+  1.06321,
+  1.06616,
+  null,
+  1.05893,
+  null,
+  null,
+  0.98831,
+  1.00883,
+  1.02427,
+  0.9972,
+  1.01158,
+  0.99229,
+  0.9851,
+  1.01272,
+  0.98602,
+  1.01189,
+  null
+ ],
+ "pendentes_criado_em": {
+  "001_formular_D": "2026-09-29T02:31:34-03:00",
+  "002_confirmar_D": "2026-09-29T02:31:34-03:00",
+  "003_mapear_numeros": "2026-09-29T02:31:35-03:00",
+  "004_propor_modelo": "2026-09-29T02:31:36-03:00",
+  "005_mapear_numeros": "2026-09-29T02:31:37-03:00",
+  "006_medir_alvo": "2026-09-29T02:31:41-03:00",
+  "007_conferir_distinguibilidade": "2026-09-29T02:31:43-03:00"
+ },
+ "diario_em_ordem": true,
+ "ultimo_evento_antes_da_busca": "2026-09-29T02:31:44-03:00",
+ "primeiro_lote": "2026-09-29T02:33:01-03:00",
+ "D_confirmado_antes_da_busca": true,
+ "distinguibilidade_antes_da_busca": true,
+ "modelo_recebido_em": "2026-09-29T02:31:37-03:00",
+ "roteiro_primeira_e_ultima_hora": [
+  "02:31:33",
+  "02:41:30"
+ ],
+ "roteiro_passo_final_ate_desfecho_s": 586.0,
+ "roteiro_contadores": {
+  "pedidos_ia": 7,
+  "pedidos_criador": 0,
+  "pedidos_avaliador": 0,
+  "consultas_de_dados": 0,
+  "avaliacoes": 48,
+  "passos": 8,
+  "segundos_motor": 590.0
+ },
+ "roteiro_tem_trecho_cortado": true,
+ "intervencoes_citam_script": [
+  "experimentos/montar_desafio_motor.py"
+ ],
+ "problema": {
+  "ia_responde_pelo_criador": true,
+  "avaliador": false,
+  "paralelo_no_alvo": 3,
+  "rodadas": 1,
+  "repeticoes": 1,
+  "busca": "concorrencia",
+  "populacao": "sigma"
+ },
+ "pedidos_ao_criador": 0,
+ "clausulas_confirmadas_por": {
+  "r_correto": "ia",
+  "r_mais_rapida": "ia",
+  "o_tempo": "ia",
+  "o_tamanho": "ia"
+ },
+ "exportacao": {
+  "ok": false,
+  "erro": "NameError: name 'repr' is not defined"
+ }
+}

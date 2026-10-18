@@ -1,0 +1,46 @@
+pares: 96 | completos: 96
+ids do par sao consecutivos (folgado par, curto impar): 96
+desfecho f (folgado, curto): {('insufficient_memory', 'insufficient_memory'): 27, ('solucao', 'over_budget'): 26, ('solucao', 'solucao'): 28, ('unobservable', 'over_budget'): 11, ('unobservable', 'unobservable'): 4}
+
+folgado=solucao: custo folgado, custo curto, B curto, desfecho curto
+ curto=over_budget com custo do folgado bem abaixo de B (<= 0.9 B): [(9.03, None, 10.49, 'over_budget')]
+ curto=solucao: custo curto <= B em todos: True
+ diferenca de custo curto-folgado quando os dois tem solucao: n=28 min=-10.11 max=3.32
+ curto=over_budget: (custo folgado, B curto): [(7.61, 7.4), (8.2, 8.46), (9.03, 10.49), (10.0, 10.51), (11.08, 7.43), (11.49, 5.63), (11.59, 6.36), (12.3, 5.88), (12.89, 6.14), (12.91, 11.3), (13.67, 11.76), (13.92, 11.68), (14.16, 6.62), (15.24, 11.12), (15.27, 6.24), (15.61, 11.82), (15.88, 5.62), (17.45, 11.17), (18.7, 6.61), (19.6, 9.63), (20.64, 6.3), (20.91, 11.83), (20.92, 11.77), (21.43, 8.78), (24.02, 5.64), (24.86, 11.39)]
+ fracao custo_folgado/B_curto nos over_budget: min 0.86
+ curto=solucao: max custo_folgado/B_curto 1.90
+ pares com solucao nos dois e mesma maquina (estados e sensores): 28
+
+k x desfecho f:
+   ('k2', 'autorizado', 'solucao') 12
+   ('k2', 'encerrar', 'insufficient_memory') 12
+   ('k2', 'eventos', 'insufficient_memory') 12
+   ('k2', 'sem_reset', 'insufficient_memory') 12
+   ('k3', 'autorizado', 'solucao') 12
+   ('k3', 'encerrar', 'insufficient_memory') 6
+   ('k3', 'encerrar', 'over_budget') 3
+   ('k3', 'encerrar', 'solucao') 3
+   ('k3', 'eventos', 'insufficient_memory') 6
+   ('k3', 'eventos', 'over_budget') 3
+   ('k3', 'eventos', 'solucao') 3
+   ('k3', 'sem_reset', 'insufficient_memory') 6
+   ('k3', 'sem_reset', 'over_budget') 2
+   ('k3', 'sem_reset', 'unobservable') 4
+   ('k4', 'autorizado', 'solucao') 12
+   ('k4', 'encerrar', 'over_budget') 5
+   ('k4', 'encerrar', 'solucao') 7
+   ('k4', 'eventos', 'over_budget') 6
+   ('k4', 'eventos', 'solucao') 6
+   ('k4', 'sem_reset', 'over_budget') 3
+   ('k4', 'sem_reset', 'unobservable') 9
+   ('k5', 'autorizado', 'solucao') 12
+   ('k5', 'encerrar', 'over_budget') 5
+   ('k5', 'encerrar', 'solucao') 7
+   ('k5', 'eventos', 'over_budget') 4
+   ('k5', 'eventos', 'solucao') 8
+   ('k5', 'sem_reset', 'over_budget') 6
+   ('k5', 'sem_reset', 'unobservable') 6
+
+seg: casos em que f levou mais segundos que cegis_poda, por tipo: Counter({'autorizado': 22, 'eventos': 13, 'encerrar': 7, 'sem_reset': 6})
+seg f por tipo: {'autorizado': 4.8, 'eventos': 76.2, 'encerrar': 46.9, 'sem_reset': 25.4}
+seg cegis_poda por tipo: {'autorizado': 5.3, 'eventos': 74.8, 'encerrar': 50.6, 'sem_reset': 28.4}

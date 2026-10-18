@@ -1,0 +1,7 @@
+# Transcrito do terminal da sessão de 17/10/2026, no servidor A (Intel Xeon @ 2.10GHz, AVX-512, modelo não registrado), g++ 13.3.0:
+# o programa publicado, compilado como no LEIA-ME, rodado 5 vezes com ./rotina 21. A saída do servidor B está em saida_5_rodadas.txt.
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 14.281, "ciclos_referencia": 14.883, "ns_std_sort": 70.363, "razao_vs_rede": 0.96010, "razao_ref_contra_ref": 1.00053, "ruido": 0.00132, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 14.273, "ciclos_referencia": 14.875, "ns_std_sort": 66.149, "razao_vs_rede": 0.95960, "razao_ref_contra_ref": 1.00053, "ruido": 0.00223, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 15.586, "ciclos_referencia": 16.234, "ns_std_sort": 70.709, "razao_vs_rede": 0.95962, "razao_ref_contra_ref": 1.00000, "ruido": 0.00103, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 14.328, "ciclos_referencia": 14.945, "ns_std_sort": 70.167, "razao_vs_rede": 0.96101, "razao_ref_contra_ref": 1.00000, "ruido": 0.00206, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 15.430, "ciclos_referencia": 16.109, "ns_std_sort": 66.767, "razao_vs_rede": 0.96000, "razao_ref_contra_ref": 1.00000, "ruido": 0.00108, "soma": 22775}

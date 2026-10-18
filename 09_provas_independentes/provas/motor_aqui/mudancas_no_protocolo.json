@@ -1,0 +1,46 @@
+{
+ "protocolo_original": "protocolos/calculadora/ordenacao_8_motor_vps.json",
+ "protocolo_original_sha256": "fe1147243cb19bf711c4e09adbfdc7bc550640ceb0da3edff4eb3ba93560ec9a",
+ "protocolo_novo": "protocolos/calculadora/ordenacao_8_motor_xeon.json",
+ "protocolo_novo_sha256": "6c5eaa92e01d00635a45db3c900e1ea17438730f9c9ed1ed06a785678ee4bb93",
+ "mudancas_no_protocolo": [
+  {
+   "campo": "/alvos[0]/descricao",
+   "antes": "a VPS: AMD EPYC, 3 dos 6 núcleos para este problema",
+   "depois": "esta máquina: Intel Xeon 2,1 GHz com AVX-512, 4 núcleos, 3 para este problema (verificação de 17/10/2026)"
+  },
+  {
+   "campo": "/alvos[0]/python",
+   "antes": "/home/iro/bancada-criacao/venv/bin/python",
+   "depois": "/usr/bin/python3"
+  },
+  {
+   "campo": "/id",
+   "antes": "ordenacao_8_motor_vps",
+   "depois": "ordenacao_8_motor_xeon"
+  }
+ ],
+ "por_que": {
+  "/id": "outro id, para não confundir esta corrida com a de 29/09 (pedido da tarefa)",
+  "/alvos[0]/python": "o caminho do Python do servidor (/home/iro/bancada-criacao/venv/bin/python) não existe aqui; /usr/bin/python3 é o Python 3.13.16 com numpy 2.5.3 desta máquina",
+  "/alvos[0]/descricao": "texto descritivo do meio; o original dizia AMD EPYC, o que seria falso aqui. Não é executável e não entra em nenhuma conta do motor"
+ },
+ "mantido_de_proposito": {
+  "/alvos[0]/id": "continua 'vps-local' porque as respostas da corrida original (formular_D, escopo.alvo) apontam para esse id; mudar o id obrigaria a editar as respostas. É só um rótulo: o alvo efetivo é esta máquina",
+  "o resto": "paralelo_no_alvo 3, rodadas 1, repeticoes 1, orçamento, busca concorrencia, populacao sigma, teto, reformulacoes_max 5, conferir_distinguibilidade: idênticos"
+ },
+ "mudancas_fora_do_protocolo": {
+  "FERRAMENTA_GXX": "/usr/bin/g++",
+  "FERRAMENTA_GXX_SHA256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769",
+  "g++": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0; /usr/bin/g++ -> /etc/alternatives/g++ -> /usr/bin/x86_64-linux-gnu-g++-13",
+  "por_que_gxx": "a ferramenta declarada (compilador/ferramenta_ordenacao.py) lê o compilador destas duas variáveis de ambiente, e não do protocolo; é o compilador desta máquina, declarado por caminho e sha256 como no original",
+  "TMPDIR": "/tmp/claude-0/-home-user-Conta/9b6d7c7f-549d-59d8-82a7-bc02ceae2e96/scratchpad/deverser/provas/motor_aqui/tmp",
+  "por_que_tmpdir": "a ferramenta guarda o C++ gerado e o binário em tempfile.gettempdir()/ordenacao_<uid>; com TMPDIR aqui, nada é escrito fora de provas/motor_aqui, e o cache de binários começa vazio. Não muda a medida"
+ },
+ "respostas": {
+  "fonte": "06_evidencias/ordenacao_29-09/01_resultado_8_elementos/corrida_motor8/respostas/ (as que o motor de 29/09 consumiu: o sha256 de cada uma bate com o evento resposta_copiada do diario.jsonl de lá)",
+  "aviso": "as respostas em 03_motor_de_29-09/saida/calculadora/ordenacao/motor_respostas_8/ NÃO são as da corrida: formular_D.json e propor_modelo.json de lá são de uma versão anterior (medida razao_vs_rede e variantes ternario/minmax/mascara, sem SIMD). A corrida usou razao_vs_melhor e variantes ternario/mascara/simd/simd_imediato. O script experimentos/montar_ordenacao_motor.py do repositório, rodado com 0.0113 0.0053, reproduz byte a byte as respostas da corrida e o problema.json dela",
+  "medir_alvo": "medido aqui com a ferramenta do motor (python -B -m compilador medir <pasta>), como em 29/09",
+  "revisar_1": "se o motor empacar, a abertura de L preparada antes da corrida, gerada pelo mesmo script (coerente com as respostas da corrida), em respostas_usadas/revisar_1_preparada_antes.json"
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "modo": "L1",
+ "semente": 20261019,
+ "N": 435,
+ "criacoes_espelhadas": [
+  1
+ ],
+ "lote": 48,
+ "por_arquetipo": {
+  "composicao": 214,
+  "rede": 221
+ },
+ "paralelo": 3,
+ "rodadas": 1,
+ "repeticoes": 1,
+ "modelo_hash": "6c9ef2c92479f76ca29f64e55f00904624ada37509c638361830bf534720d8d4",
+ "alvo": {
+  "id": "vps-local",
+  "tipo": "local",
+  "python": "/usr/bin/python3",
+  "host": null,
+  "descricao": "esta máquina: Intel Xeon 2,1 GHz com AVX-512, 4 núcleos, 3 para este problema (verificação de 17/10/2026)"
+ },
+ "FERRAMENTA_GXX": "/usr/bin/g++",
+ "FERRAMENTA_GXX_SHA256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769",
+ "inicio": "2026-10-17T23:25:06+0000",
+ "fim": "2026-10-17T23:30:55+0000",
+ "segundos": 348.4,
+ "medidos": 435,
+ "erros": 0,
+ "oraculo_ok": 435,
+ "corretos_que_ordenam": 1,
+ "cumprem_D": 0,
+ "melhor_violacao": 0.417247,
+ "melhores_corretos": [
+  {
+   "id": "rede|base=otima|pri_0=0.274022|pri_1=0.371722|pri_10=0.455183|pri_11=0.209779|pri_12=0.109986|pri_13=0.236541|pri_14=0.106036|pri_15=0.410893|pri_16=0.306741|pri_17=0.801116|pri_18=0.047514|pri_19=0.25387|pri_2=0.752359|pri_20=0.518964|pri_21=0.946689|pri_22=0.724502|pri_23=0.073157|pri_24=0.688735|pri_25=0.616759|pri_26=0.240923|pri_27=0.747817|pri_3=0.206784|pri_4=0.74962|pri_5=0.362136|pri_6=0.571928|pri_7=0.949964|pri_8=0.297933|pri_9=0.939444|registradores=1|rem_0=0|rem_1=0|rem_10=0|rem_11=0|rem_12=0|rem_13=0|rem_14=0|rem_15=0|rem_16=0|rem_17=0|rem_18=0|rem_19=1|rem_2=0|rem_20=0|rem_21=0|rem_22=0|rem_23=0|rem_24=0|rem_25=0|rem_26=0|rem_27=1|rem_3=0|rem_4=0|rem_5=0|rem_6=0|rem_7=0|rem_8=0|rem_9=0|taxa_de_mutacao=0.598562|variante=mascara",
+   "arquetipo": "rede",
+   "razao_vs_melhor": 1.45293,
+   "razao_vs_rede": 0.99522,
+   "variante": "mascara",
+   "registradores": 1,
+   "base": "otima",
+   "n_comparadores": 19
+  }
+ ]
+}

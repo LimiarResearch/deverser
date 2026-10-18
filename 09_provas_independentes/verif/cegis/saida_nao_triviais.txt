@@ -1,0 +1,27 @@
+solucoes da familia autorizado 48
+  cegis_poda/f formulacoes: 1816.0/102.0 = 17.80
+  cegis_poda/f verificacoes: 122.0/100.0 = 1.22
+  cegis_poda/f segundos: 5.3/4.8 = 1.09
+  cegis/f formulacoes: 2053.0/102.0 = 20.13
+  cegis/f verificacoes: 359.0/100.0 = 3.59
+  cegis/f segundos: 2.2/4.8 = 0.45
+  cegis resolveu: 48 | estados das solucoes de f: [1]
+  mediana da razao cegis_poda/f por caso: 17.00
+solucoes fora da familia autorizado 34
+  cegis_poda/f formulacoes: 6619.0/616.0 = 10.75
+  cegis_poda/f verificacoes: 445.0/400.0 = 1.11
+  cegis_poda/f segundos: 107.0/108.3 = 0.99
+  cegis/f formulacoes: 4645.0/616.0 = 7.54
+  cegis/f verificacoes: 809.0/400.0 = 2.02
+  cegis/f segundos: 165.1/108.3 = 1.52
+  cegis resolveu: 2 | estados das solucoes de f: [3, 4]
+  mediana da razao cegis_poda/f por caso: 10.51
+todos os casos fora da familia autorizado 144
+  cegis_poda/f formulacoes: 15772.0/1050.0 = 15.02
+  cegis_poda/f verificacoes: 896.0/717.0 = 1.25
+  cegis_poda/f segundos: 153.7/148.5 = 1.04
+  cegis/f formulacoes: 14067.0/1050.0 = 13.40
+  cegis/f verificacoes: 2553.0/717.0 = 3.56
+  cegis/f segundos: 360.6/148.5 = 2.43
+  cegis resolveu: 2 | estados das solucoes de f: [3, 4]
+  mediana da razao cegis_poda/f por caso: 22.04

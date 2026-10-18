@@ -1,0 +1,20 @@
+{
+ "bytes": 61224,
+ "gene": 108,
+ "cadeia": {
+  "predicao": "nenhuma",
+  "mapa": "deslocamento",
+  "empacote": "planos_de_bytes",
+  "rle0": true,
+  "fundo": "lzma9e",
+  "arranjo": "coluna_a_coluna"
+ },
+ "medida": {
+  "estado": "ok",
+  "bytes": 61224,
+  "erros": 0,
+  "s_codificar": 0.24554374100002008,
+  "s_decodificar": 0.06344344299998284
+ },
+ "segundos": 810
+}

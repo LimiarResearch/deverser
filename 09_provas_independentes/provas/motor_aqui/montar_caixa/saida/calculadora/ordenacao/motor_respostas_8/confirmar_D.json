@@ -1,0 +1,20 @@
+{
+ "clausulas": {
+  "r_correto": {
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  },
+  "r_mais_rapida": {
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  },
+  "o_tempo": {
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  },
+  "o_tamanho": {
+   "acao": "confirmar",
+   "justificativa": "o pedido de Gabriel de 29/09; o limite de 3% foi posto pela IA pelo criador"
+  }
+ }
+}

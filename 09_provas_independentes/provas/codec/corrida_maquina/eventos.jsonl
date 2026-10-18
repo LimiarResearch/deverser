@@ -1,0 +1,57 @@
+{"evento": "inicio", "versao": "4.3.1-selecao", "autorizacao": "Gabriel Santos, 18/10/2026: roda (o codec sem perda; corrida 2, com a escala de c1 corrigida)", "config": {"K": 10, "bracos": ["cega", "operador"], "declaracao_cada": 300.0, "escala_do_posto": 12.0, "frac_acaso": 0.25, "imprimir_cada": 60.0, "k_melhores": 200, "max_rodadas": 297, "max_tentativas_por_pai": 6, "n_partida": 64, "semente": 1, "tempo": null}, "rodada": 0, "segundos": 0.0}
+{"evento": "melhor", "id": 0, "distancia": 979, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 47.485}
+{"evento": "melhor", "id": 1, "distancia": 643, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 47.486}
+{"evento": "melhor", "id": 2, "distancia": 373, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 47.486}
+{"evento": "melhor", "id": 8, "distancia": 316, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 47.486}
+{"evento": "melhor", "id": 17, "distancia": 304, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 47.486}
+{"evento": "melhor", "id": 40, "distancia": 264, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 47.486}
+{"evento": "melhor", "id": 46, "distancia": 262, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 47.486}
+{"evento": "partida", "fotos_sorteadas": 64, "menor_distancia": 262, "rodada": 0, "segundos": 47.486}
+{"evento": "melhor", "id": 101, "distancia": 260, "nfal": 1, "origem": "operador", "rodada": 2, "segundos": 126.961}
+{"evento": "melhor", "id": 162, "distancia": 254, "nfal": 1, "origem": "operador", "rodada": 5, "segundos": 210.217}
+{"evento": "melhor", "id": 290, "distancia": 245, "nfal": 1, "origem": "cega", "rodada": 12, "segundos": 387.74}
+{"evento": "melhor", "id": 523, "distancia": 237, "nfal": 1, "origem": "cega", "rodada": 24, "segundos": 798.397}
+{"evento": "melhor", "id": 528, "distancia": 232, "nfal": 1, "origem": "cega", "rodada": 24, "segundos": 798.397}
+{"evento": "melhor", "id": 612, "distancia": 222, "nfal": 1, "origem": "cega", "rodada": 28, "segundos": 945.658}
+{"evento": "melhor", "id": 702, "distancia": 221, "nfal": 1, "origem": "operador", "rodada": 32, "segundos": 1097.383}
+{"evento": "melhor", "id": 714, "distancia": 220, "nfal": 1, "origem": "operador", "rodada": 33, "segundos": 1129.543}
+{"evento": "melhor", "id": 813, "distancia": 218, "nfal": 1, "origem": "operador", "rodada": 38, "segundos": 1280.319}
+{"evento": "melhor", "id": 856, "distancia": 213, "nfal": 1, "origem": "operador", "rodada": 40, "segundos": 1351.025}
+{"evento": "melhor", "id": 862, "distancia": 212, "nfal": 1, "origem": "cega", "rodada": 41, "segundos": 1383.939}
+{"evento": "melhor", "id": 863, "distancia": 210, "nfal": 1, "origem": "cega", "rodada": 41, "segundos": 1383.939}
+{"evento": "melhor", "id": 892, "distancia": 203, "nfal": 1, "origem": "operador", "rodada": 42, "segundos": 1415.687}
+{"evento": "melhor", "id": 1045, "distancia": 200, "nfal": 1, "origem": "cega", "rodada": 50, "segundos": 1644.289}
+{"evento": "melhor", "id": 1064, "distancia": 198, "nfal": 1, "origem": "cega", "rodada": 51, "segundos": 1674.991}
+{"evento": "melhor", "id": 1072, "distancia": 187, "nfal": 1, "origem": "operador", "rodada": 51, "segundos": 1674.991}
+{"evento": "melhor", "id": 1146, "distancia": 185, "nfal": 1, "origem": "cega", "rodada": 55, "segundos": 1803.201}
+{"evento": "melhor", "id": 1283, "distancia": 184, "nfal": 1, "origem": "cega", "rodada": 62, "segundos": 2008.57}
+{"evento": "melhor", "id": 1323, "distancia": 183, "nfal": 1, "origem": "cega", "rodada": 64, "segundos": 2067.459}
+{"evento": "melhor", "id": 1328, "distancia": 181, "nfal": 1, "origem": "cega", "rodada": 64, "segundos": 2067.459}
+{"evento": "melhor", "id": 1340, "distancia": 179, "nfal": 1, "origem": "operador", "rodada": 64, "segundos": 2067.459}
+{"evento": "melhor", "id": 1497, "distancia": 178, "nfal": 1, "origem": "operador", "rodada": 72, "segundos": 2329.22}
+{"evento": "melhor", "id": 1619, "distancia": 175, "nfal": 1, "origem": "operador", "rodada": 78, "segundos": 2498.747}
+{"evento": "melhor", "id": 1802, "distancia": 173, "nfal": 1, "origem": "cega", "rodada": 88, "segundos": 2774.034}
+{"evento": "melhor", "id": 1954, "distancia": 170, "nfal": 1, "origem": "operador", "rodada": 95, "segundos": 2952.185}
+{"evento": "melhor", "id": 1988, "distancia": 163, "nfal": 1, "origem": "cega", "rodada": 97, "segundos": 2999.753}
+{"evento": "melhor", "id": 2094, "distancia": 161, "nfal": 1, "origem": "operador", "rodada": 102, "segundos": 3112.43}
+{"evento": "melhor", "id": 2295, "distancia": 158, "nfal": 1, "origem": "operador", "rodada": 112, "segundos": 3344.859}
+{"evento": "melhor", "id": 2331, "distancia": 147, "nfal": 1, "origem": "operador", "rodada": 114, "segundos": 3391.71}
+{"evento": "melhor", "id": 2701, "distancia": 146, "nfal": 1, "origem": "cega", "rodada": 133, "segundos": 3859.019}
+{"evento": "melhor", "id": 2854, "distancia": 130, "nfal": 1, "origem": "operador", "rodada": 140, "segundos": 4009.108}
+{"evento": "melhor", "id": 2897, "distancia": 129, "nfal": 1, "origem": "operador", "rodada": 142, "segundos": 4046.29}
+{"evento": "melhor", "id": 2913, "distancia": 127, "nfal": 1, "origem": "operador", "rodada": 143, "segundos": 4064.58}
+{"evento": "melhor", "id": 2924, "distancia": 124, "nfal": 1, "origem": "cega", "rodada": 144, "segundos": 4082.781}
+{"evento": "melhor", "id": 2970, "distancia": 113, "nfal": 1, "origem": "operador", "rodada": 146, "segundos": 4119.823}
+{"evento": "melhor", "id": 3104, "distancia": 100, "nfal": 1, "origem": "cega", "rodada": 153, "segundos": 4254.355}
+{"evento": "melhor", "id": 3296, "distancia": 98, "nfal": 1, "origem": "operador", "rodada": 162, "segundos": 4446.094}
+{"evento": "melhor", "id": 3441, "distancia": 97, "nfal": 1, "origem": "cega", "rodada": 170, "segundos": 4639.2}
+{"evento": "melhor", "id": 3586, "distancia": 94, "nfal": 1, "origem": "cega", "rodada": 177, "segundos": 4769.797}
+{"evento": "melhor", "id": 3768, "distancia": 93, "nfal": 1, "origem": "operador", "rodada": 186, "segundos": 4984.264}
+{"evento": "melhor", "id": 3782, "distancia": 89, "nfal": 1, "origem": "cega", "rodada": 187, "segundos": 5002.212}
+{"evento": "melhor", "id": 4514, "distancia": 86, "nfal": 1, "origem": "operador", "rodada": 223, "segundos": 5717.007}
+{"evento": "melhor", "id": 4605, "distancia": 79, "nfal": 1, "origem": "cega", "rodada": 228, "segundos": 5826.46}
+{"evento": "melhor", "id": 5375, "distancia": 77, "nfal": 1, "origem": "cega", "rodada": 267, "segundos": 6622.131}
+{"evento": "melhor", "id": 5389, "distancia": 76, "nfal": 1, "origem": "operador", "rodada": 267, "segundos": 6622.131}
+{"evento": "melhor", "id": 5811, "distancia": 74, "nfal": 1, "origem": "operador", "rodada": 288, "segundos": 7058.924}
+{"evento": "melhor", "id": 5972, "distancia": 72, "nfal": 1, "origem": "operador", "rodada": 296, "segundos": 7208.557}
+{"evento": "fim", "parada": "fusível: 297 rodadas", "menor_distancia": 72, "rodada": 297, "segundos": 7227.14}

@@ -1,0 +1,2 @@
+folgado (familia, classes_no_limite): {('eventos', 32): 24, ('encerrar', 64): 20, ('encerrar', 63): 4, ('autorizado', 28): 1, ('autorizado', 40): 2, ('autorizado', 60): 1, ('autorizado', 27): 1, ('sem_reset', 16): 24, ('autorizado', 31): 1, ('autorizado', 12): 3, ('autorizado', 2): 1, ('autorizado', 7): 1, ('autorizado', 16): 2, ('autorizado', 8): 2, ('autorizado', 22): 3, ('autorizado', 14): 1, ('autorizado', 47): 2, ('autorizado', 15): 1, ('autorizado', 44): 1, ('autorizado', 42): 1}
+curto com classes_no_limite <= folgado do par: 83 de 96

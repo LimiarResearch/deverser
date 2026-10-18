@@ -1,0 +1,13 @@
+cegis_poda
+   desfecho=over_budget              vazias==k*classes_no_limite=False menor=True : 61
+   desfecho=sem_maquina_na_familia   vazias==k*classes_no_limite=True menor=False : 49
+   desfecho=solucao                  vazias==k*classes_no_limite=False menor=True : 82
+   exemplos fora da regra: [(1, 'J0-livre-eventos-k2-curto', 'over_budget', 39, 2, 32, 1), (7, 'J0-livre-eventos-k5-curto', 'over_budget', 32, 5, 26, 15), (3, 'J0-livre-eventos-k3-curto', 'over_budget', 48, 3, 32, 1), (9, 'J0-livre-encerrar-k2-curto', 'over_budget', 91, 2, 64, 1), (11, 'J0-livre-encerrar-k3-curto', 'over_budget', 58, 3, 64, 1), (5, 'J0-livre-eventos-k4-curto', 'over_budget', 100, 4, 32, 21)]
+cegis
+   desfecho=over_budget              vazias==k*classes_no_limite=False menor=True : 44
+   desfecho=sem_maquina_na_familia   vazias==k*classes_no_limite=True menor=False : 26
+   desfecho=solucao                  vazias==k*classes_no_limite=False menor=True : 50
+   desfecho=timeout                  vazias==k*classes_no_limite=False menor=True : 72
+   exemplos fora da regra: [(1, 'J0-livre-eventos-k2-curto', 'over_budget', 39, 2, 32, 1), (7, 'J0-livre-eventos-k5-curto', 'over_budget', 32, 5, 26, 15), (3, 'J0-livre-eventos-k3-curto', 'over_budget', 48, 3, 32, 1), (9, 'J0-livre-encerrar-k2-curto', 'over_budget', 91, 2, 64, 1), (11, 'J0-livre-encerrar-k3-curto', 'over_budget', 58, 3, 64, 1), (5, 'J0-livre-eventos-k4-curto', 'over_budget', 100, 4, 32, 21)]
+f: (desfecho, formulacoes - verificacoes): {('insufficient_memory', 0): 54, ('over_budget', 0): 15, ('over_budget', 1): 6, ('over_budget', 2): 7, ('over_budget', 3): 4, ('over_budget', 4): 3, ('over_budget', 6): 1, ('over_budget', 9): 1, ('solucao', 0): 46, ('solucao', 1): 2, ('solucao', 2): 3, ('solucao', 3): 4, ('solucao', 4): 3, ('solucao', 5): 2, ('solucao', 6): 7, ('solucao', 7): 4, ('solucao', 8): 1, ('solucao', 9): 4, ('solucao', 10): 4, ('solucao', 11): 2, ('unobservable', 1): 1, ('unobservable', 2): 8, ('unobservable', 3): 1, ('unobservable', 4): 8, ('unobservable', 6): 1}
+f: (desfecho, formulacoes == classes_maximais, == classes_maximais+1): {('insufficient_memory', True, False): 54, ('over_budget', False, False): 37, ('solucao', False, False): 79, ('solucao', False, True): 2, ('solucao', True, False): 1, ('unobservable', False, False): 19}

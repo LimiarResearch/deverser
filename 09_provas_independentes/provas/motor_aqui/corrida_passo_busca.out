@@ -1,0 +1,33 @@
+{
+ "pendentes": [
+  "008_revisar"
+ ],
+ "desfecho": null,
+ "contadores": {
+  "pedidos_ia": 8,
+  "pedidos_criador": 0,
+  "pedidos_avaliador": 0,
+  "consultas_de_dados": 0,
+  "avaliacoes": 48,
+  "passos": 8,
+  "segundos_motor": 223.66
+ },
+ "modelo": "m1",
+ "criacoes": 1,
+ "numeros": {
+  "maquina_id": "escolha",
+  "python_versao": "medido",
+  "python_implementacao": "medido",
+  "sistema": "medido",
+  "numpy_disponivel": "medido",
+  "numpy_versao": "medido",
+  "cpus": "medido",
+  "alimentacao": "medido",
+  "ram_total_mb": "medido",
+  "ram_livre_mb": "medido",
+  "ns_por_insercao_em_conjunto": "medido",
+  "ns_por_hash_splitmix": "medido"
+ }
+}
+--- pendente 008_revisar para ia: revisar
+rc=0 parede_s=221.3

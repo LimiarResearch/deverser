@@ -1,0 +1,20 @@
+{
+ "id": "006_medir_alvo",
+ "para": "ia",
+ "tipo": "medir_alvo",
+ "conteudo": {
+  "alvo": {
+   "id": "vps-local",
+   "tipo": "local",
+   "python": "/usr/bin/python3",
+   "host": null,
+   "descricao": "esta máquina: Intel Xeon 2,1 GHz com AVX-512, 4 núcleos, 3 para este problema (verificação de 17/10/2026)"
+  },
+  "ferramenta": "python -B -m compilador medir /tmp/claude-0/-home-user-Conta/9b6d7c7f-549d-59d8-82a7-bc02ceae2e96/scratchpad/deverser/provas/motor_aqui/corrida",
+  "pedido": "meça no alvo o perfil da máquina (versão do Python, núcleos, memória, microbenchmarks) e responda com os números, o método e a origem; a ferramenta do motor imprime uma resposta pronta, e você pode medir de outro jeito",
+  "formato": "ver esquemas.md, seção medir_alvo",
+  "causa": "Π"
+ },
+ "criado_em": "2026-10-17T23:09:10+00:00",
+ "formato_da_resposta": "ver esquemas.md, seção medir_alvo"
+}

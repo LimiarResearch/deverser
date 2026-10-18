@@ -1,0 +1,50 @@
+23:09:00 /tmp/claude-0/-home-user-Conta/9b6d7c7f-549d-59d8-82a7-bc02ceae2e96/scratchpad/deverser/provas/motor_aqui/corrida
+23:09:00 
+23:09:00 iniciar protocolos/calculadora/ordenacao_8_motor_xeon.json
+23:09:00 passo
+23:09:06 responde 001_formular_D 001_formular_D.json
+23:09:06 copiada 001_formular_D
+23:09:06 
+23:09:06 passo
+23:09:06 responde 002_confirmar_D 002_confirmar_D.json
+23:09:06 copiada 002_confirmar_D
+23:09:06 
+23:09:06 passo
+23:09:06 responde 003_mapear_numeros 003_mapear_numeros.json
+23:09:06 copiada 003_mapear_numeros
+23:09:06 
+23:09:06 passo
+23:09:07 responde 004_propor_modelo 004_propor_modelo.json
+23:09:07 copiada 004_propor_modelo
+23:09:07 
+23:09:07 passo
+23:09:07 responde 005_mapear_numeros 005_mapear_numeros.json
+23:09:07 copiada 005_mapear_numeros
+23:09:07 
+23:09:07 passo
+23:09:26 passo
+23:09:27 responde 006_medir_alvo 006_medir_alvo.json
+23:09:27 copiada 006_medir_alvo
+23:09:27 
+23:09:27 passo
+23:09:36 responde 007_conferir_distinguibilidade 007_conferir_distinguibilidade.json
+23:09:36 copiada 007_conferir_distinguibilidade
+23:09:42 
+23:09:42 passo
+23:13:23 desfecho (rc=0): null
+23:14:36 pedido fora das respostas de 29/09: 008_revisar (nenhum candidato cumpre D); respondido com a abertura de L preparada antes da corrida (revisar_1, gerada pelo script que reproduz as respostas da corrida)
+23:14:36 responde 008_revisar 008_revisar.json
+23:14:36 copiada 008_revisar
+23:14:36 
+23:14:36 passo
+23:14:46 pedido fora das respostas de 29/09: 009_mapear_numeros (formas novas: composicao:comparador); respondido pela IA nesta verificação com nenhum número novo
+23:14:46 responde 009_mapear_numeros 009_mapear_numeros.json
+23:14:46 copiada 009_mapear_numeros
+23:14:46 
+23:14:46 passo
+23:14:57 pedido fora das respostas de 29/09: 010_medir_alvo (o modelo mudou para m2); respondido com a ferramenta do motor, como o 006
+23:14:57 responde 010_medir_alvo 010_medir_alvo.json
+23:14:57 copiada 010_medir_alvo
+23:15:02 
+23:15:02 passo
+23:20:21 fim do passo (rc=0); pendentes:  desfecho: {"tipo": "solucao", "escolhido": "rede|base=otima|pri_0=0.734429|pri_1=0.863667|pri_10=0.215412|pri_11=1.0|pri_12=0.724638|pri_13=0.721574|pri_14=0.65715|pri_15=0.482889|pri_16=0.670145|pri_17=1.0|pri_18=0.348411|pri_19=1.0|pri_2=1.0|pri_20=0.497966|pri_21=1.0|pri_22=0.142761|pri_23=0.648552|pri_24=0.294429|pri_25=0.086769|pri_26=1.0|pri_27=0.993327|pri_3=0.958458|pri_4=1.0|pri_5=0.147199|pri_6=0.

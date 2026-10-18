@@ -1,0 +1,33 @@
+03_motor_de_29-09: 35 .py; comentarios (fora a linha de codificacao) = 148; docstrings = 117
+    ('03_motor_de_29-09/testes/test_compilador.py', 5, 12)
+    ('03_motor_de_29-09/testes/test_nucleo.py', 7, 3)
+    ('03_motor_de_29-09/experimentos/montar_ordenacao_motor.py', 2, 2)
+    ('03_motor_de_29-09/bancada/__init__.py', 0, 1)
+    ('03_motor_de_29-09/bancada/nucleo/ledger.py', 4, 6)
+    ('03_motor_de_29-09/bancada/nucleo/artefato.py', 0, 2)
+    ('03_motor_de_29-09/bancada/nucleo/__init__.py', 0, 1)
+    ('03_motor_de_29-09/bancada/nucleo/criacao.py', 5, 2)
+    ('03_motor_de_29-09/bancada/nucleo/adaptador.py', 0, 1)
+    ('03_motor_de_29-09/bancada/nucleo/selecao.py', 0, 3)
+    ('03_motor_de_29-09/bancada/nucleo/modelo.py', 0, 6)
+    ('03_motor_de_29-09/bancada/adaptadores/componente/executor.py', 5, 7)
+    ... mais 19
+04_maquina_do_dever_ser_selecao: 8 .py; comentarios (fora a linha de codificacao) = 72; docstrings = 42
+    ('04_maquina_do_dever_ser_selecao/testes/test_selecao.py', 4, 1)
+    ('04_maquina_do_dever_ser_selecao/experimentos/variacao.py', 10, 9)
+    ('04_maquina_do_dever_ser_selecao/experimentos/foto_atomica.py', 19, 18)
+    ('04_maquina_do_dever_ser_selecao/experimentos/problema_de_d.py', 0, 2)
+    ('04_maquina_do_dever_ser_selecao/experimentos/condutor_de_selecao.py', 24, 5)
+    ('04_maquina_do_dever_ser_selecao/exemplos/novo_d_do_zero.py', 15, 7)
+05_tear_selecao: 6 .py; comentarios (fora a linha de codificacao) = 251; docstrings = 101
+    ('05_tear_selecao/rodar_ilha.py', 2, 1)
+    ('05_tear_selecao/experimentos/vida_no_leito.py', 173, 37)
+    ('05_tear_selecao/experimentos/vida_v3c_c.py', 15, 15)
+    ('05_tear_selecao/experimentos/maquina_minima.py', 12, 12)
+    ('05_tear_selecao/experimentos/vida_v3c_c.c', 'C: blocos /* */ = 81, linhas // = 0', '')
+    ('05_tear_selecao/experimentos/foto_atomica.py', 19, 18)
+    ('05_tear_selecao/experimentos/vida_v3c.py', 30, 18)
+07_conta_15: 15 .py; comentarios (fora a linha de codificacao) = 0; docstrings = 0
+08_c_estrela_3: 80 .py; comentarios (fora a linha de codificacao) = 0; docstrings = 0
+    ('08_c_estrela_3/experimentos/l_ser_nucleo.cpp', 'C: blocos /* */ = 0, linhas // = 0', '')
+    ('08_c_estrela_3/experimentos/copias_c.c', 'C: blocos /* */ = 0, linhas // = 0', '')

@@ -1,0 +1,55 @@
+{"hora": "2026-10-17T23:09:00+00:00", "evento": "iniciado", "problema": "ordenacao_8_motor_xeon.json"}
+{"hora": "2026-10-17T23:09:00+00:00", "evento": "pedido", "id": "001_formular_D", "para": "ia", "tipo": "formular_D", "causa": "D"}
+{"hora": "2026-10-17T23:09:06+00:00", "evento": "resposta_copiada", "id": "001_formular_D", "sha256": "82e79fefb4c6a5a16b76cf8d7eb9a4acb6623db03f951f45977c6bae28beec08", "de": "001_formular_D.json"}
+{"hora": "2026-10-17T23:09:06+00:00", "evento": "resposta", "id": "001_formular_D", "tipo": "formular_D", "sha256": "eb2025ffb8133c748394e80f333f18a4ceba082bacccbe660048f3736d0cd051"}
+{"hora": "2026-10-17T23:09:06+00:00", "evento": "pedido", "id": "002_confirmar_D", "para": "ia", "tipo": "confirmar_D", "causa": "D"}
+{"hora": "2026-10-17T23:09:06+00:00", "evento": "resposta_copiada", "id": "002_confirmar_D", "sha256": "193d3e9a8c9c51c58d995dcf57b47340f0a5796ce7ef483e41025c59225efaf0", "de": "002_confirmar_D.json"}
+{"hora": "2026-10-17T23:09:06+00:00", "evento": "resposta", "id": "002_confirmar_D", "tipo": "confirmar_D", "sha256": "e7abd8cb8c26a634fb9334260358a7364987ada6d0b50252eaee6f6161660a3f"}
+{"hora": "2026-10-17T23:09:06+00:00", "evento": "pedido", "id": "003_mapear_numeros", "para": "ia", "tipo": "mapear_numeros", "causa": "Π"}
+{"hora": "2026-10-17T23:09:06+00:00", "evento": "resposta_copiada", "id": "003_mapear_numeros", "sha256": "b716000ff545a3282c40ce8571d9684489f5987ecdb584d3a41fbf8c1c8ca683", "de": "003_mapear_numeros.json"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "resposta", "id": "003_mapear_numeros", "tipo": "mapear_numeros", "sha256": "ad12aeca7c4ac55320576435f6adcc60aaae6bbfdb92fc7d27699300f6662fd8"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "mapa_de_numeros", "de": "ia", "numeros": 6, "no_mapa": 6}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "pedido", "id": "004_propor_modelo", "para": "ia", "tipo": "propor_modelo", "causa": "L e M: a primeira proposta"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "resposta_copiada", "id": "004_propor_modelo", "sha256": "e531eb52c58e2531dd87a6938faaf70688db6d225e0a0fb25f0bb3c73ba8162d", "de": "004_propor_modelo.json"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "resposta", "id": "004_propor_modelo", "tipo": "propor_modelo", "sha256": "02636b5f0886f3db6e760ab8b7b46130f742d6439098e8f315d55ae0388b70ff"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "pedido", "id": "005_mapear_numeros", "para": "ia", "tipo": "mapear_numeros", "causa": "Π"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "resposta_copiada", "id": "005_mapear_numeros", "sha256": "3c6a275636745f3bfcd756850206f05514dc109b85abea086c975f0683f9a215", "de": "005_mapear_numeros.json"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "resposta", "id": "005_mapear_numeros", "tipo": "mapear_numeros", "sha256": "8689b45d0e1d7b3a62676c6a440837eb98301a526910b4565fddd0b5d3dc8b7d"}
+{"hora": "2026-10-17T23:09:07+00:00", "evento": "mapa_de_numeros", "de": "ia", "numeros": 3, "no_mapa": 9}
+{"hora": "2026-10-17T23:09:10+00:00", "evento": "modelo_testado", "modelo": "m1", "falhas": 0}
+{"hora": "2026-10-17T23:09:10+00:00", "evento": "pedido", "id": "006_medir_alvo", "para": "ia", "tipo": "medir_alvo", "causa": "Π"}
+{"hora": "2026-10-17T23:09:27+00:00", "evento": "resposta_copiada", "id": "006_medir_alvo", "sha256": "3b77fb9c0820ae2624ab21630de554a05af2f876c7f4afd22acac674f1ebf2d8", "de": "006_medir_alvo.json"}
+{"hora": "2026-10-17T23:09:27+00:00", "evento": "resposta", "id": "006_medir_alvo", "tipo": "medir_alvo", "sha256": "d59bb9a4812b6fedb53d910f63c4f558b1da625253072bb3e7b0e2323e81088a"}
+{"hora": "2026-10-17T23:09:27+00:00", "evento": "alvo_medido_pela_ia", "numeros": 12}
+{"hora": "2026-10-17T23:09:27+00:00", "evento": "pedido", "id": "007_conferir_distinguibilidade", "para": "ia", "tipo": "conferir_distinguibilidade", "causa": "Π e D: o meio entrega a informação que decide cada cláusula?"}
+{"hora": "2026-10-17T23:09:36+00:00", "evento": "resposta_copiada", "id": "007_conferir_distinguibilidade", "sha256": "0ace4900b5d2d8dc795aeaadb9a5261fef2645bd9e298917e0f627e6ca8c6b61", "de": "007_conferir_distinguibilidade.json"}
+{"hora": "2026-10-17T23:09:42+00:00", "evento": "resposta", "id": "007_conferir_distinguibilidade", "tipo": "conferir_distinguibilidade", "sha256": "32d2785eef2cca028d1a464d2813fe11f2cbe416d4c317a3dbb7fe420eec34ce"}
+{"hora": "2026-10-17T23:10:22+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.5062092830000007}
+{"hora": "2026-10-17T23:10:57+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.427186012}
+{"hora": "2026-10-17T23:11:34+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.183109283}
+{"hora": "2026-10-17T23:12:10+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.419800327}
+{"hora": "2026-10-17T23:12:47+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.296210527}
+{"hora": "2026-10-17T23:13:23+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.296210527}
+{"hora": "2026-10-17T23:13:23+00:00", "evento": "criacao", "rotulo": "criacao", "validos": 0, "desfecho": "candidato_falho", "segundos": 221.17}
+{"hora": "2026-10-17T23:13:23+00:00", "evento": "pedido", "id": "008_revisar", "para": "ia", "tipo": "revisar", "causa": "L ou D: nenhum candidato cumpre D, e nenhum número de Π muda isso"}
+{"hora": "2026-10-17T23:14:36+00:00", "evento": "resposta_copiada", "id": "008_revisar", "sha256": "341488af5886e04cb9d01350d9a68fa1122b31c10c2123a10912b11aa5352c6d", "de": "008_revisar.json"}
+{"hora": "2026-10-17T23:14:36+00:00", "evento": "resposta", "id": "008_revisar", "tipo": "revisar", "sha256": "d22453b4099c4eeefddee60309cc22d701eab8c1f523049733715c57ecaa7a8e"}
+{"hora": "2026-10-17T23:14:36+00:00", "evento": "pedido", "id": "009_mapear_numeros", "para": "ia", "tipo": "mapear_numeros", "causa": "Π"}
+{"hora": "2026-10-17T23:14:46+00:00", "evento": "resposta_copiada", "id": "009_mapear_numeros", "sha256": "7b955269c2f2a3ea532132b3bb87c45e5aeecb3929a7f47c6a8bd36e3237e3c3", "de": "009_mapear_numeros.json"}
+{"hora": "2026-10-17T23:14:46+00:00", "evento": "resposta", "id": "009_mapear_numeros", "tipo": "mapear_numeros", "sha256": "e5fd08647a0998ecaf0348b4d3bac7abb4e7f87c14874c2649430ebd6e7146e2"}
+{"hora": "2026-10-17T23:14:46+00:00", "evento": "mapa_de_numeros", "de": "ia", "numeros": 0, "no_mapa": 9}
+{"hora": "2026-10-17T23:14:50+00:00", "evento": "modelo_testado", "modelo": "m2", "falhas": 0}
+{"hora": "2026-10-17T23:14:50+00:00", "evento": "pedido", "id": "010_medir_alvo", "para": "ia", "tipo": "medir_alvo", "causa": "Π"}
+{"hora": "2026-10-17T23:14:57+00:00", "evento": "resposta_copiada", "id": "010_medir_alvo", "sha256": "e780de44306ead4a86d603529dca136e290fc5e172be01f0c646dd3e8c7a9e40", "de": "010_medir_alvo.json"}
+{"hora": "2026-10-17T23:15:03+00:00", "evento": "resposta", "id": "010_medir_alvo", "tipo": "medir_alvo", "sha256": "fe14f13a822b9c7df16ced83a5a8781db3b3bd89ab1120eff615cd8124d32d18"}
+{"hora": "2026-10-17T23:15:03+00:00", "evento": "alvo_medido_pela_ia", "numeros": 12}
+{"hora": "2026-10-17T23:15:43+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.65824151}
+{"hora": "2026-10-17T23:16:19+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.354473114}
+{"hora": "2026-10-17T23:16:56+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.183109283}
+{"hora": "2026-10-17T23:17:33+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.347996473}
+{"hora": "2026-10-17T23:18:08+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.242077827}
+{"hora": "2026-10-17T23:18:43+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.0}
+{"hora": "2026-10-17T23:19:19+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.0}
+{"hora": "2026-10-17T23:19:52+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.0}
+{"hora": "2026-10-17T23:20:21+00:00", "evento": "geracao", "avaliados": 48, "melhor_violacao": 0.0}
+{"hora": "2026-10-17T23:20:21+00:00", "evento": "criacao", "rotulo": "criacao", "validos": 15, "desfecho": "solucao", "segundos": 318.22}

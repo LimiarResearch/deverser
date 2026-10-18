@@ -1,0 +1,563 @@
+{
+ "id": "005_mapear_numeros",
+ "para": "ia",
+ "tipo": "mapear_numeros",
+ "conteudo": {
+  "D": {
+   "clausulas": [
+    {
+     "id": "r_correto",
+     "tipo": "rigida",
+     "enunciado": "ordena certo todo vetor de 8 inteiros, com empates",
+     "teste": {
+      "medida": "erro_de_ordenacao",
+      "op": "<=",
+      "valor": 0,
+      "unidade": "1",
+      "escala": 1.0
+     }
+    },
+    {
+     "id": "r_mais_rapida",
+     "tipo": "rigida",
+     "enunciado": "pelo menos 3% mais rápida no alvo que a mais rápida das referências (a rede escalar e a rede SIMD em AVX2), medida no mesmo processo",
+     "teste": {
+      "medida": "razao_vs_melhor",
+      "op": "<=",
+      "valor": 0.97,
+      "unidade": "1",
+      "escala": 0.1
+     }
+    },
+    {
+     "id": "o_tempo",
+     "tipo": "objetivo",
+     "enunciado": "a menor razão de tempo contra a rede de referência",
+     "teste": {
+      "medida": "razao_vs_melhor",
+      "sentido": "min",
+      "resolucao": 0.01
+     }
+    },
+    {
+     "id": "o_tamanho",
+     "tipo": "objetivo",
+     "enunciado": "o menor número de comparadores",
+     "teste": {
+      "medida": "comparadores",
+      "sentido": "min",
+      "resolucao": 1
+     }
+    }
+   ],
+   "escopo": {
+    "alvo": "vps-local",
+    "n": 8,
+    "referencias": "a melhor rede conhecida escrita à mão, a mesma rede em SIMD (AVX2) e o std::sort do libstdc++",
+    "respostas_das_ambiguidades": {}
+   }
+  },
+  "formas_novas": [
+   {
+    "nome": "rede",
+    "descricao": "uma rede conhecida, com a ordem dentro dos níveis, a retirada de comparadores, a variante da troca e o uso de registradores",
+    "variaveis": [
+     {
+      "nome": "base",
+      "tipo": "categoria",
+      "valores": [
+       "batcher",
+       "insercao",
+       "otima"
+      ]
+     },
+     {
+      "nome": "variante",
+      "tipo": "categoria",
+      "valores": [
+       "ternario",
+       "mascara",
+       "simd",
+       "simd_imediato"
+      ]
+     },
+     {
+      "nome": "registradores",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "taxa_de_mutacao",
+      "tipo": "real",
+      "min": 0.1,
+      "max": 0.6
+     },
+     {
+      "nome": "rem_0",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_1",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_2",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_3",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_4",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_5",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_6",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_7",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_8",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_9",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_10",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_11",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_12",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_13",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_14",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_15",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_16",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_17",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_18",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_19",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_20",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_21",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_22",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_23",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_24",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_25",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_26",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "rem_27",
+      "tipo": "categoria",
+      "valores": [
+       0,
+       0,
+       0,
+       1
+      ]
+     },
+     {
+      "nome": "pri_0",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_1",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_2",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_3",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_4",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_5",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_6",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_7",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_8",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_9",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_10",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_11",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_12",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_13",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_14",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_15",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_16",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_17",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_18",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_19",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_20",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_21",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_22",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_23",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_24",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_25",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_26",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     },
+     {
+      "nome": "pri_27",
+      "tipo": "real",
+      "min": 0.0,
+      "max": 1.0
+     }
+    ]
+   }
+  ],
+  "mapa_atual": [
+   "cache_de_instrucoes_de_quem_chama",
+   "custo_de_desvio_errado",
+   "frequencia_do_processador",
+   "latencia_das_instrucoes_de_troca",
+   "ruido_da_medida_de_tempo",
+   "versao_do_gxx"
+  ],
+  "pedido": "os números do meio de que estas formas dependem e que o mapa ainda não tem",
+  "formato": "ver esquemas.md, seção mapear_numeros",
+  "causa": "Π"
+ },
+ "criado_em": "2026-10-17T23:09:07+00:00",
+ "formato_da_resposta": "ver esquemas.md, seção mapear_numeros"
+}

@@ -1,0 +1,99 @@
+
+======== 1. casos
+linhas: 192 | ids unicos: 192 | ids = 0..191: True
+rotulos unicos: 192
+linhas fora da ordem de id: 187
+fatores do rotulo: [{'J0': 64, 'J1': 64, 'J2': 64}, {'livre': 96, 'ordem': 96}, {'eventos': 48, 'encerrar': 48, 'autorizado': 48, 'sem_reset': 48}, {'k2': 48, 'k5': 48, 'k3': 48, 'k4': 48}, {'curto': 96, 'folgado': 96}]
+protocolo.casos: 192 | resumo.casos: 192 | auditoria.resumo.casos: 192
+
+======== 2. totais por metodo (recontados) x resumo.json
+[f]
+  desfechos recontados: {'insufficient_memory': 54, 'over_budget': 37, 'solucao': 82, 'unobservable': 19} | resumo: {'insufficient_memory': 54, 'over_budget': 37, 'solucao': 82, 'unobservable': 19} | iguais: True
+  formulacoes: recontado 1152 | resumo 1152 | iguais: True
+  verificacoes: recontado 817 | resumo 817 | iguais: True
+  nos: recontado 54014 | resumo 54014 | iguais: True
+  segundos: recontado 153.3 | resumo 153.3 | iguais: True
+  buscas (nao esta no resumo): 1152
+  campo conferido: {'True': 155, 'None': 37} | resumo conferidos: 155 | falhas (conferido == False): 0 | resumo falhas: 0
+  conferido por desfecho: {'insufficient_memory': {'True': 54}, 'over_budget': {'None': 37}, 'solucao': {'True': 82}, 'unobservable': {'True': 19}}
+[cegis_poda]
+  desfechos recontados: {'over_budget': 61, 'sem_maquina_na_familia': 49, 'solucao': 82} | resumo: {'over_budget': 61, 'sem_maquina_na_familia': 49, 'solucao': 82} | iguais: True
+  formulacoes: recontado 17588 | resumo 17588 | iguais: True
+  verificacoes: recontado 1018 | resumo 1018 | iguais: True
+  nos: recontado 201129 | resumo 201129 | iguais: True
+  segundos: recontado 159.0 | resumo 159.0 | iguais: True
+  buscas (nao esta no resumo): 17588
+  campo conferido: {'None': 110, 'True': 82} | resumo conferidos: 82 | falhas (conferido == False): 0 | resumo falhas: 0
+  conferido por desfecho: {'over_budget': {'None': 61}, 'sem_maquina_na_familia': {'None': 49}, 'solucao': {'True': 82}}
+[cegis]
+  desfechos recontados: {'over_budget': 44, 'sem_maquina_na_familia': 26, 'solucao': 50, 'timeout': 72} | resumo: {'over_budget': 44, 'sem_maquina_na_familia': 26, 'solucao': 50, 'timeout': 72} | iguais: True
+  formulacoes: recontado 16120 | resumo 16120 | iguais: True
+  verificacoes: recontado 2912 | resumo 2912 | iguais: True
+  nos: recontado 42826972 | resumo 42826972 | iguais: True
+  segundos: recontado 362.7 | resumo 362.7 | iguais: True
+  buscas (nao esta no resumo): 16192
+  campo conferido: {'None': 142, 'True': 50} | resumo conferidos: 50 | falhas (conferido == False): 0 | resumo falhas: 0
+  conferido por desfecho: {'over_budget': {'None': 44}, 'sem_maquina_na_familia': {'None': 26}, 'solucao': {'True': 50}, 'timeout': {'None': 72}}
+
+======== 3. concordancia de custo e contradicoes entre metodos
+f x cegis_poda: ambos com maquina 82, mesmo custo 82, mesmos estados e sensores 82 | resumo: {'ambos_com_maquina': 82, 'mesmo_custo': 82}
+f x cegis: ambos com maquina 50, mesmo custo 50, mesmos estados e sensores 50 | resumo: {'ambos_com_maquina': 50, 'mesmo_custo': 50}
+cegis_poda x cegis: ambos com maquina 50, mesmo custo 50, mesmos estados e sensores 50 | resumo: {'ambos_com_maquina': 50, 'mesmo_custo': 50}
+contradicoes (um acha maquina, outro nega): [] | resumo: []
+solucoes com custo acima de B: []
+
+======== 4. tabela cruzada de desfechos
+  f=solucao              cegis_poda=solucao                  cegis=solucao                  50
+  f=solucao              cegis_poda=solucao                  cegis=timeout                  32
+  f=insufficient_memory  cegis_poda=sem_maquina_na_familia   cegis=sem_maquina_na_familia   24
+  f=insufficient_memory  cegis_poda=over_budget              cegis=over_budget              22
+  f=over_budget          cegis_poda=over_budget              cegis=over_budget              22
+  f=unobservable         cegis_poda=sem_maquina_na_familia   cegis=timeout                  17
+  f=over_budget          cegis_poda=over_budget              cegis=timeout                  15
+  f=insufficient_memory  cegis_poda=sem_maquina_na_familia   cegis=timeout                  6
+  f=insufficient_memory  cegis_poda=over_budget              cegis=timeout                  2
+  f=unobservable         cegis_poda=sem_maquina_na_familia   cegis=sem_maquina_na_familia   2
+
+======== 5. auditoria do z3: recontagem
+casos na auditoria: 192 | ids unicos: 192
+vereditos por desfecho (recontado): {'insufficient_memory': 54, 'solucao': 82, 'over_budget': 37, 'unobservable': 19}
+resumo.por_desfecho: {'insufficient_memory': {'casos': 54, 'confirmados': 54}, 'solucao': {'casos': 82, 'confirmados': 82}, 'over_budget': {'casos': 37, 'confirmados': 37}, 'unobservable': {'casos': 19, 'confirmados': 19}}
+perguntas ao z3 (soma): 2870 | resumo: 2870
+discordancias (soma de listas): 0 | resumo: []
+desconhecidos (soma): 0 | resumo: 0
+tabelas_sat_conferidas: {'True': 192}
+segundos (soma): 755.76 | segundos_z3 (soma): 688.95 | resumo.segundos: 173.7
+usa_s_autorizado True: 48 | entre solucoes: 48 | por desfecho: {'solucao': 48} | resumo.solucoes_com_s_autorizado: 48
+hash_dos_casos auditoria: aef6c8a1500fbc6a40cddab5cd4adcc5b8b24560f51e8b1b16ba73579c01ef9c
+hash_dos_casos protocolo: aef6c8a1500fbc6a40cddab5cd4adcc5b8b24560f51e8b1b16ba73579c01ef9c
+iguais: True
+
+======== 6. auditoria x resultados, caso a caso
+diferencas auditoria x resultados.f: nenhuma
+veredito confirmado pelo z3 x desfecho de cegis_poda: {('insufficient_memory', 'over_budget'): 24, ('insufficient_memory', 'sem_maquina_na_familia'): 30, ('over_budget', 'over_budget'): 37, ('solucao', 'solucao'): 82, ('unobservable', 'sem_maquina_na_familia'): 19}
+  solucoes de cegis_poda com o mesmo custo confirmado pelo z3: 82
+veredito confirmado pelo z3 x desfecho de cegis: {('insufficient_memory', 'over_budget'): 22, ('insufficient_memory', 'sem_maquina_na_familia'): 24, ('insufficient_memory', 'timeout'): 8, ('over_budget', 'over_budget'): 22, ('over_budget', 'timeout'): 15, ('solucao', 'solucao'): 50, ('solucao', 'timeout'): 32, ('unobservable', 'sem_maquina_na_familia'): 2, ('unobservable', 'timeout'): 17}
+  solucoes de cegis com o mesmo custo confirmado pelo z3: 50
+
+======== 7. limites do protocolo
+protocolo: limite_de_nos 300000 | max_formulacoes 400
+f: formulacoes max 25 | casos com formulacoes >= 400: 0 | nos max 7547 | casos com nos >= 300000: 0
+cegis_poda: formulacoes max 293 | casos com formulacoes >= 400: 0 | nos max 15696 | casos com nos >= 300000: 0
+cegis: formulacoes max 231 | casos com formulacoes >= 400: 0 | nos max 1111925 | casos com nos >= 300000: 77
+cegis timeout: 72 | buscas == formulacoes + 1: 72 | nos >= 300000: 72 | nos min: 341382
+cegis nao-timeout: buscas == formulacoes: 120 de 120 | nos max: 708855
+f: buscas == formulacoes em 192 de 192
+cegis_poda: buscas == formulacoes em 192 de 192
+f: verificacoes <= formulacoes em 192 de 192
+cegis_poda: verificacoes <= formulacoes em 192 de 192
+cegis: verificacoes <= formulacoes em 192 de 192
+
+======== 8. razoes agregadas
+cegis_poda/f em formulacoes: 17588.0/1152.0 = 15.267
+cegis_poda/f em verificacoes: 1018.0/817.0 = 1.246
+cegis_poda/f em nos: 201129.0/54014.0 = 3.724
+cegis_poda/f em segundos: 159.0/153.3 = 1.037
+cegis/f em formulacoes: 16120.0/1152.0 = 13.993
+cegis/f em verificacoes: 2912.0/817.0 = 3.564
+cegis/f em nos: 42826972.0/54014.0 = 792.887
+cegis/f em segundos: 362.7/153.3 = 2.366

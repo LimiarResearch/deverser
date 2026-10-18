@@ -1,0 +1,8 @@
+2026-10-18T12:33:32Z
+Model name:                              Intel(R) Xeon(R) Processor @ 2.80GHz
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 20.109, "ciclos_referencia": 20.258, "ns_std_sort": 69.111, "razao_vs_rede": 0.99267, "razao_ref_contra_ref": 1.00000, "ruido": 0.00120, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 20.168, "ciclos_referencia": 20.363, "ns_std_sort": 64.869, "razao_vs_rede": 0.99023, "razao_ref_contra_ref": 1.00038, "ruido": 0.00113, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 20.105, "ciclos_referencia": 20.301, "ns_std_sort": 70.265, "razao_vs_rede": 0.99040, "razao_ref_contra_ref": 1.00000, "ruido": 0.00061, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 20.117, "ciclos_referencia": 20.301, "ns_std_sort": 74.264, "razao_vs_rede": 0.99111, "razao_ref_contra_ref": 0.99981, "ruido": 0.00078, "soma": 22775}
+{"erro_de_ordenacao": 0.000000000, "vetores_conferidos": 16777216, "ciclos_por_vetor": 20.172, "ciclos_referencia": 20.352, "ns_std_sort": 63.716, "razao_vs_rede": 0.99116, "razao_ref_contra_ref": 0.99981, "ruido": 0.00173, "soma": 22775}

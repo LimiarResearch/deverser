@@ -1,0 +1,8 @@
+ok test_versoes_ligadas_pelo_hash
+ok test_clausula_da_ia_so_entra_confirmada
+ok test_transferencia
+ok test_transferencia_cada_dimensao_e_combinacoes
+ok test_transferencia_modos_declarados
+ok test_rigidas_exatas
+ok test_hash_nao_distingue_2500_de_2500_0
+ok test_pareto_e_preferencia

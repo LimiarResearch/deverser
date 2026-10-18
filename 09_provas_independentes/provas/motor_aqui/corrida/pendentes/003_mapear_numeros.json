@@ -1,0 +1,77 @@
+{
+ "id": "003_mapear_numeros",
+ "para": "ia",
+ "tipo": "mapear_numeros",
+ "conteudo": {
+  "D": {
+   "clausulas": [
+    {
+     "id": "r_correto",
+     "tipo": "rigida",
+     "enunciado": "ordena certo todo vetor de 8 inteiros, com empates",
+     "teste": {
+      "medida": "erro_de_ordenacao",
+      "op": "<=",
+      "valor": 0,
+      "unidade": "1",
+      "escala": 1.0
+     }
+    },
+    {
+     "id": "r_mais_rapida",
+     "tipo": "rigida",
+     "enunciado": "pelo menos 3% mais rápida no alvo que a mais rápida das referências (a rede escalar e a rede SIMD em AVX2), medida no mesmo processo",
+     "teste": {
+      "medida": "razao_vs_melhor",
+      "op": "<=",
+      "valor": 0.97,
+      "unidade": "1",
+      "escala": 0.1
+     }
+    },
+    {
+     "id": "o_tempo",
+     "tipo": "objetivo",
+     "enunciado": "a menor razão de tempo contra a rede de referência",
+     "teste": {
+      "medida": "razao_vs_melhor",
+      "sentido": "min",
+      "resolucao": 0.01
+     }
+    },
+    {
+     "id": "o_tamanho",
+     "tipo": "objetivo",
+     "enunciado": "o menor número de comparadores",
+     "teste": {
+      "medida": "comparadores",
+      "sentido": "min",
+      "resolucao": 1
+     }
+    }
+   ],
+   "escopo": {
+    "alvo": "vps-local",
+    "n": 8,
+    "referencias": "a melhor rede conhecida escrita à mão, a mesma rede em SIMD (AVX2) e o std::sort do libstdc++",
+    "respostas_das_ambiguidades": {}
+   }
+  },
+  "mundo": "silicio",
+  "execucao": "medida",
+  "alvos": [
+   {
+    "id": "vps-local",
+    "tipo": "local",
+    "python": "/usr/bin/python3",
+    "descricao": "esta máquina: Intel Xeon 2,1 GHz com AVX-512, 4 núcleos, 3 para este problema (verificação de 17/10/2026)"
+   }
+  ],
+  "lugar": null,
+  "pedido": "para cada cláusula de D, todos os números do meio que decidem se ela é cumprida ou quanto ela vale: as constantes do meio (do servidor ou do lugar), as propriedades dos materiais ou dos componentes, as cargas, as normas e as incertezas; para cada número, a grandeza, a unidade, onde ele se obtém e por que ele decide a cláusula",
+  "formato": "ver esquemas.md, seção mapear_numeros",
+  "causa": "Π"
+ },
+ "criado_em": "2026-10-17T23:09:06+00:00",
+ "formato_da_resposta": "ver esquemas.md, seção mapear_numeros"
+}

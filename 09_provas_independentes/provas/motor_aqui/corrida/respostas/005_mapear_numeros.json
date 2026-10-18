@@ -1,0 +1,38 @@
+{
+ "numeros": {
+  "profundidade_da_rede": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "níveis",
+   "grandeza": {
+    "quantidade": "profundidade da rede"
+   },
+   "onde": "no alvo",
+   "por_que": "o paralelismo que o processador aproveita"
+  },
+  "pressao_de_registradores": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "registradores",
+   "grandeza": {
+    "quantidade": "pressao de registradores"
+   },
+   "onde": "no alvo",
+   "por_que": "quando os valores saem dos registradores"
+  },
+  "numero_de_comparadores": {
+   "clausulas": [
+    "o_tamanho",
+    "r_mais_rapida"
+   ],
+   "unidade": "comparadores",
+   "grandeza": {
+    "quantidade": "numero de comparadores"
+   },
+   "onde": "no alvo",
+   "por_que": "o trabalho da rotina"
+  }
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "dias_retidos": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24
+ ],
+ "bytes_csv": 69554178,
+ "melhor da máquina": {
+  "bytes": 1517508,
+  "dias_errados": 0,
+  "s_decodificar": 0.923
+ },
+ "melhor codec único da L (gene 108)": {
+  "bytes": 1180998,
+  "dias_errados": 0,
+  "s_decodificar": 0.764
+ },
+ "colunar int32 + xz -9e": {
+  "bytes": 1398416
+ },
+ "xz -9e no CSV": {
+  "bytes": 2585304
+ }
+}

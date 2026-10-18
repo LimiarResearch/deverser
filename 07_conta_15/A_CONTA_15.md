@@ -4,7 +4,7 @@ Limiar Research. Gabriel Santos. Cálculo realizado em 26 de setembro de 2026.
 
 ## O que é
 
-A conta 15 é o cálculo, a partir do dever ser e dos números do meio, do tecido de um pequeno ser de teste simulado: um programa sem fala, que recebe som, percebe um ambiente simulado e aprende durante a própria vida. O D dele descreve também, em cláusulas, estados com nomes de sentimentos (curiosidade, medo, apego e outros) e um pensar sem língua; cada um é medido como uma condição do tecido (a seção seguinte). Ela foi feita antes de existir a máquina que executa a fórmula. Cada premissa do ser foi calculada por um roteiro próprio, com a previsão escrita e registrada antes de a vida rodar.
+A conta 15 é o cálculo, a partir do dever ser e dos números do meio, do tecido de um pequeno ser de teste simulado: um programa sem fala, que recebe som, percebe um ambiente simulado e aprende durante a própria vida. O D dele descreve também, em cláusulas, estados com nomes de sentimentos (curiosidade, medo, apego e outros) e um pensar sem língua; cada um é medido como uma condição do tecido (a seção seguinte). Ela foi feita antes de existir a máquina que executa a fórmula. Cada premissa do ser foi calculada por um roteiro próprio, que imprime a previsão antes da vida, no mesmo registro.
 
 A conta 15 é a origem do Sismo e do aprendiz de sinapses. A semente dos dois é o aprendiz de associações das premissas 1 e 2c: cada ligação acumula a evidência contra o acaso, só vota quando essa evidência passa de um limiar e é esquecida e recomeçada quando o teste de mudança acusa que o que ela ligava deixou de valer. Essa semente foi depois reformada pelo autor. Em 06 e 07/10 ela deu o detector de mudança que hoje é o Sismo; dela saiu também o aprendiz de sinapses. Os dois têm publicação própria.
 
@@ -23,7 +23,7 @@ Duas regras do D orientam todas as premissas:
 
 **O método, para cada premissa.**
 1. A conta, escrita a partir do D e dos números do meio, prevê o resultado da vida (arquivos `*_conta.log`).
-2. A previsão é registrada no repositório antes de a vida rodar.
+2. A previsão é registrada no repositório de trabalho antes de a vida rodar. Esse repositório não é público, e os registros não têm carimbo de tempo.
 3. A vida roda e é medida (arquivos `*_vida.log`).
 4. O que cai fica registrado. A formulação seguinte corrige a causa a partir do próprio D, e nunca com uma peça acrescentada depois para consertar o resultado.
 
@@ -102,6 +102,30 @@ No mesmo dia, as premissas foram reunidas no corpo inteiro do ser de teste:
 - o motor que lê esse tecido, com a previsão linha por linha antes da vida (`394bc00f`).
 
 A vida de 6 horas desse corpo inteiro deu nulo. A curiosidade ficou acesa em toda a vida acordada, e, chamado 21 vezes, o ser não veio nenhuma. As premissas aprenderam cada uma no seu teste; o tecido montado a partir do D inteiro não aprendeu.
+
+## O que a verificação de 17/10 encontrou
+
+Uma sessão separada conferiu este texto contra os registros (`09_provas_independentes/verif/VERIF_outros.md`, seção 1). Os números citados batem com os registros. A verificação achou também previsões que caíram e que este texto omitia, três inconsistências e um limite na ordem entre previsão e vida.
+
+**Previsões que caíram e não estavam no texto:**
+- **1b:** a previsão para a segunda palavra também era a 5ª vez, e ela só foi esquecida na 13ª.
+- **2b:** o critério de 2,3% de acendimentos errados (93,5 de 4.110) foi ultrapassado em 10 das 12 medidas.
+- **2c, terceira forma:** os acendimentos errados ficaram entre 117 e 214 de 4.110, acima de 2,3% nas 12 medidas.
+- **p4c:** a duração dos sentimentos, que tinha passado na p4b e que a conta previa de 13,5 min para cima, caiu para medianas de 4,2 min; o medo ficou aceso em 9,2% do tempo, contra menos de 5% previstos.
+- **p4d:** a procura depois das saídas ficou entre 80% e 87% em 11 das 18 saídas e em 0% nas outras 7; a alegria se apagou também em 20% das vezes depois de um tom bom, onde a conta previa poucas.
+- **p4e:** a procura em vão, de 29,8%, ficou cerca de 13 vezes acima da previsão, perto de 2,3% das decisões.
+
+**As três inconsistências:**
+- **A faixa da 2c:** a previsão de "11.000 a 16.000" ligações apagadas na terceira forma da 2c não aparece em nenhum registro.
+- **O "7 das 10" da p4f:** depende de um critério que não foi declarado. Com "acima de 0%" são 8 de 10, com "acima de 2%" são 7, e com "50% ou mais" são 6.
+- **O registro da 2b:** diz que os acendimentos errados "ficam abaixo" do critério, numa frase fixa do roteiro, e logo depois a conta calculada prevê de 137 a 150, acima dele.
+
+**Uma previsão que acertou e o texto omitia:** na segunda forma da 2c, a conta previu 10.919 ligações apagadas sem mudança, e a vida mediu 11.073 (1,4% de diferença).
+
+**A ordem entre previsão e vida:**
+- Nas premissas 1, 1b, 2 e 2c, a previsão é um cálculo que roda antes da vida e não depende dela.
+- Nas premissas 3 e 4, a "conta" é texto fixo no roteiro. A igualdade entre a conta e o começo da vida não diz quando esse texto foi escrito, e a ordem entre previsão e vida não pode ser verificada.
+- Os registros não têm carimbo de tempo, e os commits citados acima não estão neste repositório.
 
 ## Os arquivos
 

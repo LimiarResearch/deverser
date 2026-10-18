@@ -1,0 +1,10 @@
+{"erros": {"vencedora": 0, "referencia": 0, "std_sort": 0, "avx2": 0, "avx512": 0, "motor_otima": 0, "motor_batcher": 0, "ref_simd": 0, "intel": 0}}
+{"rotina": "vencedora_29-09", "tiques_por_vetor": 15.789, "tiques_referencia": 16.492, "razao_vs_rede": 0.95813, "razao_ref_contra_ref": 1.00048, "ruido": 0.00619, "soma": 34864}
+{"rotina": "std_sort", "tiques_por_vetor": 163.414, "tiques_referencia": 19.602, "razao_vs_rede": 9.09317, "razao_ref_contra_ref": 0.99123, "ruido": 0.03541, "soma": 34864}
+{"rotina": "avx2_bitonica", "tiques_por_vetor": 9.102, "tiques_referencia": 16.508, "razao_vs_rede": 0.55332, "razao_ref_contra_ref": 0.99921, "ruido": 0.01617, "soma": 34864}
+{"rotina": "avx512_bitonica", "tiques_por_vetor": 8.156, "tiques_referencia": 15.930, "razao_vs_rede": 0.51613, "razao_ref_contra_ref": 1.00049, "ruido": 0.01715, "soma": 34864}
+{"rotina": "copia_da_referencia", "tiques_por_vetor": 16.359, "tiques_referencia": 16.359, "razao_vs_rede": 1.00000, "razao_ref_contra_ref": 1.00095, "ruido": 0.00143, "soma": 34864}
+{"rotina": "referencia_simd_da_ferramenta", "tiques_por_vetor": 9.945, "tiques_referencia": 14.672, "razao_vs_rede": 0.68000, "razao_ref_contra_ref": 1.00000, "ruido": 0.00538, "soma": 34864}
+{"rotina": "motor_xeon_otima_simd_imediato", "tiques_por_vetor": 9.461, "tiques_referencia": 15.914, "razao_vs_rede": 0.59533, "razao_ref_contra_ref": 1.00048, "ruido": 0.00271, "soma": 34864}
+{"rotina": "motor_xeon_batcher_simd_imediato", "tiques_por_vetor": 9.578, "tiques_referencia": 16.008, "razao_vs_rede": 0.59941, "razao_ref_contra_ref": 1.00000, "ruido": 0.00376, "soma": 34864}
+{"rotina": "intel_x86_simd_sort", "tiques_por_vetor": 57.750, "tiques_referencia": 15.977, "razao_vs_rede": 3.61328, "razao_ref_contra_ref": 0.99902, "ruido": 0.01550, "soma": 34864}

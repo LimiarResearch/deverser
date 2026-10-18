@@ -98,6 +98,6 @@ Cada prova roda com `python -B testes/<nome>.py`, de dentro desta pasta.
 
 ## Sobre esta versão
 
-O código é o da C★3 na sua última versão, de 05/10/2026, sem os comentários. O código executável é idêntico ao original, conferido pela árvore sintática de cada arquivo Python e pelo código C++ sem comentários. Alguns textos que o programa grava nas declarações foram reescritos em forma neutra. Como o hash de V é calculado sobre os arquivos-fonte, o hash desta versão difere do da corrida de 04/10/2026.
+O código é o da C★3 na sua última versão, de 05/10/2026, sem os comentários. O código executável é idêntico ao original exceto pelas cadeias de texto que o programa grava nas declarações, reescritas em forma neutra: a conferência comparou a árvore sintática de cada arquivo Python com essas cadeias apagadas, e o código C++ sem comentários. Como o hash de V é calculado sobre os arquivos-fonte, o hash desta versão difere do da corrida de 04/10/2026.
 
-Ficaram de fora o manual, os planos de construção, o visor e os registros da corrida. A corrida de 04 e 05/10/2026 parou com estado retomável depois de 15 rodadas, 3 gerações, 1.488 fotos e 2.033 medidas de V, e nenhuma foto cumpriu D.
+Ficaram de fora o manual, os planos de construção, o visor e os registros da corrida. A corrida de 04 e 05/10/2026 parou com estado retomável depois de 15 rodadas, 3 gerações, 1.488 fotos e 2.033 medidas de V, e nenhuma foto cumpriu D. Os registros dessa corrida não estão no pacote, e esses números não podem ser conferidos aqui.

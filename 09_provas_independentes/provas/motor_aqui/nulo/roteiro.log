@@ -1,0 +1,40 @@
+23:21:25 inicio parte1
+23:22:01 48/291 medidos, que ordenam até aqui: 0
+23:22:38 96/291 medidos, que ordenam até aqui: 0
+23:23:14 144/291 medidos, que ordenam até aqui: 0
+23:23:50 192/291 medidos, que ordenam até aqui: 0
+23:24:28 240/291 medidos, que ordenam até aqui: 0
+23:25:04 288/291 medidos, que ordenam até aqui: 0
+23:25:06 291/291 medidos, que ordenam até aqui: 0
+{"N": 291, "segundos": 220.6, "medidos": 291, "erros": 0, "oraculo_ok": 291, "corretos_que_ordenam": 0, "cumprem_D": 0, "melhor_violacao": 0.548704}
+23:25:06 fim parte1 rc=0
+23:25:44 48/435 medidos, que ordenam até aqui: 0
+23:26:26 96/435 medidos, que ordenam até aqui: 0
+23:27:04 144/435 medidos, que ordenam até aqui: 0
+23:27:41 192/435 medidos, que ordenam até aqui: 0
+23:28:21 240/435 medidos, que ordenam até aqui: 0
+23:29:00 288/435 medidos, que ordenam até aqui: 0
+23:29:36 336/435 medidos, que ordenam até aqui: 0
+23:30:13 384/435 medidos, que ordenam até aqui: 0
+23:30:52 432/435 medidos, que ordenam até aqui: 1
+23:30:55 435/435 medidos, que ordenam até aqui: 1
+{"N": 435, "segundos": 348.4, "medidos": 435, "erros": 0, "oraculo_ok": 435, "corretos_que_ordenam": 1, "cumprem_D": 0, "melhor_violacao": 0.417247}
+23:30:55 fim parte2 rc=0
+23:31:28 48/726 medidos, que ordenam até aqui: 48
+23:32:00 96/726 medidos, que ordenam até aqui: 96
+23:32:34 144/726 medidos, que ordenam até aqui: 144
+23:33:07 192/726 medidos, que ordenam até aqui: 192
+23:33:41 240/726 medidos, que ordenam até aqui: 240
+23:34:15 288/726 medidos, que ordenam até aqui: 288
+23:34:50 336/726 medidos, que ordenam até aqui: 336
+23:35:24 384/726 medidos, que ordenam até aqui: 384
+23:35:58 432/726 medidos, que ordenam até aqui: 432
+23:36:34 480/726 medidos, que ordenam até aqui: 480
+23:37:08 528/726 medidos, que ordenam até aqui: 528
+23:37:41 576/726 medidos, que ordenam até aqui: 576
+23:38:13 624/726 medidos, que ordenam até aqui: 624
+23:38:43 672/726 medidos, que ordenam até aqui: 672
+23:39:16 720/726 medidos, que ordenam até aqui: 720
+23:39:20 726/726 medidos, que ordenam até aqui: 726
+{"N": 726, "segundos": 505.3, "medidos": 726, "erros": 0, "oraculo_ok": 726, "corretos_que_ordenam": 726, "cumprem_D": 126, "melhor_violacao": 0.0}
+23:39:20 fim suplementar rc=0

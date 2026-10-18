@@ -1,0 +1,32 @@
+pares com o mesmo conjunto de comparadores, mesma variante e mesmos registradores: 114
+camadas_diferentes=1 posicoes_diferentes=2 |dif razao|=0.00121 seq 69 x 81: 0.95340 x 0.95461 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=1 posicoes_diferentes=2 |dif razao|=0.00811 seq 24 x 48: 0.97754 x 0.98565 ('otima', 'ternario', 0) correta=True
+camadas_diferentes=1 posicoes_diferentes=2 |dif razao|=0.01886 seq 69 x 123: 0.95340 x 0.97226 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=1 posicoes_diferentes=3 |dif razao|=0.00258 seq 114 x 132: 0.97140 x 0.97398 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=1 posicoes_diferentes=3 |dif razao|=0.00497 seq 78 x 90: 0.95378 x 0.95875 ('otima', 'ternario', 0) correta=False
+camadas_diferentes=1 posicoes_diferentes=4 |dif razao|=0.01599 seq 27 x 108: 0.96290 x 0.97889 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=1 posicoes_diferentes=4 |dif razao|=0.01765 seq 81 x 123: 0.95461 x 0.97226 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=2 posicoes_diferentes=4 |dif razao|=0.00055 seq 81 x 99: 0.95461 x 0.95516 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=2 posicoes_diferentes=4 |dif razao|=0.00149 seq 63 x 66: 0.93844 x 0.93695 ('otima', 'ternario', 0) correta=False
+camadas_diferentes=2 posicoes_diferentes=5 |dif razao|=0.00045 seq 3 x 9: 0.95682 x 0.95727 ('otima', 'ternario', 0) correta=True
+camadas_diferentes=2 posicoes_diferentes=5 |dif razao|=0.01095 seq 69 x 93: 0.95340 x 0.96435 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=2 posicoes_diferentes=6 |dif razao|=0.00055 seq 111 x 114: 0.97085 x 0.97140 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=2 posicoes_diferentes=6 |dif razao|=0.01501 seq 36 x 129: 0.96741 x 0.98242 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=2 posicoes_diferentes=7 |dif razao|=0.01407 seq 27 x 60: 0.96290 x 0.97697 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=2 posicoes_diferentes=9 |dif razao|=0.00192 seq 60 x 108: 0.97697 x 0.97889 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=2 posicoes_diferentes=9 |dif razao|=0.00420 seq 129 x 144: 0.98242 x 0.98662 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=3 posicoes_diferentes=6 |dif razao|=0.00061 seq 45 x 57: 0.98541 x 0.98602 ('otima', 'ternario', 0) correta=True
+camadas_diferentes=3 posicoes_diferentes=6 |dif razao|=0.00176 seq 69 x 99: 0.95340 x 0.95516 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=3 posicoes_diferentes=7 |dif razao|=0.00473 seq 39 x 48: 0.98092 x 0.98565 ('otima', 'ternario', 0) correta=True
+camadas_diferentes=3 posicoes_diferentes=7 |dif razao|=0.00605 seq 12 x 24: 0.97149 x 0.97754 ('otima', 'ternario', 0) correta=True
+camadas_diferentes=3 posicoes_diferentes=7 |dif razao|=0.00791 seq 93 x 123: 0.96435 x 0.97226 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=3 posicoes_diferentes=7 |dif razao|=0.00974 seq 81 x 93: 0.95461 x 0.96435 ('otima', 'ternario', 1) correta=False
+camadas_diferentes=3 posicoes_diferentes=8 |dif razao|=0.00449 seq 39 x 45: 0.98092 x 0.98541 ('otima', 'ternario', 0) correta=True
+camadas_diferentes=3 posicoes_diferentes=8 |dif razao|=0.00756 seq 6 x 12: 0.96393 x 0.97149 ('otima', 'ternario', 0) correta=True
+camadas_diferentes=3 posicoes_diferentes=8 |dif razao|=0.01710 seq 99 x 123: 0.95516 x 0.97226 ('otima', 'ternario', 1) correta=False
+camadas diferentes = 1 pares: 7 mediana |dif|: 0.00811 max: 0.01886
+camadas diferentes = 2 pares: 9 mediana |dif|: 0.00192 max: 0.01501
+camadas diferentes = 3 pares: 23 mediana |dif|: 0.00715 max: 0.02372
+camadas diferentes = 4 pares: 37 mediana |dif|: 0.00956 max: 0.03318
+camadas diferentes = 5 pares: 27 mediana |dif|: 0.01387 max: 0.02883
+camadas diferentes = 6 pares: 11 mediana |dif|: 0.01534 max: 0.0292

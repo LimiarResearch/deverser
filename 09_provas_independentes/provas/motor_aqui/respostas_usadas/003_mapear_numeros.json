@@ -1,0 +1,70 @@
+{
+ "numeros": {
+  "latencia_das_instrucoes_de_troca": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "ciclos",
+   "grandeza": {
+    "quantidade": "latencia das instrucoes de troca"
+   },
+   "onde": "no alvo",
+   "por_que": "o custo de cada troca"
+  },
+  "custo_de_desvio_errado": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "ciclos",
+   "grandeza": {
+    "quantidade": "custo de desvio errado"
+   },
+   "onde": "no alvo",
+   "por_que": "quanto custa a rotina que desvia"
+  },
+  "ruido_da_medida_de_tempo": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "1",
+   "grandeza": {
+    "quantidade": "ruido da medida de tempo"
+   },
+   "onde": "no alvo",
+   "por_que": "o que é distinguível"
+  },
+  "frequencia_do_processador": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "GHz",
+   "grandeza": {
+    "quantidade": "frequencia do processador"
+   },
+   "onde": "no alvo",
+   "por_que": "o tempo absoluto"
+  },
+  "versao_do_gxx": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "versão",
+   "grandeza": {
+    "quantidade": "versao do gxx"
+   },
+   "onde": "no alvo",
+   "por_que": "o código gerado"
+  },
+  "cache_de_instrucoes_de_quem_chama": {
+   "clausulas": [
+    "r_mais_rapida"
+   ],
+   "unidade": "bytes",
+   "grandeza": {
+    "quantidade": "cache de instrucoes de quem chama"
+   },
+   "onde": "no alvo",
+   "por_que": "o efeito do corpo no meio"
+  }
+ }
+}

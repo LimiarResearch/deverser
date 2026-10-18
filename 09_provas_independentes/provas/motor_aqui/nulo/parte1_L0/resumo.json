@@ -1,0 +1,35 @@
+{
+ "modo": "L0",
+ "semente": 20261017,
+ "N": 291,
+ "criacoes_espelhadas": [
+  0
+ ],
+ "lote": 48,
+ "por_arquetipo": {
+  "rede": 291
+ },
+ "paralelo": 3,
+ "rodadas": 1,
+ "repeticoes": 1,
+ "modelo_hash": "6c9ef2c92479f76ca29f64e55f00904624ada37509c638361830bf534720d8d4",
+ "alvo": {
+  "id": "vps-local",
+  "tipo": "local",
+  "python": "/usr/bin/python3",
+  "host": null,
+  "descricao": "esta máquina: Intel Xeon 2,1 GHz com AVX-512, 4 núcleos, 3 para este problema (verificação de 17/10/2026)"
+ },
+ "FERRAMENTA_GXX": "/usr/bin/g++",
+ "FERRAMENTA_GXX_SHA256": "1353e9bdd29a7295c7226bf6c63abccce056d8cac31f112e5cdbecc3f28c2769",
+ "inicio": "2026-10-17T23:21:25+0000",
+ "fim": "2026-10-17T23:25:06+0000",
+ "segundos": 220.6,
+ "medidos": 291,
+ "erros": 0,
+ "oraculo_ok": 291,
+ "corretos_que_ordenam": 0,
+ "cumprem_D": 0,
+ "melhor_violacao": 0.548704,
+ "melhores_corretos": []
+}

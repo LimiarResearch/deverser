@@ -1,0 +1,15 @@
+618d72c2e1301172efcaca9f  codec.py
+37c564974f5dca2a77a8cf20  d_codec.py
+c5f7189c51c4a7d3cea03bcf  d_codec2.py
+5c1ca4333e56f707b3b017b2  nulo_codec.py
+ba667566d7ba7d67a8d3e88b  alternativas_codec.py
+70335b3c57bab830d8999348  seletor_por_classe.py
+48c8487e5de7440396451224  grupo_unico.py
+c120ae3213bed03d27fc20ae  confirmar_retidos.py
+ebbd0256ee7584c1948121c6  dados/itens.csv
+1aa1bf7f19c688b9e252a961  melhor_da_maquina.json
+a4c728195e06cb18e5d4bb55  corrida_maquina/declaracao.json
+d3bba32fcc1b52ec67172db4  /tmp/claude-0/-home-user-Conta/9b6d7c7f-549d-59d8-82a7-bc02ceae2e96/scratchpad/deverser/provas/codec/d_codec3.py
+0e6300fe8f667ad83b8066d3  /tmp/claude-0/-home-user-Conta/9b6d7c7f-549d-59d8-82a7-bc02ceae2e96/scratchpad/deverser/provas/codec/nulo_codec3.py
+eeebe4d22283a46662e6659c  /tmp/claude-0/-home-user-Conta/9b6d7c7f-549d-59d8-82a7-bc02ceae2e96/scratchpad/deverser/provas/codec/codec.py
+68461545fdcf4a7f64ceab44  /tmp/claude-0/-home-user-Conta/9b6d7c7f-549d-59d8-82a7-bc02ceae2e96/scratchpad/deverser/provas/codec/testar_rle0.py

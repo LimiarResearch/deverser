@@ -1,0 +1,44 @@
+{
+ "escrito_em": "2026-10-17, durante a busca do motor, antes de ver o resultado dela",
+ "nulo_principal": {
+  "o_que": "sorteio cego e uniforme na mesma L do motor (o arquétipo 'rede' do modelo m1 que o motor aceitou, hash 889c906d0b), com o mesmo número de candidatos que o motor mediu na busca",
+  "N": "codigos_que_concorreram da concorrência + os 3 do lote que o σ mede antes da busca (lidos do estado.json da corrida)",
+  "como_sorteia": "cada variável com compilador.gerar._valor_novo, a mesma função do motor para valores novos: categoria uniforme sobre a lista declarada (base 1/3 cada; variante 1/4 cada entre ternario, mascara, simd, simd_imediato; registradores 1/2; rem_k sobre [0,0,0,1], isto é, retirar o comparador com probabilidade 1/4, que é o mesmo domínio que o motor usa na população inicial e na mutação); reais uniformes em [min, max] arredondados a 6 casas (pri_k em [0,1], taxa_de_mutacao em [0,1; 0,6], que não é usada pelo candidato)",
+  "semente": 20261017,
+  "como_mede": "o mesmo caminho do motor: compilador.adaptador_maquina.AdaptadorMaquina.medir_lote, com o mesmo modelo, o mesmo alvo, rodadas 1, repeticoes 1 e paralelo 3, em lotes do tamanho da população do motor; cada candidato roda no executor_generico, que chama compilador/ferramenta_ordenacao.medir (V exaustivo e 21 repetições do tempo)",
+  "como_julga": "o mesmo D: correto (oráculo e erro_de_ordenacao = 0) e razao_vs_melhor <= 0,97; a violação no pior caso calculada por Motor._violacao_pior, como na seleção"
+ },
+ "nulo_suplementar_exploratorio": {
+  "por_que": "em L, retirar qualquer um dos 19 comparadores da rede ótima ou da de Batcher (ou dos 28 da inserção) quebra a ordenação, então o sorteio cego acerta uma rede correta com probabilidade perto de (1/3)(2 x 0,75^19 + 0,75^28), cerca de 0,3%: o nulo principal deve achar uns poucos corretos. Este segundo nulo separa as duas coisas que a seleção pode acrescentar: achar a correção e, entre as corretas, achar a ordem e a troca mais rápidas",
+  "o_que": "o mesmo sorteio, com todos os rem_k = 0 (nenhum comparador retirado); todo o resto igual",
+  "semente": 20261018,
+  "N": "o mesmo N",
+  "status": "exploratório e declarado aqui antes de ver os resultados; não substitui o nulo principal, que é o pedido"
+ },
+ "remedida": {
+  "quem": "os 5 melhores corretos do motor (por razao_vs_melhor medida na busca, entre as medidas que o motor guardou: o ledger da criação), os 5 melhores corretos do nulo principal, a vencedora de 29/09 (a formulação escolhida no estado.json da corrida de 29/09); e, à parte, os 5 melhores corretos do nulo suplementar",
+  "como": "5 rodadas; em cada uma, cada candidato medido uma vez, em sequência (sem paralelo), em processo novo, pelo executor_generico do motor com a mesma carga (21 repetições da ferramenta); a ordem dos candidatos muda a cada rodada (rotação e inversão alternadas)",
+  "o_que_registra": "a mediana e a faixa (mín e máx) das 5 rodadas de razao_vs_melhor, razao_vs_rede e razao_vs_simd, mais o ruído e a razão da referência contra a cópia dela"
+ },
+ "emenda_1": {
+  "escrita_em": "2026-10-17 23:16 UTC, depois de ver a busca 1 do motor (empacou sem válido) e durante a busca 2, antes de ver o resultado dela",
+  "o_que_mudou": "o motor não parou na primeira criação: pediu reformulação e recebeu a abertura de L preparada antes da corrida (m2: o arquétipo rede mais a rede livre que compõe). O nulo espelha o orçamento e a L de cada busca do motor",
+  "parte_1": {
+   "L": "L0: o arquétipo rede (igual em m1 e m2)",
+   "N": "codigos_que_concorreram da criação 1 + 3 do lote do σ",
+   "semente": 20261017
+  },
+  "parte_2": {
+   "L": "L1 de m2: com probabilidade 1/2 o arquétipo rede, com 1/2 a composição (é a divisão da população inicial do motor em grade_ou_amostra); a composição sorteada como em gerar.compostos: número de peças uniforme entre min_pecas e max_pecas, cada peça com _peca_nova (i e j uniformes de 0 a 7), genes com _valor_novo",
+   "N": "codigos_que_concorreram da criação 2 + 3 do lote do σ",
+   "semente": 20261019
+  },
+  "suplementar": {
+   "N": "a soma das duas partes",
+   "semente": 20261018,
+   "L": "o arquétipo rede com todos os rem_k = 0"
+  },
+  "comparacao": "o melhor do motor nas duas criações contra o melhor do nulo nas duas partes; os 5 melhores que ordenam de cada lado vão para a remedida",
+  "medida": "o mesmo trabalho do executor para m1 e m2: a carga, o código do candidato, as métricas e o oráculo são os mesmos nos dois modelos (só a representação muda), então um candidato do arquétipo rede é medido igual nos dois"
+ }
+}

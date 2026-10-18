@@ -1,0 +1,84 @@
+{
+ "desenvolvimento (dias 5 e 6)": {
+  "bytes_csv": 6006714,
+  "gzip9": {
+   "bytes": 263724,
+   "exato": true,
+   "s_decodificar": 0.007
+  },
+  "bzip2_9": {
+   "bytes": 148530,
+   "exato": true,
+   "s_decodificar": 0.086
+  },
+  "xz9e": {
+   "bytes": 153036,
+   "exato": true,
+   "s_decodificar": 0.015
+  },
+  "gorilla": {
+   "bytes": 738885,
+   "exato": "tamanho pela regra, sem decodificador"
+  },
+  "colunar_int32_xz9e": {
+   "bytes": 76084,
+   "exato": true,
+   "s_decodificar": 0.016
+  },
+  "especialista_a_mao": {
+   "bytes": 98643,
+   "exato": true,
+   "s_decodificar": 0.056,
+   "gene": 134
+  }
+ },
+ "todos os 25 dias": {
+  "bytes_csv": 75560892,
+  "gzip9": {
+   "bytes": 4346495,
+   "exato": true,
+   "s_decodificar": 0.102
+  },
+  "bzip2_9": {
+   "bytes": 2778701,
+   "exato": true,
+   "s_decodificar": 1.204
+  },
+  "xz9e": {
+   "bytes": 2738340,
+   "exato": true,
+   "s_decodificar": 0.222
+  },
+  "gorilla": {
+   "bytes": 10315716,
+   "exato": "tamanho pela regra, sem decodificador"
+  },
+  "colunar_int32_xz9e": {
+   "bytes": 1474500,
+   "exato": true,
+   "s_decodificar": 0.272
+  },
+  "especialista_a_mao": {
+   "bytes": 1581269,
+   "exato": true,
+   "s_decodificar": 0.819,
+   "gene": 134
+  }
+ },
+ "arquivo inteiro, um fluxo só (não se lê por dia)": {
+  "bytes_csv": 75560892,
+  "gzip9": 4335969,
+  "bzip2_9": 2748131,
+  "xz9e": 2570128
+ },
+ "classes": {
+  "tempo": 1,
+  "constante": 364,
+  "quase_zero": 53,
+  "contador": 20,
+  "inteiro_pequeno": 27,
+  "inteiro_grande": 0,
+  "com_irma": 12,
+  "outra": 19
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "maquina": "Máquina do Dever-Ser",
+ "versao": "4.3.1-selecao",
+ "modo": "corrida",
+ "final": true,
+ "autorizacao": "Gabriel Santos, 18/10/2026: sim (o codec v3, declarado depois da corrida 2)",
+ "problema": "codec sem perda para a tabela de métricas, no máximo 0.95 da melhor alternativa",
+ "codificacao": {
+  "nome": "codec sem perda v3: grupo padrão, exceções (coluna, grupo) e a cadeia de cada grupo",
+  "versao": 3,
+  "bits_da_foto": 848,
+  "campos": 176,
+  "grupos": [
+   "excecoes",
+   "cadeias"
+  ]
+ },
+ "clausulas_de_D": [
+  "c0_exato",
+  "c1_tamanho",
+  "c2_leitura"
+ ],
+ "config": {
+  "K": 10,
+  "bracos": [
+   "cega",
+   "operador"
+  ],
+  "declaracao_cada": 300.0,
+  "escala_do_posto": 12.0,
+  "frac_acaso": 0.25,
+  "imprimir_cada": 60.0,
+  "k_melhores": 200,
+  "max_rodadas": 197,
+  "max_tentativas_por_pai": 6,
+  "n_partida": 64,
+  "semente": 1,
+  "tempo": null
+ },
+ "calibracao_de_V": null,
+ "hash_de_V": {
+  "partida": null,
+  "fim": null
+ },
+ "rodadas": 197,
+ "segundos": 2773.555,
+ "fotos_medidas": 3978,
+ "avaliacoes_de_V": {
+  "total": 3978,
+  "por_finalidade": {
+   "partida (sorteio)": 64,
+   "rodadas": 3914
+  }
+ },
+ "bracos": {
+  "cega": {
+   "propostas": 1970,
+   "repetidas_sem_medida": 8,
+   "avaliacoes_de_V": 1962,
+   "melhoras_sobre_o_pai": 131,
+   "soma_da_variacao": 9250.0
+  },
+  "operador": {
+   "propostas": 1970,
+   "repetidas_sem_medida": 18,
+   "avaliacoes_de_V": 1952,
+   "melhoras_sobre_o_pai": 141,
+   "soma_da_variacao": 9175.0
+  }
+ },
+ "pais": {
+  "acaso": 51,
+  "posto": 146
+ },
+ "melhor": {
+  "id": 3012,
+  "distancia": 38,
+  "nfal": 1,
+  "bits": "00000001101000011100001100100001000100101110001100101110111100111000110100111100010100111110001001000011110001000111101001001010000101001110101001001111000101011011000101011100011001011111001001100110110001100111011001101101011101110000110001110010001001110111011001111110010101111111001010000001011010000101110110000110001110010010001110010111101110011000110010011010110010011011011010011110011010100100101010110000001110110100001110110110001110111110001111000111010111001011101011001101111111001111001111010100010011010111001011011010110111011100101011011111101011100001010011100011111011100100111011101010111111101101001011101110101011110000011111110000110011111111100011111111100011111111100011111111100011111111100011111111100011111111100011111111100011111111100000100011000001001110010001001100100011100010011101001111110100000010100010001101"
+ },
+ "curva_da_melhor": [
+  [
+   64,
+   222
+  ],
+  [
+   64,
+   152
+  ],
+  [
+   64,
+   146
+  ],
+  [
+   184,
+   127
+  ],
+  [
+   203,
+   123
+  ],
+  [
+   283,
+   122
+  ],
+  [
+   303,
+   117
+  ],
+  [
+   303,
+   105
+  ],
+  [
+   402,
+   103
+  ],
+  [
+   422,
+   102
+  ],
+  [
+   422,
+   96
+  ],
+  [
+   622,
+   91
+  ],
+  [
+   622,
+   88
+  ],
+  [
+   702,
+   86
+  ],
+  [
+   782,
+   85
+  ],
+  [
+   822,
+   84
+  ],
+  [
+   842,
+   82
+  ],
+  [
+   901,
+   81
+  ],
+  [
+   961,
+   79
+  ],
+  [
+   1000,
+   78
+  ],
+  [
+   1060,
+   77
+  ],
+  [
+   1120,
+   46
+  ],
+  [
+   1518,
+   41
+  ],
+  [
+   1798,
+   40
+  ],
+  [
+   1818,
+   39
+  ],
+  [
+   3022,
+   38
+  ]
+ ],
+ "candidatas": [],
+ "parada": "fusível: 197 rodadas",
+ "o_que_esta_versao_nao_tem": "o aprendiz (a rede, a memória de edições, a biblioteca, os motivos, as piscinas, as sementes da rede), a catraca e a retomada"
+}

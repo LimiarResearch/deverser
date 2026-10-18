@@ -1,0 +1,10 @@
+estruturado: 2000/6004 medidos; melhor bytes/ref 1.4112; primeiro que cumpre D: None (1553 s)
+cego: 2000/6004 medidos; melhor bytes/ref 1.9334; primeiro que cumpre D: None (1644 s)
+estruturado: 4000/6004 medidos; melhor bytes/ref 1.3666; primeiro que cumpre D: None (3054 s)
+cego: 4000/6004 medidos; melhor bytes/ref 1.8574; primeiro que cumpre D: None (3294 s)
+estruturado: 6000/6004 medidos; melhor bytes/ref 1.3369; primeiro que cumpre D: None (4588 s)
+fim nulo_estruturado
+morto 24799
+cego: 6000/6004 medidos; melhor bytes/ref 1.8574; primeiro que cumpre D: None (4975 s)
+fim nulo_cego
+morto 24746

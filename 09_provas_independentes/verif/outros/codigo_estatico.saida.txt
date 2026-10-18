@@ -1,0 +1,89 @@
+== A. Conta 15: comentarios e docstrings em codigo/
+  conta_orelha.py          linhas= 133 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p1_aprender.py           linhas= 200 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p1b_limiar.py            linhas= 180 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p2_orelha.py             linhas= 209 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p2_sintese.py            linhas=  50 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p2b_orelha.py            linhas=  34 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p2c_esquecer.py          linhas= 377 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p2c_esquecer_a.py        linhas= 327 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p2c_esquecer_b.py        linhas= 366 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p4_vida_de_dentro.py     linhas= 305 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p4b_narrativa.py         linhas= 283 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p4c_valor.py             linhas= 311 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p4d_situacao.py          linhas= 320 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p4e_exato.py             linhas= 373 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+  p4f_dois.py              linhas=  20 comentarios=['# -*- coding: utf-8 -*-'] docstrings=0
+
+== B. C*3: a foto atomica (recalculada a mao a partir das constantes de l_ser_lang.py)
+  N_OPS=32 (2^BITS_OP=32), secoes=16, nos por secao=8, bits por no=25
+  cabecalho=94, secoes=3222, total=3316
+  c3_capacidade.CAPACIDADE = 3316
+  linhas add( em _montar_campos: 18 (16 no cabecalho do codigo + 4 por secao + rotulo)
+
+== C. C*3: o D (clausulas e predicados) contado no codigo
+  D do piso (montar_desafio_motor.D): 12
+  desafio_v acrescenta: 6
+  desafio_v_ser acrescenta: 10 ['r_calibra', 'r_conflito_fino', 'r_novidade', 'r_tempo_fixo', 'r_compoe_8', 'r_compoe_32', 'r_melhora_com_o_uso', 'r_latencia', 'r_recorrencia', 'r_deriva']
+  total de clausulas: 28
+  cauda dos predicados (alem de falha:/longe:): 60 -> predicados definidos = 2 x 28 + 60 = 116
+  N_PREDICADOS (espaco reservado) = [128]
+
+== D. C*3: vidas por familia (lidas no codigo)
+  carga_vida: FLUXOS, SONDA_A_CADA, TESTE, INTERROMPER_A_CADA, COMPOSTA_N = (2, 1000, 48, 8000, 150)
+  seq = carga(s) + carga(s+1) -> 2 x FLUXOS; ling = gerar_carga(..., 2); tri = comp, fam, reg com 2 e der com 1; age = gerar_carga(s, 2)
+  total = 2*2 + 2 + (2+2+2+1) + 2 = 15
+  o selo do banco diz vidas_por_familia = {'seq': 4, 'ling': 2, 'age': 2, 'tri': 7} soma 15
+
+== E. C*3: o selo do banco da prova cega
+  oraculo_banco_seq_s424242.npz: sha256 e90e7f4ce671a5b7... selo e90e7f4ce671a5b7... confere=True
+  oraculo_banco_ling_s424242.npz: sha256 6d91eb0639a902a0... selo 6d91eb0639a902a0... confere=True
+  oraculo_banco_der_s424242.npz: sha256 50b8d26a89fd7611... selo 50b8d26a89fd7611... confere=True
+  hash_do_selo recalculado confere = True
+
+== F. C*3: a piscina, o desenvolvimento, eps e os oraculos presentes
+   EPS = 2.0 ** (-17)
+   PISCINA_PADRAO = tuple((30000000 + 1009 * i for i in range(24)))
+   DESENVOLVIMENTO = (7391026, 58210473, 913004317)
+   PROIBIDAS = {1, 2, 424242, 424243, 20261003, 20261004, 50505050, 50505051}
+  eps = 2**-17 = 7.62939453125e-06
+  piscina (24): oraculos vidas/ling/der faltando: nenhum
+  desenvolvimento (3): oraculos vidas/ling/der faltando: nenhum
+  base: oraculos vidas/ling/der faltando: nenhum
+  outros oraculos: ['oraculo_banco_der_s424242.npz', 'oraculo_banco_ling_s424242.npz', 'oraculo_banco_seq_s424242.npz', 'oraculo_der_s1_v1.npz', 'oraculo_der_s1_v2.npz', 'oraculo_der_s1_v3.npz', 'oraculo_der_s1_v4.npz', 'oraculo_der_s1_v5.npz', 'oraculo_der_s1_v6.npz', 'oraculo_der_s1_v7.npz', 'oraculo_der_s1_v8.npz', 'oraculo_do_ser.py', 'oraculo_ling_s1_v1.npz', 'oraculo_ling_s1_v2.npz', 'oraculo_ling_s1_v3.npz', 'oraculo_ling_s1_v4.npz', 'oraculo_ling_s1_v5.npz', 'oraculo_ling_s1_v6.npz', 'oraculo_ling_s1_v7.npz', 'oraculo_ling_s1_v8.npz', 'oraculo_vidas_s1_v1.npz', 'oraculo_vidas_s1_v2.npz', 'oraculo_vidas_s1_v3.npz', 'oraculo_vidas_s1_v4.npz', 'oraculo_vidas_s1_v5.npz', 'oraculo_vidas_s1_v6.npz', 'oraculo_vidas_s1_v7.npz', 'oraculo_vidas_s1_v8.npz']
+  conteudo de oraculo_banco_der_s424242.npz -> ['O.npy', 'tarefas.npy', 'pos.npy']
+  conteudo de oraculo_banco_ling_s424242.npz -> ['n_vidas.npy', 'O0.npy', 'O1.npy', 'tarefas0.npy', 'tarefas1.npy', 'pos0.npy', 'pos1.npy', 'treino0.npy', 'treino1.npy']
+  conteudo de oraculo_banco_seq_s424242.npz -> ['n_vidas.npy', 'O0.npy', 'O1.npy', 'O2.npy', 'O3.npy', 'tarefas0.npy', 'tarefas1.npy', 'tarefas2.npy', 'tarefas3.npy', 'pos0.npy', 'pos1.npy', 'pos2.npy', 'pos3.npy', 'treino0.npy', 'treino1.npy', 'treino2.npy', 'treino3.npy']
+
+== G. C*3: a configuracao contra os campos da classe Config
+  campos de Config: 92
+  chaves da config que nao existem em Config: nenhuma
+
+== H. C*3: perturbacao igual em numpy e C++ (constantes)
+  11400714819323198485 (0x9e3779b97f4a7c15): no .py=True, no .cpp=True
+  13787848793156543929 (0xbf58476d1ce4e5b9): no .py=True, no .cpp=True
+  10723151780598845931 (0x94d049bb133111eb): no .py=True, no .cpp=True
+  >>30, >>27, >>31 e >>40 / 16777216 nos dois: True True
+
+== I. Pecas da 04 comparadas com a C*3 (arvore sintatica, sem docstrings)
+  foto_atomica 04 x 08: arvore identica = True
+  problema_de_d 04 x 08: so na 08 = ['problema_do_l2', 'problema_do_ser', 'problema_do_ser_restrito', 'problema_do_ser_v2'] ; so na 04 = [] ; comuns diferentes = []
+  variacao (04) x escritor_de_fotos (08): definicoes comuns 7 ; iguais 7 ; diferentes [] ; so na 04 ['Molde']
+  sha256 do escritor_de_fotos.py da 08: 2bf935f24c57021084beb31dd4c1a6db9c29552e5daf52d22a8d296c99207280 (o LEIA-ME da 04 cita o do original: ee71d10e...67ff65d) False
+  foto_atomica 05 x 08: arvore identica = True
+
+== J. Provas: quantas funcoes test_ existem (contagem estatica, nada rodado)
+  03_motor_de_29-09/testes/test_compilador.py: 18
+  03_motor_de_29-09/testes/test_nucleo.py: 8
+  04_maquina_do_dever_ser_selecao/testes/test_selecao.py: 11
+  08_c_estrela_3/testes/mundos_falsos.py: 0
+  08_c_estrela_3/testes/test_c3_calibrar_v2.py: 1
+  08_c_estrela_3/testes/test_c3_condutor_v2.py: 6
+  08_c_estrela_3/testes/test_c3_perturbacao.py: 2
+  08_c_estrela_3/testes/test_c3_sonda.py: 2
+  08_c_estrela_3/testes/test_c3_v_compartilhada.py: 1
+  08_c_estrela_3/testes/test_c3_v_da_busca.py: 3
+  08_c_estrela_3/testes/test_c3_v_repartida.py: 1
+  08_c_estrela_3/testes/test_coletor_de_intervencoes.py: 5
+  08_c_estrela_3/testes/test_condutor_de_fotos.py: 13
+  08_c_estrela_3/testes/test_estresse_ser_cpp.py: 4

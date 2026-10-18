@@ -1,0 +1,18 @@
+sem timeout do cegis 120
+  formulacoes: f 240.0 | cegis_poda 7177.0 | cegis 8055.0
+  verificacoes: f 212.0 | cegis_poda 300.0 | cegis 1178.0
+  nos: f 875.0 | cegis_poda 16427.0 | cegis 4300272.0
+  segundos: f 15.7 | cegis_poda 18.0 | cegis 47.0
+com timeout do cegis 72
+  formulacoes: f 912.0 | cegis_poda 10411.0 | cegis 8065.0
+  verificacoes: f 605.0 | cegis_poda 718.0 | cegis 1734.0
+  nos: f 53139.0 | cegis_poda 184702.0 | cegis 38526700.0
+  segundos: f 137.6 | cegis_poda 141.1 | cegis 315.8
+casos sem timeout em que cegis tem mais formulacoes que cegis_poda: 118 | menos: 0 | igual: 2
+diferenca cegis - cegis_poda em formulacoes (sem timeout): mediana 8.0
+diferenca cegis - cegis_poda em verificacoes (sem timeout): mediana 8.0
+diferenca formulacoes - verificacoes, cegis (sem timeout) == cegis_poda?: 120 de 120
+f: formulacoes sem verificacao = 335 de 1152 (29.1%)
+cegis_poda: formulacoes sem verificacao = 16570 de 17588 (94.2%)
+cegis: formulacoes sem verificacao = 13208 de 16120 (81.9%)
+f: casos com formulacoes == verificacoes: 115

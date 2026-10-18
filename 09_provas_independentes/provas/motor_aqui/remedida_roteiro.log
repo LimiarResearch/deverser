@@ -1,0 +1,19 @@
+23:39:39 inicio remedida
+23:40:01 rodada 1/5 feita
+23:40:19 rodada 2/5 feita
+23:40:37 rodada 3/5 feita
+23:40:54 rodada 4/5 feita
+23:41:13 rodada 5/5 feita
+suplementar_5          0.8417 [0.8415, 0.8911]  rede 0.5773  simd_imediato reg=0 batcher ecc6497663
+motor_4                0.8418 [0.8396, 0.8912]  rede 0.5769  simd_imediato reg=0 batcher ecc6497663
+motor_5                0.8418 [0.7921, 0.8912]  rede 0.5770  simd_imediato reg=1 batcher ecc6497663
+motor_3                0.8419 [0.8416, 0.8911]  rede 0.5769  simd_imediato reg=1 batcher ecc6497663
+suplementar_2          0.8422 [0.8401, 0.8919]  rede 0.5788  simd_imediato reg=0 batcher ecc6497663
+suplementar_4          0.8428 [0.8236, 0.8909]  rede 0.6109  simd_imediato reg=0 batcher ecc6497663
+suplementar_3          0.8441 [0.7834, 0.8905]  rede 0.5912  simd_imediato reg=0 otima de7c37a0a4
+motor_1                0.8444 [0.8071, 0.8907]  rede 0.6104  simd_imediato reg=1 otima de7c37a0a4
+suplementar_1          0.8444 [0.8438, 0.8910]  rede 0.5788  simd_imediato reg=0 otima de7c37a0a4
+motor_2                0.8906 [0.8441, 0.8909]  rede 0.6098  simd_imediato reg=0 otima de7c37a0a4
+vencedora_29-09        1.4065 [1.2505, 1.4077]  rede 0.9643  ternario reg=0 otima af8427daff
+nulo_1                 1.4524 [1.4521, 1.4527]  rede 0.9952  mascara reg=1 otima a5b1116d48
+23:41:13 fim remedida rc=0

@@ -1,0 +1,29 @@
+{"evento": "inicio", "versao": "4.3.1-selecao", "autorizacao": "Gabriel Santos, 18/10/2026: sim (o codec v3, declarado depois da corrida 2)", "config": {"K": 10, "bracos": ["cega", "operador"], "declaracao_cada": 300.0, "escala_do_posto": 12.0, "frac_acaso": 0.25, "imprimir_cada": 60.0, "k_melhores": 200, "max_rodadas": 197, "max_tentativas_por_pai": 6, "n_partida": 64, "semente": 1, "tempo": null}, "rodada": 0, "segundos": 0.0}
+{"evento": "melhor", "id": 0, "distancia": 222, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 67.055}
+{"evento": "melhor", "id": 6, "distancia": 152, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 67.056}
+{"evento": "melhor", "id": 56, "distancia": 146, "nfal": 1, "origem": "sorteio de partida", "rodada": 0, "segundos": 67.056}
+{"evento": "partida", "fotos_sorteadas": 64, "menor_distancia": 146, "rodada": 0, "segundos": 67.056}
+{"evento": "melhor", "id": 180, "distancia": 127, "nfal": 1, "origem": "operador", "rodada": 6, "segundos": 167.417}
+{"evento": "melhor", "id": 186, "distancia": 123, "nfal": 1, "origem": "cega", "rodada": 7, "segundos": 177.042}
+{"evento": "melhor", "id": 270, "distancia": 122, "nfal": 1, "origem": "cega", "rodada": 11, "segundos": 226.661}
+{"evento": "melhor", "id": 287, "distancia": 117, "nfal": 1, "origem": "cega", "rodada": 12, "segundos": 240.802}
+{"evento": "melhor", "id": 293, "distancia": 105, "nfal": 1, "origem": "operador", "rodada": 12, "segundos": 240.802}
+{"evento": "melhor", "id": 383, "distancia": 103, "nfal": 1, "origem": "cega", "rodada": 17, "segundos": 298.792}
+{"evento": "melhor", "id": 404, "distancia": 102, "nfal": 1, "origem": "cega", "rodada": 18, "segundos": 311.103}
+{"evento": "melhor", "id": 413, "distancia": 96, "nfal": 1, "origem": "operador", "rodada": 18, "segundos": 311.103}
+{"evento": "melhor", "id": 613, "distancia": 91, "nfal": 1, "origem": "operador", "rodada": 28, "segundos": 422.776}
+{"evento": "melhor", "id": 621, "distancia": 88, "nfal": 1, "origem": "operador", "rodada": 28, "segundos": 422.776}
+{"evento": "melhor", "id": 686, "distancia": 86, "nfal": 1, "origem": "cega", "rodada": 32, "segundos": 466.193}
+{"evento": "melhor", "id": 770, "distancia": 85, "nfal": 1, "origem": "cega", "rodada": 36, "segundos": 520.461}
+{"evento": "melhor", "id": 817, "distancia": 84, "nfal": 1, "origem": "operador", "rodada": 38, "segundos": 564.864}
+{"evento": "melhor", "id": 839, "distancia": 82, "nfal": 1, "origem": "operador", "rodada": 39, "segundos": 577.38}
+{"evento": "melhor", "id": 882, "distancia": 81, "nfal": 1, "origem": "cega", "rodada": 42, "segundos": 615.757}
+{"evento": "melhor", "id": 959, "distancia": 79, "nfal": 1, "origem": "operador", "rodada": 45, "segundos": 656.472}
+{"evento": "melhor", "id": 984, "distancia": 78, "nfal": 1, "origem": "cega", "rodada": 47, "segundos": 686.263}
+{"evento": "melhor", "id": 1041, "distancia": 77, "nfal": 1, "origem": "cega", "rodada": 50, "segundos": 740.836}
+{"evento": "melhor", "id": 1102, "distancia": 46, "nfal": 1, "origem": "cega", "rodada": 53, "segundos": 788.444}
+{"evento": "melhor", "id": 1506, "distancia": 41, "nfal": 1, "origem": "cega", "rodada": 73, "segundos": 1124.979}
+{"evento": "melhor", "id": 1787, "distancia": 40, "nfal": 1, "origem": "cega", "rodada": 87, "segundos": 1340.958}
+{"evento": "melhor", "id": 1809, "distancia": 39, "nfal": 1, "origem": "operador", "rodada": 88, "segundos": 1356.429}
+{"evento": "melhor", "id": 3012, "distancia": 38, "nfal": 1, "origem": "operador", "rodada": 149, "segundos": 2224.083}
+{"evento": "fim", "parada": "fusível: 197 rodadas", "menor_distancia": 38, "rodada": 197, "segundos": 2773.556}

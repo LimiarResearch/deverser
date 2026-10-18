@@ -1,0 +1,1 @@
+tentativas: 108 | alvo: aef6c8a1500fbc6a40cddab5cd4adcc5b8b24560f51e8b1b16ba73579c01ef9c

@@ -1,0 +1,103 @@
+{
+ "tempo": {
+  "bytes": 18,
+  "gene": 200,
+  "cadeia": {
+   "predicao": "delta",
+   "mapa": "deslocamento",
+   "empacote": "varint",
+   "rle0": true,
+   "fundo": "nenhum",
+   "arranjo": "coluna_a_coluna"
+  }
+ },
+ "constante": {
+  "bytes": 832,
+  "gene": 80,
+  "cadeia": {
+   "predicao": "nenhuma",
+   "mapa": "deslocamento",
+   "empacote": "bits_fixos",
+   "rle0": false,
+   "fundo": "nenhum",
+   "arranjo": "coluna_a_coluna"
+  }
+ },
+ "quase_zero": {
+  "bytes": 3471,
+  "gene": 110,
+  "cadeia": {
+   "predicao": "nenhuma",
+   "mapa": "deslocamento",
+   "empacote": "planos_de_bytes",
+   "rle0": true,
+   "fundo": "lzma6",
+   "arranjo": "coluna_a_coluna"
+  }
+ },
+ "contador": {
+  "bytes": 326,
+  "gene": 204,
+  "cadeia": {
+   "predicao": "delta",
+   "mapa": "deslocamento",
+   "empacote": "varint",
+   "rle0": true,
+   "fundo": "lzma9e",
+   "arranjo": "coluna_a_coluna"
+  }
+ },
+ "inteiro_pequeno": {
+  "bytes": 6828,
+  "gene": 78,
+  "cadeia": {
+   "predicao": "nenhuma",
+   "mapa": "deslocamento",
+   "empacote": "varint",
+   "rle0": true,
+   "fundo": "lzma6",
+   "arranjo": "coluna_a_coluna"
+  }
+ },
+ "com_irma": {
+  "bytes": 38409,
+  "gene": 68,
+  "cadeia": {
+   "predicao": "nenhuma",
+   "mapa": "deslocamento",
+   "empacote": "varint",
+   "rle0": false,
+   "fundo": "lzma9e",
+   "arranjo": "coluna_a_coluna"
+  }
+ },
+ "outra": {
+  "bytes": 42130,
+  "gene": 68,
+  "cadeia": {
+   "predicao": "nenhuma",
+   "mapa": "deslocamento",
+   "empacote": "varint",
+   "rle0": false,
+   "fundo": "lzma9e",
+   "arranjo": "coluna_a_coluna"
+  }
+ },
+ "total_dev": {
+  "estado": "ok",
+  "bytes": 92024,
+  "erros": 0,
+  "s_codificar": 0.37237592400003905,
+  "s_decodificar": 0.06417681899995387
+ },
+ "genes": [
+  200,
+  80,
+  110,
+  204,
+  78,
+  0,
+  68,
+  68
+ ]
+}
