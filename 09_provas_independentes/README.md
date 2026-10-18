@@ -36,14 +36,14 @@ Mesmo medidor do programa publicado. Cinco rodadas por servidor, cada uma num pr
 |---|---|---|
 | rede bitônica em AVX-512, versão de livro | 0,505 | 0,570 |
 | rede bitônica em AVX2, versão de livro | 0,550 | 0,619 |
-| código vetorial achado pelo motor de 29/09 nesse meio (Batcher e rede ótima, AVX2) | 0,568 e 0,570 | 0,639 e 0,650 |
+| código vetorial achado pelo motor de 29/09 no servidor A (Batcher e rede ótima, AVX2) | 0,568 e 0,570 | 0,639 e 0,650 |
 | referência vetorial da ferramenta do motor | 0,679 | 0,783 |
 | vencedora de 29/09 | 0,959 | 0,995 |
 | x86-simd-sort da Intel | 3,610 | 3,654 |
 | std::sort (libstdc++ 13) | 9,068 | 8,939 |
 
-Nesses dois meios, o motor escolheu código vetorial. As contas abaixo saem das medianas da tabela:
-- o código do motor foi de 35% a 43% mais rápido que a rede escalar escrita à mão;
+O motor de 29/09 buscou só no servidor A (Xeon de 2,1 GHz), em 17/10, e lá escolheu código vetorial. No servidor B, o mesmo código foi só medido. As contas abaixo saem das medianas da tabela:
+- o código do motor foi 43% mais rápido que a rede escalar escrita à mão no servidor A e 35% mais rápido no servidor B;
 - foi de 14 a 16 vezes mais rápido que o std::sort, que ficou cerca de 9 vezes mais lento que a rede escalar;
 - a rede bitônica de livro em AVX-512, que usa instruções mais largas que as do motor, foi de 11% a 12% mais rápida que o código do motor;
 - a bitônica de livro em AVX2, a mesma família de instruções do motor, foi de 3% a 5% mais rápida.
