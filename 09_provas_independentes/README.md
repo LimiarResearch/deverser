@@ -4,7 +4,7 @@ Esta pasta traz o trabalho de uma sessão separada, feita em 17 e 18/10/2026 com
 - conferiu as alegações do repositório pelos próprios registros (`verif/`);
 - rodou o código em outras máquinas, com testes novos (`provas/`).
 
-Os arquivos estão como a sessão os entregou, com os scripts, as sementes, as saídas e os hashes. Os caminhos absolutos nos registros e nos relatórios são do ambiente da verificação. A única edição foi no `provas/codec/RESULTADO_codec.md`, onde o nome de outro projeto da Limiar foi trocado por "outro projeto da Limiar".
+Os arquivos estão como a sessão os entregou, com os scripts, as sementes, as saídas e os hashes. Os caminhos absolutos nos registros e nos relatórios são do ambiente da verificação. Houve duas edições: no `provas/codec/RESULTADO_codec.md`, o nome de outro projeto da Limiar foi trocado por "outro projeto da Limiar"; no `verif/VERIF_outros.md`, a citação literal da linha de coautoria dos commits foi trocada por "a linha de coautoria de uma ferramenta de IA".
 
 **O resumo:**
 - Os números do repositório conferem com os registros e são coerentes entre si.
